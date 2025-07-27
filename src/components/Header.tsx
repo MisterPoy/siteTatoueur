@@ -48,10 +48,10 @@ const Header: React.FC = () => {
           >
             <div className="flex items-center space-x-3">
               {/* Icône Corbeau stylisée */}
-              <div className="w-10 h-10 relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary via-purple to-teal rounded-full opacity-20 group-hover:opacity-40 transition-all duration-300 group-hover:animate-pulse"></div>
+              <div className="w-12 h-12 relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary via-purple to-teal rounded-full opacity-30 group-hover:opacity-50 transition-all duration-300 group-hover:animate-pulse"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-primary text-xl font-bold kanji-style group-hover:text-purple transition-colors duration-300">烏</span>
+                  <span className="text-primary text-2xl font-bold kanji-style group-hover:text-purple transition-colors duration-300 group-hover:scale-110">烏</span>
                 </div>
               </div>
               
@@ -61,7 +61,7 @@ const Header: React.FC = () => {
                   Karasu Ink
                 </div>
                 <div className="text-xs text-karasu-400 font-accent tracking-wider hidden lg:block">
-                  鴉 · L'art de l'encre
+                  烏 · L'identité Karasu
                 </div>
               </div>
             </div>

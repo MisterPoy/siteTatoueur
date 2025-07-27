@@ -44,13 +44,16 @@ const Hero: React.FC = () => {
         <div className="max-w-6xl mx-auto text-center">
           {/* Titre principal style Kanji */}
           <div className={`transition-all duration-1500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-            {/* Caractère japonais principal */}
+            {/* Caractère japonais principal - KARASU */}
             <div className="mb-8">
-              <span className="text-6xl sm:text-8xl md:text-9xl kanji-style text-primary text-shadow-primary animate-reveal">
-                墨
+              <span className="text-7xl sm:text-9xl md:text-[12rem] kanji-style text-primary text-shadow-primary animate-reveal leading-none">
+                烏
               </span>
-              <div className="text-sm font-accent text-karasu-400 tracking-widest mt-2">
-                SUMI · L'ENCRE SACRÉE
+              <div className="text-lg font-accent text-primary tracking-widest mt-4 mb-2">
+                KARASU · LE CORBEAU
+              </div>
+              <div className="text-sm font-accent text-karasu-400 tracking-widest">
+                L'IDENTITÉ DE L'ARTISTE
               </div>
             </div>
 
@@ -73,7 +76,7 @@ const Hero: React.FC = () => {
             {/* Bouton d'action */}
             <button
               onClick={scrollToArtist}
-              className="group relative inline-flex items-center px-10 py-4 bg-primary hover:bg-primary-dark text-bone font-accent text-lg tracking-wider uppercase transition-all duration-300 hover-lift primary-glow"
+              className="group relative inline-flex items-center px-10 py-4 bg-primary hover:bg-primary-dark text-bone font-accent text-lg tracking-wider uppercase transition-all duration-300 hover-lift primary-glow overflow-hidden"
             >
               <span className="relative z-10">Découvrir l'art</span>
               <FaChevronDown className="ml-4 group-hover:translate-y-1 transition-transform duration-300" />
@@ -83,15 +86,18 @@ const Hero: React.FC = () => {
             </button>
           </div>
 
-          {/* Éléments décoratifs japonais */}
+          {/* Éléments décoratifs japonais - KARASU en vedette */}
           <div className="absolute top-1/4 left-8 hidden lg:block">
-            <div className="text-2xl kanji-style text-primary/30 animate-float">鴉</div>
+            <div className="text-3xl kanji-style text-primary/40 animate-float">烏</div>
           </div>
           <div className="absolute top-1/3 right-12 hidden lg:block">
-            <div className="text-xl kanji-style text-primary/20 animate-float" style={{ animationDelay: '1s' }}>美</div>
+            <div className="text-2xl kanji-style text-primary/30 animate-float" style={{ animationDelay: '1s' }}>烏</div>
           </div>
           <div className="absolute bottom-1/4 left-1/4 hidden lg:block">
-            <div className="text-lg kanji-style text-gold/30 animate-float" style={{ animationDelay: '2s' }}>道</div>
+            <div className="text-xl kanji-style text-gold/40 animate-float" style={{ animationDelay: '2s' }}>烏</div>
+          </div>
+          <div className="absolute bottom-1/3 right-1/4 hidden lg:block">
+            <div className="text-lg kanji-style text-primary/25 animate-float" style={{ animationDelay: '3s' }}>烏</div>
           </div>
         </div>
       </div>
