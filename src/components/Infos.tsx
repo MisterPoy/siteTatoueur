@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaClock, FaMapMarkerAlt, FaPhoneAlt, FaShieldAlt, FaHeart, FaEuroSign } from 'react-icons/fa';
+import { FaClock, FaMapMarkerAlt, FaPhoneAlt, FaShieldAlt, FaHeart } from 'react-icons/fa';
 
 const Infos: React.FC = () => {
   const pricingTiers = [
