@@ -20,9 +20,9 @@ const Footer: React.FC = () => {
   ];
 
   const socialLinks = [
-    { icon: <FaInstagram />, name: "Instagram", url: "https://instagram.com/karasu.ink", handle: "@karasu.ink" },
-    { icon: <FaTwitter />, name: "Twitter", url: "https://twitter.com/karasu_ink", handle: "@karasu_ink" },
-    { icon: <FaTiktok />, name: "TikTok", url: "https://tiktok.com/@karasu.ink", handle: "@karasu.ink" }
+    { icon: <FaInstagram />, name: "Instagram", url: "https://instagram.com/karasutattoo.fr", handle: "@karasutattoo.fr" },
+    { icon: <FaTwitter />, name: "Twitter", url: "https://twitter.com/theora_ink", handle: "@theora_ink" },
+    { icon: <FaTiktok />, name: "TikTok", url: "https://tiktok.com/@theoraink", handle: "@theoraink" }
   ];
 
   const scrollToSection = (href: string) => {
@@ -49,13 +49,13 @@ const Footer: React.FC = () => {
                 </div>
               </div>
               <div className="text-3xl kanji-style text-bone">
-                Karasu Ink
+                Theora Ink Shop
               </div>
             </div>
             
             <p className="text-karasu-300 mb-6 leading-relaxed font-body">
-              Studio de tatouage japonais traditionnel et contemporain. 
-              L'art de l'encre au service de votre expression artistique.
+              Theora Ink Shop - Studio de tatouage avec Karasu. 
+              L'art de l'encre japonais au service de votre expression artistique.
             </p>
             
             <div className="mb-6">

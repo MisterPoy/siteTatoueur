@@ -68,8 +68,8 @@ const Contact: React.FC = () => {
     {
       icon: <FaEnvelope />,
       title: "Email",
-      content: "contact@karasu-ink.fr",
-      link: "mailto:contact@karasu-ink.fr",
+      content: "contact@theora-ink.fr",
+      link: "mailto:contact@theora-ink.fr",
       kanji: "信"
     },
     {
@@ -89,9 +89,9 @@ const Contact: React.FC = () => {
   ];
 
   const socialLinks = [
-    { icon: <FaInstagram />, name: "Instagram", url: "https://instagram.com/karasu.ink", handle: "@karasu.ink" },
-    { icon: <FaTwitter />, name: "Twitter", url: "https://twitter.com/karasu_ink", handle: "@karasu_ink" },
-    { icon: <FaTiktok />, name: "TikTok", url: "https://tiktok.com/@karasu.ink", handle: "@karasu.ink" }
+    { icon: <FaInstagram />, name: "Instagram", url: "https://instagram.com/karasutattoo.fr", handle: "@karasutattoo.fr" },
+    { icon: <FaTwitter />, name: "Twitter", url: "https://twitter.com/theora_ink", handle: "@theora_ink" },
+    { icon: <FaTiktok />, name: "TikTok", url: "https://tiktok.com/@theoraink", handle: "@theoraink" }
   ];
 
   const projectTypes = [
@@ -115,7 +115,7 @@ const Contact: React.FC = () => {
             </div>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-accent text-bone mb-6 text-shadow-dark">
-            Contactez <span className="text-primary brush-stroke">Nous</span>
+            Contactez <span className="text-primary brush-stroke">Karasu</span>
           </h2>
           <p className="text-lg text-karasu-300 max-w-3xl mx-auto leading-relaxed font-body">
             Prêt à transformer votre vision en œuvre d'art permanente ? 

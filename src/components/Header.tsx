@@ -58,10 +58,10 @@ const Header: React.FC = () => {
               {/* Nom du salon */}
               <div>
                 <div className="text-2xl lg:text-3xl kanji-style text-bone group-hover:text-shimmer transition-all duration-300">
-                  Karasu Ink
+                  Theora Ink Shop
                 </div>
                 <div className="text-xs text-karasu-400 font-accent tracking-wider hidden lg:block">
-                  烏 · L'identité Karasu
+                  烏 · Avec Karasu
                 </div>
               </div>
             </div>

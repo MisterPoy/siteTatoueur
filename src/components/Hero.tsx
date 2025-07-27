@@ -59,18 +59,18 @@ const Hero: React.FC = () => {
 
             {/* Titre français */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-accent text-bone mb-6 text-shadow-dark">
-              <span className="block mb-2">L'art de l'encre</span>
+              <span className="block mb-2">Theora Ink Shop</span>
               <span className="block text-2xl sm:text-3xl md:text-4xl text-primary brush-stroke">
-                comme art de vivre
+                L'art de l'encre sacrée
               </span>
             </h1>
 
             {/* Slogan */}
             <p className="text-lg sm:text-xl md:text-2xl text-karasu-300 mb-12 max-w-3xl mx-auto leading-relaxed font-body">
-              Chez <span className="text-primary font-semibold kanji-style">Karasu Ink</span>, 
-              chaque tatouage est une œuvre d'art unique, 
+              Chez <span className="text-primary font-semibold kanji-style">Theora Ink Shop</span>, 
+              <span className="text-primary font-semibold">Karasu</span> vous propose des tatouages uniques, 
               <br className="hidden md:block" />
-              inspirée de la tradition japonaise et de l'esthétique moderne.
+              inspirés de la tradition japonaise et de l'esthétique moderne.
             </p>
 
             {/* Bouton d'action */}
