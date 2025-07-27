@@ -19,39 +19,7 @@ const Gallery: React.FC = () => {
   const headerRef = useScrollReveal();
   const ctaRef = useScrollReveal();
 
-  // Images organisées par catégories avec section généraliste
   const images: GalleryImage[] = [
-    // Section généraliste - Réalisations en vrac
-    {
-      id: 13,
-      src: "https://images.unsplash.com/photo-1590736969955-71cc94901144?w=400&h=400&fit=crop",
-      alt: "Réalisation en vrac #1",
-      category: "all",
-      artist: "Karasu Tattoo",
-      description: "Exemple de nos diverses créations artistiques",
-      style: "Réalisations en vrac",
-      height: 200
-    },
-    {
-      id: 14,
-      src: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=400&h=500&fit=crop",
-      alt: "Réalisation en vrac #2",
-      category: "all",
-      artist: "Karasu Tattoo",
-      description: "Portfolio varié de nos créations",
-      style: "Réalisations en vrac",
-      height: 250
-    },
-    {
-      id: 15,
-      src: "https://images.unsplash.com/photo-1588776814546-daab30c310ce?w=400&h=600&fit=crop",
-      alt: "Réalisation en vrac #3",
-      category: "all",
-      artist: "Karasu Tattoo",
-      description: "Diversité de notre savoir-faire artistique",
-      style: "Réalisations en vrac",
-      height: 300
-    },
     {
       id: 1,
       src: "https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?w=400&h=600&fit=crop",
@@ -184,7 +152,7 @@ const Gallery: React.FC = () => {
 
   const filteredImages = selectedCategory === 'all' 
     ? images 
-    : images.filter(img => img.category === selectedCategory || img.category === 'all');
+    : images.filter(img => img.category === selectedCategory);
 
   const openModal = (image: GalleryImage) => {
     setSelectedImage(image);
