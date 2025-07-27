@@ -201,15 +201,15 @@ const Gallery: React.FC = () => {
           <div className="mb-6">
             <span className="text-4xl kanji-style text-gold">作品</span>
             <div className="text-sm font-accent text-karasu-400 tracking-widest mt-2">
-              SAKUHIN · GALERIE DES ŒUVRES
+              SAKUHIN · MES SPÉCIALITÉS
             </div>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-accent text-bone mb-6 text-shadow-dark">
-            Nos <span className="text-primary brush-stroke">Créations</span>
+            Mes <span className="text-primary brush-stroke">Spécialités</span>
           </h2>
           <p className="text-lg text-karasu-300 max-w-3xl mx-auto leading-relaxed font-body mb-8">
-            Découvrez une sélection de nos plus belles réalisations. 
-            Chaque tatouage raconte une histoire unique mêlant tradition et modernité.
+            Découvrez mes 4 styles de prédilection. Chaque catégorie représente un univers artistique 
+            que je maîtrise parfaitement pour donner vie à vos projets.
           </p>
 
           {/* Filtres par catégorie */}

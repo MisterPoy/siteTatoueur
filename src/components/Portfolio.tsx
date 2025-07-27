@@ -113,19 +113,15 @@ const Portfolio: React.FC = () => {
     <section id="portfolio" className="py-20 bg-karasu-900 japanese-texture">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div ref={headerRef} className="text-center mb-16 scroll-reveal">
-          <div className="mb-6">
-            <span className="text-4xl kanji-style text-gold">雑</span>
+        <div ref={headerRef} className="text-center mb-12 scroll-reveal">
+          <div className="mb-4">
+            <span className="text-3xl kanji-style text-gold">雑</span>
             <div className="text-sm font-accent text-karasu-400 tracking-widest mt-2">
               ZATSU · RÉALISATIONS EN VRAC
             </div>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-accent text-bone mb-6 text-shadow-dark">
-            Notre <span className="text-primary brush-stroke">Portfolio</span>
-          </h2>
-          <p className="text-lg text-karasu-300 max-w-3xl mx-auto leading-relaxed font-body">
-            Un aperçu de nos créations variées, témoignant de notre savoir-faire 
-            et de notre passion pour l'art du tatouage.
+          <p className="text-lg text-karasu-300 max-w-2xl mx-auto leading-relaxed font-body">
+            Un aperçu de mes diverses créations artistiques
           </p>
         </div>
 
