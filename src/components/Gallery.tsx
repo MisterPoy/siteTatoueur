@@ -19,7 +19,39 @@ const Gallery: React.FC = () => {
   const headerRef = useScrollReveal();
   const ctaRef = useScrollReveal();
 
+  // Images organisées par catégories avec section généraliste
   const images: GalleryImage[] = [
+    // Section généraliste - Réalisations en vrac
+    {
+      id: 13,
+      src: "https://images.unsplash.com/photo-1590736969955-71cc94901144?w=400&h=400&fit=crop",
+      alt: "Réalisation en vrac #1",
+      category: "all",
+      artist: "Karasu Tattoo",
+      description: "Exemple de nos diverses créations artistiques",
+      style: "Réalisations en vrac",
+      height: 200
+    },
+    {
+      id: 14,
+      src: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=400&h=500&fit=crop",
+      alt: "Réalisation en vrac #2",
+      category: "all",
+      artist: "Karasu Tattoo",
+      description: "Portfolio varié de nos créations",
+      style: "Réalisations en vrac",
+      height: 250
+    },
+    {
+      id: 15,
+      src: "https://images.unsplash.com/photo-1588776814546-daab30c310ce?w=400&h=600&fit=crop",
+      alt: "Réalisation en vrac #3",
+      category: "all",
+      artist: "Karasu Tattoo",
+      description: "Diversité de notre savoir-faire artistique",
+      style: "Réalisations en vrac",
+      height: 300
+    },
     {
       id: 1,
       src: "https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?w=400&h=600&fit=crop",
@@ -37,17 +69,17 @@ const Gallery: React.FC = () => {
       category: "floral",
       artist: "Karasu Tattoo",
       description: "Branche de cerisier délicate et épurée",
-      style: "Minimalisme japonais",
+      style: "Floral japonais",
       height: 250
     },
     {
       id: 3,
       src: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=700&fit=crop",
       alt: "Carpe Koi",
-      category: "irezumi",
+      category: "neo-japonais",
       artist: "Karasu Tattoo",
       description: "Koi nageant dans les vagues traditionnelles",
-      style: "Irezumi complet",
+      style: "Neo-japonais traditionnel",
       height: 350
     },
     {
@@ -74,20 +106,20 @@ const Gallery: React.FC = () => {
       id: 6,
       src: "https://images.unsplash.com/photo-1606902965551-dce093cda6e7?w=400&h=450&fit=crop",
       alt: "Calligraphie Artistique",
-      category: "calligraphie",
+      category: "pop-culture",
       artist: "Karasu Tattoo",
       description: "Caractères japonais stylisés",
-      style: "Calligraphie moderne",
+      style: "Pop-culture japonaise",
       height: 225
     },
     {
       id: 7,
       src: "https://images.unsplash.com/photo-1588776814546-daab30c310ce?w=400&h=550&fit=crop",
       alt: "Oni Traditionnel",
-      category: "irezumi",
+      category: "neo-japonais",
       artist: "Karasu Tattoo",
       description: "Masque de démon japonais coloré",
-      style: "Irezumi coloré",
+      style: "Neo-japonais coloré",
       height: 275
     },
     {
@@ -97,7 +129,7 @@ const Gallery: React.FC = () => {
       category: "manga",
       artist: "Karasu Tattoo",
       description: "Héros de manga dans un style moderne et dynamique",
-      style: "Manga contemporain",
+      style: "Style manga moderne",
       height: 250
     },
     {
@@ -107,7 +139,7 @@ const Gallery: React.FC = () => {
       category: "neo-japonais",
       artist: "Karasu Tattoo",
       description: "Personnage d'animation stylisé",
-      style: "Neo-manga",
+      style: "Neo-japonais contemporain",
       height: 300
     },
     {
@@ -117,27 +149,27 @@ const Gallery: React.FC = () => {
       category: "floral",
       artist: "Karasu Tattoo",
       description: "Fleur de lotus en trait unique",
-      style: "Minimalisme zen",
+      style: "Floral minimaliste",
       height: 200
     },
     {
       id: 11,
       src: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=750&fit=crop",
       alt: "Phoenix Irezumi",
-      category: "irezumi",
+      category: "neo-japonais",
       artist: "Karasu Tattoo",
       description: "Oiseau légendaire aux couleurs vives",
-      style: "Irezumi majestueux",
+      style: "Neo-japonais majestueux",
       height: 375
     },
     {
       id: 12,
       src: "https://images.unsplash.com/photo-1567359781514-3b964e2b04d6?w=400&h=350&fit=crop",
       alt: "Mandala Japonais",
-      category: "geometrique",
+      category: "floral",
       artist: "Karasu Tattoo",
       description: "Motifs circulaires traditionnels",
-      style: "Géométrie sacrée",
+      style: "Floral géométrique",
       height: 175
     }
   ];
@@ -152,7 +184,7 @@ const Gallery: React.FC = () => {
 
   const filteredImages = selectedCategory === 'all' 
     ? images 
-    : images.filter(img => img.category === selectedCategory);
+    : images.filter(img => img.category === selectedCategory || img.category === 'all');
 
   const openModal = (image: GalleryImage) => {
     setSelectedImage(image);
