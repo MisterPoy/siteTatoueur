@@ -139,6 +139,47 @@ const Gallery: React.FC = () => {
       description: "Motifs circulaires traditionnels",
       style: "Floral géométrique",
       height: 175
+    },
+    // Styles de Theora - Réalisme et Black & White
+    {
+      id: 13,
+      src: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=600&fit=crop",
+      alt: "Portrait Réaliste",
+      category: "realisme",
+      artist: "Th3ora",
+      description: "Portrait réaliste aux détails saisissants",
+      style: "Réalisme photographique",
+      height: 300
+    },
+    {
+      id: 14,
+      src: "https://images.unsplash.com/photo-1567359781514-3b964e2b04d6?w=400&h=500&fit=crop",
+      alt: "Tatouage Black & White",
+      category: "black-white",
+      artist: "Th3ora",
+      description: "Création en noir et blanc aux contrastes parfaits",
+      style: "Black & White artistique",
+      height: 250
+    },
+    {
+      id: 15,
+      src: "https://images.unsplash.com/photo-1594736797933-d0fce9e2bbf7?w=400&h=400&fit=crop",
+      alt: "Portrait Expressif",
+      category: "realisme",
+      artist: "Th3ora",
+      description: "Portrait capturant l'émotion avec précision",
+      style: "Réalisme expressif",
+      height: 200
+    },
+    {
+      id: 16,
+      src: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=550&fit=crop",
+      alt: "Graphisme Noir & Blanc",
+      category: "black-white",
+      artist: "Th3ora",
+      description: "Design graphique en monochrome",
+      style: "Graphisme B&W",
+      height: 275
     }
   ];
 
@@ -147,7 +188,9 @@ const Gallery: React.FC = () => {
     { id: 'manga', name: 'Manga', kanji: '漫', color: 'text-primary' },
     { id: 'neo-japonais', name: 'Neo-Japonais', kanji: '新', color: 'text-purple' },
     { id: 'pop-culture', name: 'Pop-Culture', kanji: '流', color: 'text-teal' },
-    { id: 'floral', name: 'Floral', kanji: '花', color: 'text-emerald' }
+    { id: 'floral', name: 'Floral', kanji: '花', color: 'text-emerald' },
+    { id: 'realisme', name: 'Réalisme', kanji: '実', color: 'text-purple' },
+    { id: 'black-white', name: 'Black & White', kanji: '白黒', color: 'text-karasu-300' }
   ];
 
   const filteredImages = selectedCategory === 'all' 
@@ -205,11 +248,11 @@ const Gallery: React.FC = () => {
             </div>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-accent text-bone mb-6 text-shadow-dark">
-            Mes <span className="text-primary brush-stroke">Spécialités</span>
+            Nos <span className="text-primary brush-stroke">Spécialités</span>
           </h2>
           <p className="text-lg text-karasu-300 max-w-3xl mx-auto leading-relaxed font-body mb-8">
-            Découvrez mes 4 styles de prédilection. Chaque catégorie représente un univers artistique 
-            que je maîtrise parfaitement pour donner vie à vos projets.
+            Découvrez les styles maîtrisés par nos artistes. Karasu excelle dans l'art japonais, 
+            Theora dans le réalisme et le black & white.
           </p>
 
           {/* Filtres par catégorie */}

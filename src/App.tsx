@@ -1,6 +1,6 @@
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Artist from './components/Artist';
+import Artists from './components/Artist';
 import Portfolio from './components/Portfolio';
 import Gallery from './components/Gallery';
 import Infos from './components/Infos';
@@ -13,7 +13,7 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <Artist />
+        <Artists />
         <Portfolio />
         <Gallery />
         <Infos />
