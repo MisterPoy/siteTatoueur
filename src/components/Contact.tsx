@@ -75,14 +75,14 @@ const Contact: React.FC = () => {
     {
       icon: <FaMapMarkerAlt />,
       title: "Adresse",
-      content: "42 Rue de la Paix, 75001 Paris",
+      content: "Theora Ink Shop, Lucciana, Corse",
       link: "https://maps.google.com",
       kanji: "場"
     },
     {
       icon: <FaClock />,
-      title: "Horaires",
-      content: "Mar-Sam: 10h-19h",
+      title: "Rendez-vous",
+      content: "Sur RDV uniquement",
       link: null,
       kanji: "時"
     }
@@ -348,8 +348,8 @@ const Contact: React.FC = () => {
                 <div className="text-center text-karasu-400">
                   <FaMapMarkerAlt className="text-4xl mb-4 mx-auto text-primary" />
                   <p className="font-accent text-bone mb-1">Studio Karasu Ink</p>
-                  <p className="text-sm font-body">42 Rue de la Paix</p>
-                  <p className="text-sm font-body">75001 Paris</p>
+                  <p className="text-sm font-body">Theora Ink Shop</p>
+                  <p className="text-sm font-body">20290 Lucciana, Corse</p>
                 </div>
               </div>
             </div>

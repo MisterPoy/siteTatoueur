@@ -118,7 +118,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-4">
               <li className="flex items-start text-karasu-300">
                 <FaMapMarkerAlt className="text-primary mr-3 flex-shrink-0 mt-1" />
-                <span className="text-sm font-body">42 Rue de la Paix<br />75001 Paris</span>
+                <span className="text-sm font-body">Theora Ink Shop<br />Immeuble Guidoni RDC<br />Route de l'aéroport<br />20290 Lucciana, Corse</span>
               </li>
               <li className="flex items-center text-karasu-300">
                 <FaPhone className="text-primary mr-3 flex-shrink-0" />
@@ -136,11 +136,11 @@ const Footer: React.FC = () => {
             
             {/* Business Hours */}
             <div className="mt-6 p-4 bg-karasu-800/30 rounded-lg border border-karasu-700/50">
-              <h4 className="text-bone font-accent text-sm tracking-wider uppercase mb-3">Horaires</h4>
+              <h4 className="text-bone font-accent text-sm tracking-wider uppercase mb-3">Rendez-vous</h4>
               <div className="text-karasu-300 text-sm space-y-1 font-body">
-                <p>Mardi - Vendredi: 10h - 19h</p>
-                <p>Samedi: 10h - 18h</p>
-                <p className="text-primary">Dimanche - Lundi: Fermé</p>
+                <p className="text-primary font-semibold">Sur rendez-vous uniquement</p>
+                <p>Consultation préalable obligatoire</p>
+                <p>Contactez-nous pour planifier</p>
               </div>
             </div>
           </div>

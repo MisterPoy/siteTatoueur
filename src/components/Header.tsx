@@ -24,7 +24,7 @@ const Header: React.FC = () => {
 
   const navItems = [
     { id: 'hero', label: 'Accueil' },
-    { id: 'artists', label: 'Artistes' },
+    { id: 'artist', label: 'Artiste' },
     { id: 'gallery', label: 'Galerie' },
     { id: 'infos', label: 'Infos' },
     { id: 'contact', label: 'Contact' },

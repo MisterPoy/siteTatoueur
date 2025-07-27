@@ -140,20 +140,22 @@ const Infos: React.FC = () => {
                   Adresse
                 </h4>
                 <p className="text-karasu-200 font-body ml-6">
-                  42 Rue de la Paix<br />
-                  75001 Paris, France
+                  Theora Ink Shop<br />
+                  Immeuble Guidoni RDC<br />
+                  Route de l'aéroport<br />
+                  20290 Lucciana, Corse
                 </p>
               </div>
               
               <div>
                 <h4 className="text-bone font-accent mb-2 flex items-center">
                   <FaClock className="text-primary mr-2" />
-                  Horaires
+                  Rendez-vous
                 </h4>
                 <div className="text-karasu-200 font-body ml-6 space-y-1">
-                  <p>Mardi - Vendredi: 10h - 19h</p>
-                  <p>Samedi: 10h - 18h</p>
-                  <p className="text-primary">Dimanche - Lundi: Fermé</p>
+                  <p className="text-primary font-semibold">Sur rendez-vous uniquement</p>
+                  <p>Consultation préalable obligatoire</p>
+                  <p>Devis personnalisé après entretien</p>
                 </div>
               </div>
               

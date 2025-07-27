@@ -9,8 +9,8 @@ const Hero: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const scrollToArtists = () => {
-    const element = document.getElementById('artists');
+  const scrollToArtist = () => {
+    const element = document.getElementById('artist');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
 
             {/* Bouton d'action */}
             <button
-              onClick={scrollToArtists}
+              onClick={scrollToArtist}
               className="group relative inline-flex items-center px-10 py-4 bg-primary hover:bg-primary-dark text-bone font-accent text-lg tracking-wider uppercase transition-all duration-300 hover-lift primary-glow"
             >
               <span className="relative z-10">Découvrir l'art</span>

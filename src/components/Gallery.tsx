@@ -23,11 +23,11 @@ const Gallery: React.FC = () => {
     {
       id: 1,
       src: "https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?w=400&h=600&fit=crop",
-      alt: "Dragon Irezumi",
-      category: "irezumi",
-      artist: "Hiroshi Tanaka",
-      description: "Dragon traditionnel japonais en noir et gris",
-      style: "Irezumi traditionnel",
+      alt: "Dragon Manga",
+      category: "manga",
+      artist: "Karasu Tattoo",
+      description: "Dragon stylisé inspiré du manga japonais",
+      style: "Style manga moderne",
       height: 300
     },
     {
@@ -35,7 +35,7 @@ const Gallery: React.FC = () => {
       src: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=400&h=500&fit=crop",
       alt: "Sakura Minimaliste",
       category: "floral",
-      artist: "Yuki Nakamura",
+      artist: "Karasu Tattoo",
       description: "Branche de cerisier délicate et épurée",
       style: "Minimalisme japonais",
       height: 250
@@ -45,7 +45,7 @@ const Gallery: React.FC = () => {
       src: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=700&fit=crop",
       alt: "Carpe Koi",
       category: "irezumi",
-      artist: "Hiroshi Tanaka",
+      artist: "Karasu Tattoo",
       description: "Koi nageant dans les vagues traditionnelles",
       style: "Irezumi complet",
       height: 350
@@ -53,11 +53,11 @@ const Gallery: React.FC = () => {
     {
       id: 4,
       src: "https://images.unsplash.com/photo-1590736969955-71cc94901144?w=400&h=400&fit=crop",
-      alt: "Motifs Géométriques",
-      category: "geometrique",
-      artist: "Ryu Yamamoto",
-      description: "Composition abstraite inspirée du zen",
-      style: "Blackwork moderne",
+      alt: "Personnage Pop-Culture",
+      category: "pop-culture",
+      artist: "Karasu Tattoo",
+      description: "Personnage emblématique de la pop-culture japonaise",
+      style: "Style pop moderne",
       height: 200
     },
     {
@@ -65,7 +65,7 @@ const Gallery: React.FC = () => {
       src: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=400&h=650&fit=crop",
       alt: "Yokai Moderne",
       category: "neo-japonais",
-      artist: "Akira Sato",
+      artist: "Karasu Tattoo",
       description: "Créature mythologique style manga",
       style: "Neo-japonais",
       height: 325
@@ -75,7 +75,7 @@ const Gallery: React.FC = () => {
       src: "https://images.unsplash.com/photo-1606902965551-dce093cda6e7?w=400&h=450&fit=crop",
       alt: "Calligraphie Artistique",
       category: "calligraphie",
-      artist: "Yuki Nakamura",
+      artist: "Karasu Tattoo",
       description: "Caractères japonais stylisés",
       style: "Calligraphie moderne",
       height: 225
@@ -85,7 +85,7 @@ const Gallery: React.FC = () => {
       src: "https://images.unsplash.com/photo-1588776814546-daab30c310ce?w=400&h=550&fit=crop",
       alt: "Oni Traditionnel",
       category: "irezumi",
-      artist: "Hiroshi Tanaka",
+      artist: "Karasu Tattoo",
       description: "Masque de démon japonais coloré",
       style: "Irezumi coloré",
       height: 275
@@ -93,11 +93,11 @@ const Gallery: React.FC = () => {
     {
       id: 8,
       src: "https://images.unsplash.com/photo-1594736797933-d0fce9e2bbf7?w=400&h=500&fit=crop",
-      alt: "Vagues Abstraites",
-      category: "geometrique",
-      artist: "Ryu Yamamoto",
-      description: "Interprétation moderne des vagues d'Hokusai",
-      style: "Abstrait japonais",
+      alt: "Héros Manga",
+      category: "manga",
+      artist: "Karasu Tattoo",
+      description: "Héros de manga dans un style moderne et dynamique",
+      style: "Manga contemporain",
       height: 250
     },
     {
@@ -105,7 +105,7 @@ const Gallery: React.FC = () => {
       src: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=600&fit=crop",
       alt: "Héros Manga",
       category: "neo-japonais",
-      artist: "Akira Sato",
+      artist: "Karasu Tattoo",
       description: "Personnage d'animation stylisé",
       style: "Neo-manga",
       height: 300
@@ -115,7 +115,7 @@ const Gallery: React.FC = () => {
       src: "https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?w=400&h=400&fit=crop",
       alt: "Lotus Zen",
       category: "floral",
-      artist: "Yuki Nakamura",
+      artist: "Karasu Tattoo",
       description: "Fleur de lotus en trait unique",
       style: "Minimalisme zen",
       height: 200
@@ -125,7 +125,7 @@ const Gallery: React.FC = () => {
       src: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=750&fit=crop",
       alt: "Phoenix Irezumi",
       category: "irezumi",
-      artist: "Hiroshi Tanaka",
+      artist: "Karasu Tattoo",
       description: "Oiseau légendaire aux couleurs vives",
       style: "Irezumi majestueux",
       height: 375
@@ -135,7 +135,7 @@ const Gallery: React.FC = () => {
       src: "https://images.unsplash.com/photo-1567359781514-3b964e2b04d6?w=400&h=350&fit=crop",
       alt: "Mandala Japonais",
       category: "geometrique",
-      artist: "Ryu Yamamoto",
+      artist: "Karasu Tattoo",
       description: "Motifs circulaires traditionnels",
       style: "Géométrie sacrée",
       height: 175
@@ -144,11 +144,10 @@ const Gallery: React.FC = () => {
 
   const categories = [
     { id: 'all', name: 'Tous', kanji: '全', color: 'text-bone' },
-    { id: 'irezumi', name: 'Irezumi', kanji: '入墨', color: 'text-primary' },
+    { id: 'manga', name: 'Manga', kanji: '漫', color: 'text-primary' },
     { id: 'neo-japonais', name: 'Neo-Japonais', kanji: '新', color: 'text-purple' },
-    { id: 'floral', name: 'Floral', kanji: '花', color: 'text-emerald' },
-    { id: 'geometrique', name: 'Géométrique', kanji: '幾', color: 'text-teal' },
-    { id: 'calligraphie', name: 'Calligraphie', kanji: '書', color: 'text-gold' }
+    { id: 'pop-culture', name: 'Pop-Culture', kanji: '流', color: 'text-teal' },
+    { id: 'floral', name: 'Floral', kanji: '花', color: 'text-emerald' }
   ];
 
   const filteredImages = selectedCategory === 'all' 
