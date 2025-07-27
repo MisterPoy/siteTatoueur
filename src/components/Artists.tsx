@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaInstagram, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 interface Artist {
   id: number;
@@ -16,6 +17,8 @@ interface Artist {
 
 const Artists: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const headerRef = useScrollReveal();
+  const ctaRef = useScrollReveal();
 
   const artists: Artist[] = [
     {
@@ -82,7 +85,7 @@ const Artists: React.FC = () => {
     <section id="artists" className="py-20 bg-karasu-900 japanese-texture">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16 scroll-reveal">
+        <div ref={headerRef} className="text-center mb-16 scroll-reveal">
           <div className="mb-6">
             <span className="text-4xl kanji-style text-primary">職人</span>
             <div className="text-sm font-accent text-karasu-400 tracking-widest mt-2">
@@ -211,7 +214,7 @@ const Artists: React.FC = () => {
         </div>
 
         {/* Studio Philosophy */}
-        <div className="mt-20 text-center scroll-reveal">
+        <div ref={ctaRef} className="mt-20 text-center scroll-reveal">
           <div className="glass-card p-8 max-w-4xl mx-auto">
             <div className="mb-6">
               <span className="text-3xl kanji-style text-gold">和</span>

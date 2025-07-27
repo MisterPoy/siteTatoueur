@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaTimes, FaChevronLeft, FaChevronRight, FaExpand } from 'react-icons/fa';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 interface GalleryImage {
   id: number;
@@ -15,6 +16,8 @@ interface GalleryImage {
 const Gallery: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const headerRef = useScrollReveal();
+  const ctaRef = useScrollReveal();
 
   const images: GalleryImage[] = [
     {
@@ -195,7 +198,7 @@ const Gallery: React.FC = () => {
     <section id="gallery" className="py-20 bg-karasu-800 japanese-texture">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16 scroll-reveal">
+        <div ref={headerRef} className="text-center mb-16 scroll-reveal">
           <div className="mb-6">
             <span className="text-4xl kanji-style text-gold">作品</span>
             <div className="text-sm font-accent text-karasu-400 tracking-widest mt-2">
@@ -277,7 +280,7 @@ const Gallery: React.FC = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-20 scroll-reveal">
+        <div ref={ctaRef} className="text-center mt-20 scroll-reveal">
           <div className="glass-card p-8 max-w-2xl mx-auto">
             <div className="mb-4">
               <span className="text-3xl kanji-style text-primary">夢</span>

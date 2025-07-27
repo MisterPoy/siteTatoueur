@@ -1,7 +1,9 @@
 import React from 'react';
 import { FaClock, FaMapMarkerAlt, FaPhoneAlt, FaShieldAlt, FaHeart } from 'react-icons/fa';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const Infos: React.FC = () => {
+  const headerRef = useScrollReveal();
   const pricingTiers = [
     {
       id: 1,
@@ -57,7 +59,7 @@ const Infos: React.FC = () => {
     <section id="infos" className="py-20 bg-karasu-950 japanese-texture">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16 scroll-reveal">
+        <div ref={headerRef} className="text-center mb-16 scroll-reveal">
           <div className="mb-6">
             <span className="text-4xl kanji-style text-gold">情報</span>
             <div className="text-sm font-accent text-karasu-400 tracking-widest mt-2">

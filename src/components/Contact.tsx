@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaInstagram, FaTwitter, FaTiktok, FaPaperPlane } from 'react-icons/fa';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 interface FormData {
   name: string;
@@ -11,6 +12,8 @@ interface FormData {
 }
 
 const Contact: React.FC = () => {
+  const headerRef = useScrollReveal();
+  const noteRef = useScrollReveal();
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -104,7 +107,7 @@ const Contact: React.FC = () => {
     <section id="contact" className="py-20 bg-karasu-950 japanese-texture">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16 scroll-reveal">
+        <div ref={headerRef} className="text-center mb-16 scroll-reveal">
           <div className="mb-6">
             <span className="text-4xl kanji-style text-primary">連絡</span>
             <div className="text-sm font-accent text-karasu-400 tracking-widest mt-2">
@@ -354,7 +357,7 @@ const Contact: React.FC = () => {
         </div>
 
         {/* Note importante */}
-        <div className="mt-16 text-center scroll-reveal">
+        <div ref={noteRef} className="mt-16 text-center scroll-reveal">
           <div className="glass-card p-6 max-w-4xl mx-auto border border-gold/30">
             <div className="flex items-center justify-center mb-4">
               <span className="text-3xl kanji-style text-gold">約</span>
