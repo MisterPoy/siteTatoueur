@@ -1,13 +1,25 @@
 name: Deploy to GitHub Pages
 
+# Permissions nécessaires pour GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Concurrency group pour éviter les déploiements simultanés
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
-  build-and-deploy:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     
     steps:
@@ -37,14 +49,3 @@ jobs:
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
-
-# Permissions nécessaires pour GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# Concurrency group pour éviter les déploiements simultanés
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
