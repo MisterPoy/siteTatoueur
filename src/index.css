@@ -1,0 +1,243 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600&display=swap');
+
+@theme {
+  --font-heading: 'Zen Tokyo Zoo', cursive;
+  --font-body: 'Noto Sans JP', sans-serif;
+  --font-accent: 'Cinzel', serif;
+  
+  --color-karasu-50: #fafafa;
+  --color-karasu-100: #f4f4f5;
+  --color-karasu-200: #e4e4e7;
+  --color-karasu-300: #d4d4d8;
+  --color-karasu-400: #a1a1aa;
+  --color-karasu-500: #71717a;
+  --color-karasu-600: #52525b;
+  --color-karasu-700: #3f3f46;
+  --color-karasu-800: #27272a;
+  --color-karasu-900: #18181b;
+  --color-karasu-950: #09090b;
+  
+  --color-primary: #0891b2;
+  --color-primary-dark: #0e7490;
+  --color-primary-light: #67e8f9;
+  --color-secondary: #8b5cf6;
+  --color-bone: #f8fafc;
+  --color-gold: #fbbf24;
+  --color-sakura: #ffb7c5;
+  --color-teal: #14b8a6;
+  --color-purple: #8b5cf6;
+  --color-emerald: #10b981;
+  --color-indigo: #6366f1;
+  
+  --animate-fade-in: fadeIn 1.2s ease-out;
+  --animate-slide-up: slideUp 0.8s ease-out;
+  --animate-reveal: reveal 1.5s ease-out;
+  --animate-float: float 4s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(60px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes reveal {
+  0% { opacity: 0; transform: scale(0.9) translateY(50px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+@keyframes rotate-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-body bg-karasu-950 text-bone overflow-x-hidden;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .karasu-gradient {
+    background: linear-gradient(135deg, #09090b 0%, #18181b 30%, #27272a 60%, #09090b 100%);
+  }
+  
+  .japanese-texture {
+    background-image: 
+      radial-gradient(circle at 20% 30%, rgba(8, 145, 178, 0.08) 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.06) 0%, transparent 40%),
+      radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.04) 0%, transparent 60%);
+  }
+  
+  .primary-glow {
+    box-shadow: 0 0 30px rgba(8, 145, 178, 0.25);
+  }
+  
+  .soft-glow {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.15);
+  }
+  
+  .teal-glow {
+    box-shadow: 0 0 25px rgba(20, 184, 166, 0.2);
+  }
+  
+  .emerald-glow {
+    box-shadow: 0 0 25px rgba(16, 185, 129, 0.2);
+  }
+  
+  .glass-card {
+    @apply bg-karasu-900/70 backdrop-blur-md border border-karasu-700/50 rounded-lg;
+  }
+  
+  .hover-lift {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 
+      0 20px 40px rgba(0, 0, 0, 0.3),
+      0 0 20px rgba(8, 145, 178, 0.15);
+  }
+  
+  .hover-tilt {
+    transition: all 0.3s ease;
+  }
+  
+  .hover-tilt:hover {
+    transform: perspective(1000px) rotateX(5deg) rotateY(5deg) scale(1.05);
+  }
+  
+  .text-shimmer {
+    background: linear-gradient(
+      90deg,
+      #f8fafc 0%,
+      #dc2626 50%,
+      #f8fafc 100%
+    );
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+  
+  .kanji-style {
+    font-family: 'Zen Tokyo Zoo', cursive;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+  }
+  
+  .masonry-grid {
+    column-count: 3;
+    column-gap: 1rem;
+    break-inside: avoid;
+  }
+  
+  .masonry-item {
+    break-inside: avoid;
+    margin-bottom: 1rem;
+  }
+  
+  @media (max-width: 1024px) {
+    .masonry-grid {
+      column-count: 2;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .masonry-grid {
+      column-count: 1;
+    }
+  }
+  
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+  }
+  
+  .scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .brush-stroke {
+    background: linear-gradient(45deg, #0891b2, #8b5cf6, #10b981);
+    background-size: 300% 300%;
+    animation: gradient-shift 4s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+  }
+  
+  .text-shimmer {
+    background: linear-gradient(90deg, #f8fafc, #fbbf24, #f8fafc);
+    background-size: 200% 100%;
+    animation: shimmer 2s ease-in-out infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .brush-stroke::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #dc2626, transparent);
+    opacity: 0.7;
+  }
+}
+
+@layer utilities {
+  .text-shadow-crimson {
+    text-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
+  }
+  
+  .text-shadow-dark {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  }
+  
+  .border-gradient {
+    border: 1px solid;
+    border-image: linear-gradient(90deg, transparent, #dc2626, transparent) 1;
+  }
+}
