@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaInstagram, FaPalette, FaBrush } from 'react-icons/fa';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
@@ -6,6 +6,8 @@ const Artists: React.FC = () => {
   const headerRef = useScrollReveal();
   const artistsRef = useScrollReveal();
   const ctaRef = useScrollReveal();
+  const [theoraActive, setTheoraActive] = useState(false);
+  const [karasuActive, setKarasuActive] = useState(false);
 
   return (
     <section id="artists" className="py-20 bg-karasu-900 japanese-texture">
@@ -33,11 +35,16 @@ const Artists: React.FC = () => {
               
               {/* THEORA - Grapheur & Réalisme */}
               <div className="group">
-                <div className="relative overflow-hidden rounded-lg border-2 border-primary/30 hover:border-primary transition-all duration-300 mb-6">
+                <div 
+                  className="relative overflow-hidden rounded-lg border-2 border-primary/30 hover:border-primary transition-all duration-300 mb-6 cursor-pointer"
+                  onClick={() => setTheoraActive(!theoraActive)}
+                >
                   <img
                     src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&crop=face"
                     alt="Theora - Grapheur et Tatoueur Réalisme"
-                    className="w-full h-[500px] object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                    className={`w-full h-[500px] object-cover transition-all duration-500 ${
+                      theoraActive ? 'grayscale-0' : 'grayscale group-hover:grayscale-0 group-active:grayscale-0'
+                    }`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-karasu-950/80 via-transparent to-transparent"></div>
                   
@@ -107,11 +114,16 @@ const Artists: React.FC = () => {
 
               {/* KARASU - Japonais */}
               <div className="group">
-                <div className="relative overflow-hidden rounded-lg border-2 border-primary/30 hover:border-primary transition-all duration-300 mb-6">
+                <div 
+                  className="relative overflow-hidden rounded-lg border-2 border-primary/30 hover:border-primary transition-all duration-300 mb-6 cursor-pointer"
+                  onClick={() => setKarasuActive(!karasuActive)}
+                >
                   <img
                     src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop&crop=face"
                     alt="Karasu - Tatoueur Japonais"
-                    className="w-full h-[500px] object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                    className={`w-full h-[500px] object-cover transition-all duration-500 ${
+                      karasuActive ? 'grayscale-0' : 'grayscale group-hover:grayscale-0 group-active:grayscale-0'
+                    }`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-karasu-950/80 via-transparent to-transparent"></div>
                   
