@@ -130,7 +130,7 @@ const Infos: React.FC = () => {
           <div className="glass-card p-8">
             <div className="flex items-center mb-6">
               <FaMapMarkerAlt className="text-primary text-2xl mr-4" />
-              <h3 className="text-2xl font-accent text-bone">Studio Karasu</h3>
+              <h3 className="text-2xl font-accent text-bone">Ink Ritual Tattoo</h3>
             </div>
             
             <div className="space-y-6">
@@ -140,10 +140,10 @@ const Infos: React.FC = () => {
                   Adresse
                 </h4>
                 <p className="text-karasu-200 font-body ml-6">
-                  Theora Ink Shop<br />
-                  Immeuble Guidoni RDC<br />
-                  Route de l'aéroport<br />
-                  20290 Lucciana, Corse
+                  Ink Ritual Tattoo<br />
+                  123 Rue de l'Art<br />
+                  Quartier Créatif<br />
+                  75001 Paris, France
                 </p>
               </div>
               

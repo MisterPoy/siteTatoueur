@@ -20,9 +20,9 @@ const Footer: React.FC = () => {
   ];
 
   const socialLinks = [
-    { icon: <FaInstagram />, name: "Instagram", url: "https://instagram.com/karasutattoo.fr", handle: "@karasutattoo.fr" },
-    { icon: <FaTwitter />, name: "Twitter", url: "https://twitter.com/theora_ink", handle: "@theora_ink" },
-    { icon: <FaTiktok />, name: "TikTok", url: "https://tiktok.com/@theoraink", handle: "@theoraink" }
+    { icon: <FaInstagram />, name: "Instagram", url: "https://instagram.com/inkritual.tattoo", handle: "@inkritual.tattoo" },
+    { icon: <FaTwitter />, name: "Twitter", url: "https://twitter.com/inkritual_art", handle: "@inkritual_art" },
+    { icon: <FaTiktok />, name: "TikTok", url: "https://tiktok.com/@inkritual", handle: "@inkritual" }
   ];
 
   const scrollToSection = (href: string) => {
@@ -49,12 +49,12 @@ const Footer: React.FC = () => {
                 </div>
               </div>
               <div className="text-3xl kanji-style text-bone">
-                Theora Ink Shop
+                Ink Ritual Tattoo
               </div>
             </div>
             
             <p className="text-karasu-300 mb-6 leading-relaxed font-body">
-              Theora Ink Shop - Studio de tatouage avec Karasu. 
+              Ink Ritual Tattoo - Studio de tatouage d'exception. 
               L'art de l'encre japonais au service de votre expression artistique.
             </p>
             
@@ -118,7 +118,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-4">
               <li className="flex items-start text-karasu-300">
                 <FaMapMarkerAlt className="text-primary mr-3 flex-shrink-0 mt-1" />
-                <span className="text-sm font-body">Theora Ink Shop<br />Immeuble Guidoni RDC<br />Route de l'aéroport<br />20290 Lucciana, Corse</span>
+                <span className="text-sm font-body">Ink Ritual Tattoo<br />123 Rue de l'Art<br />Quartier Créatif<br />75001 Paris, France</span>
               </li>
               <li className="flex items-center text-karasu-300">
                 <FaPhone className="text-primary mr-3 flex-shrink-0" />
@@ -128,8 +128,8 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center text-karasu-300">
                 <FaEnvelope className="text-primary mr-3 flex-shrink-0" />
-                <a href="mailto:contact@karasu-ink.fr" className="text-sm hover:text-primary transition-colors duration-300 font-body">
-                  contact@karasu-ink.fr
+                <a href="mailto:contact@inkritual-tattoo.fr" className="text-sm hover:text-primary transition-colors duration-300 font-body">
+                  contact@inkritual-tattoo.fr
                 </a>
               </li>
             </ul>
@@ -209,7 +209,7 @@ const Footer: React.FC = () => {
         <div className="pb-8">
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
             <div className="text-karasu-400 text-sm text-center lg:text-left font-body">
-              © {currentYear} Karasu Ink. Tous droits réservés.
+              © {currentYear} Ink Ritual Tattoo. Tous droits réservés.
             </div>
             
             <div className="flex items-center text-karasu-400 text-sm font-body">

@@ -223,7 +223,7 @@ const Artists: React.FC = () => {
               </div>
             </div>
             <p className="text-karasu-200 text-lg leading-relaxed font-body mb-6">
-              Chez Karasu Ink, nous honorons la tradition millénaire du tatouage japonais 
+              Chez Ink Ritual Tattoo, nous honorons la tradition millénaire du tatouage japonais 
               tout en embrassant l'innovation contemporaine. Chaque artiste apporte sa vision unique, 
               créant un équilibre parfait entre respect ancestral et créativité moderne.
             </p>

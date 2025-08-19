@@ -47,10 +47,10 @@ const Hero: React.FC = () => {
             {/* Caractère japonais principal - KARASU */}
             <div className="mb-8">
               <span className="text-7xl sm:text-9xl md:text-[12rem] kanji-style text-primary text-shadow-primary animate-reveal leading-none">
-                烏
+                墨
               </span>
               <div className="text-lg font-accent text-primary tracking-widest mt-4 mb-2">
-                KARASU · LE CORBEAU
+                SUMI · L'ENCRE
               </div>
               <div className="text-sm font-accent text-karasu-400 tracking-widest">
                 L'IDENTITÉ DE L'ARTISTE
@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
 
             {/* Titre français */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-accent text-bone mb-6 text-shadow-dark">
-              <span className="block mb-2">Theora Ink Shop</span>
+              <span className="block mb-2">Ink Ritual Tattoo</span>
               <span className="block text-2xl sm:text-3xl md:text-4xl text-primary brush-stroke">
                 L'art de l'encre sacrée
               </span>
@@ -67,8 +67,8 @@ const Hero: React.FC = () => {
 
             {/* Slogan */}
             <p className="text-lg sm:text-xl md:text-2xl text-karasu-300 mb-12 max-w-3xl mx-auto leading-relaxed font-body">
-              Chez <span className="text-primary font-semibold kanji-style">Theora Ink Shop</span>, 
-              <span className="text-primary font-semibold">Karasu</span> vous propose des tatouages uniques, 
+              Chez <span className="text-primary font-semibold kanji-style">Ink Ritual Tattoo</span>, 
+              nos <span className="text-primary font-semibold">artistes</span> vous proposent des tatouages uniques, 
               <br className="hidden md:block" />
               inspirés de la tradition japonaise et de l'esthétique moderne.
             </p>
@@ -88,16 +88,16 @@ const Hero: React.FC = () => {
 
           {/* Éléments décoratifs japonais - KARASU en vedette */}
           <div className="absolute top-1/4 left-8 hidden lg:block">
-            <div className="text-3xl kanji-style text-primary/40 animate-float">烏</div>
+            <div className="text-3xl kanji-style text-primary/40 animate-float">墨</div>
           </div>
           <div className="absolute top-1/3 right-12 hidden lg:block">
-            <div className="text-2xl kanji-style text-primary/30 animate-float" style={{ animationDelay: '1s' }}>烏</div>
+            <div className="text-2xl kanji-style text-primary/30 animate-float" style={{ animationDelay: '1s' }}>墨</div>
           </div>
           <div className="absolute bottom-1/4 left-1/4 hidden lg:block">
-            <div className="text-xl kanji-style text-gold/40 animate-float" style={{ animationDelay: '2s' }}>烏</div>
+            <div className="text-xl kanji-style text-gold/40 animate-float" style={{ animationDelay: '2s' }}>墨</div>
           </div>
           <div className="absolute bottom-1/3 right-1/4 hidden lg:block">
-            <div className="text-lg kanji-style text-primary/25 animate-float" style={{ animationDelay: '3s' }}>烏</div>
+            <div className="text-lg kanji-style text-primary/25 animate-float" style={{ animationDelay: '3s' }}>墨</div>
           </div>
         </div>
       </div>

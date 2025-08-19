@@ -6,8 +6,8 @@ const Artists: React.FC = () => {
   const headerRef = useScrollReveal();
   const artistsRef = useScrollReveal();
   const ctaRef = useScrollReveal();
-  const [theoraActive, setTheoraActive] = useState(false);
-  const [karasuActive, setKarasuActive] = useState(false);
+  const [akiraActive, setAkiraActive] = useState(false);
+  const [hiroActive, setHiroActive] = useState(false);
 
   return (
     <section id="artists" className="py-20 bg-karasu-900 japanese-texture">
@@ -37,13 +37,13 @@ const Artists: React.FC = () => {
               <div className="group">
                 <div 
                   className="relative overflow-hidden rounded-lg border-2 border-primary/30 hover:border-primary transition-all duration-300 mb-6 cursor-pointer"
-                  onClick={() => setTheoraActive(!theoraActive)}
+                  onClick={() => setAkiraActive(!akiraActive)}
                 >
                   <img
                     src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&crop=face"
-                    alt="Theora - Grapheur et Tatoueur Réalisme"
+                    alt="Akira - Grapheur et Tatoueur Réalisme"
                     className={`w-full h-[500px] object-cover transition-all duration-500 ${
-                      theoraActive ? 'grayscale-0' : 'grayscale group-hover:grayscale-0 group-active:grayscale-0'
+                      akiraActive ? 'grayscale-0' : 'grayscale group-hover:grayscale-0 group-active:grayscale-0'
                     }`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-karasu-950/80 via-transparent to-transparent"></div>
@@ -56,7 +56,7 @@ const Artists: React.FC = () => {
                   {/* Nom en overlay */}
                   <div className="absolute bottom-6 left-6">
                     <h3 className="text-3xl font-accent text-bone mb-2">
-                      Th3ora
+                      Akira
                     </h3>
                     <div className="flex items-center space-x-3">
                       <FaPalette className="text-purple" />
@@ -65,7 +65,7 @@ const Artists: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Informations Theora */}
+                {/* Informations Akira */}
                 <div className="space-y-6">
                   {/* Spécialités */}
                   <div>
@@ -100,13 +100,13 @@ const Artists: React.FC = () => {
                   {/* Contact */}
                   <div className="flex justify-center">
                     <a
-                      href="https://instagram.com/th3ora.ink"
+                      href="https://instagram.com/akira.ink"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center space-x-3 px-6 py-3 bg-purple/20 hover:bg-purple border border-purple hover:border-purple rounded-lg text-bone transition-all duration-300 hover-lift group"
                     >
                       <FaInstagram className="group-hover:scale-110 transition-transform duration-300" />
-                      <span className="font-accent">@th3ora.ink</span>
+                      <span className="font-accent">@akira.ink</span>
                     </a>
                   </div>
                 </div>
@@ -116,13 +116,13 @@ const Artists: React.FC = () => {
               <div className="group">
                 <div 
                   className="relative overflow-hidden rounded-lg border-2 border-primary/30 hover:border-primary transition-all duration-300 mb-6 cursor-pointer"
-                  onClick={() => setKarasuActive(!karasuActive)}
+                  onClick={() => setHiroActive(!hiroActive)}
                 >
                   <img
                     src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop&crop=face"
-                    alt="Karasu - Tatoueur Japonais"
+                    alt="Hiro - Tatoueur Japonais"
                     className={`w-full h-[500px] object-cover transition-all duration-500 ${
-                      karasuActive ? 'grayscale-0' : 'grayscale group-hover:grayscale-0 group-active:grayscale-0'
+                      hiroActive ? 'grayscale-0' : 'grayscale group-hover:grayscale-0 group-active:grayscale-0'
                     }`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-karasu-950/80 via-transparent to-transparent"></div>
@@ -135,7 +135,7 @@ const Artists: React.FC = () => {
                   {/* Nom en overlay */}
                   <div className="absolute bottom-6 left-6">
                     <h3 className="text-3xl font-accent text-bone mb-2">
-                      Karasu <span className="text-primary kanji-style">烏</span>
+                      Hiro <span className="text-primary kanji-style">龍</span>
                     </h3>
                     <div className="flex items-center space-x-3">
                       <span className="text-primary kanji-style text-xl">鴉</span>
@@ -144,7 +144,7 @@ const Artists: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Informations Karasu */}
+                {/* Informations Hiro */}
                 <div className="space-y-6">
                   {/* Spécialités */}
                   <div>
@@ -187,13 +187,13 @@ const Artists: React.FC = () => {
                   {/* Contact */}
                   <div className="flex justify-center">
                     <a
-                      href="https://instagram.com/karasutattoo.fr"
+                      href="https://instagram.com/hiro.tattoo"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center space-x-3 px-6 py-3 bg-primary/20 hover:bg-primary border border-primary hover:border-primary rounded-lg text-bone transition-all duration-300 hover-lift group"
                     >
                       <FaInstagram className="group-hover:scale-110 transition-transform duration-300" />
-                      <span className="font-accent">@karasutattoo.fr</span>
+                      <span className="font-accent">@hiro.tattoo</span>
                     </a>
                   </div>
                 </div>

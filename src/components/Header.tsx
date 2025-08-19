@@ -41,7 +41,7 @@ const Header: React.FC = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo Karasu */}
+          {/* Logo */}
           <div
             className="flex items-center cursor-pointer group"
             onClick={() => scrollToSection('hero')}
@@ -58,10 +58,10 @@ const Header: React.FC = () => {
               {/* Nom du salon */}
               <div>
                 <div className="text-2xl lg:text-3xl kanji-style text-bone group-hover:text-shimmer transition-all duration-300">
-                  Theora Ink Shop
+                  Ink Ritual Tattoo
                 </div>
                 <div className="text-xs text-karasu-400 font-accent tracking-wider hidden lg:block">
-                  烏 · Avec Karasu
+                  烏 · L'Art Sacré
                 </div>
               </div>
             </div>
