@@ -156,6 +156,16 @@
     -webkit-text-fill-color: transparent;
     animation: shimmer 3s ease-in-out infinite;
   }
+
+  /* Hide scrollbar for testimonials carousel */
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera */
+  }
   
   .kanji-style {
     font-family: 'Zen Tokyo Zoo', cursive;

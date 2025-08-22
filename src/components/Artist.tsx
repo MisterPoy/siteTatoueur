@@ -228,8 +228,8 @@ const Artists: React.FC = () => {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center justify-items-center">
               <div className='flex flex-col items-center'>
-                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mb-4 mx-auto md:mx-0">
-                  <span className="text-primary kanji-style text-xl">相</span>
+                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mb-4 mx-auto md:mx-0 text-primary hover:bg-primary hover:text-bone transition-all duration-300 cursor-context-menu">
+                  <span className=" kanji-style text-xl">相</span>
                 </div>
                 <h4 className="text-bone font-accent mb-2">1. Consultation</h4>
                 <p className="text-karasu-300 text-sm font-body">
@@ -237,8 +237,9 @@ const Artists: React.FC = () => {
                 </p>
               </div>
               <div className='flex flex-col items-center'>
-                <div className="w-12 h-12 bg-purple/20 rounded-full flex items-center justify-center mb-4 mx-auto md:mx-0">
-                  <span className="text-purple kanji-style text-xl">創</span>
+                <div className="w-12 h-12 bg-purple/20 rounded-full flex items-center justify-center mb-4 mx-auto md:mx-0
+                text-purple hover:bg-purple hover:text-bone transition-all duration-300 cursor-context-menu">
+                  <span className=" kanji-style text-xl">創</span>
                 </div>
                 <h4 className="text-bone font-accent mb-2">2. Création</h4>
                 <p className="text-karasu-300 text-sm font-body">
@@ -246,8 +247,9 @@ const Artists: React.FC = () => {
                 </p>
               </div>
               <div className='flex flex-col items-center'>
-                <div className="w-12 h-12 bg-emerald/20 rounded-full flex items-center justify-center mb-4 mx-auto md:mx-0">
-                  <span className="text-emerald kanji-style text-xl">実</span>
+                <div className="w-12 h-12 bg-emerald/20 rounded-full flex items-center justify-center mb-4 mx-auto md:mx-0
+                text-emerald hover:bg-emerald hover:text-bone transition-all duration-300 cursor-alias cursor-context-menu  ">
+                  <span className=" kanji-style text-xl">実</span>
                 </div>
                 <h4 className="text-bone font-accent mb-2">3. Réalisation</h4>
                 <p className="text-karasu-300 text-sm font-body">

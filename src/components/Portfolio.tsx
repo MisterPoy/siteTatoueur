@@ -102,12 +102,23 @@ const Portfolio: React.FC = () => {
 
   const openModal = (image: PortfolioImage) => {
     setSelectedImage(image);
+    // Sauvegarder l'état original du body
+    const originalStyle = window.getComputedStyle(document.body).overflow;
+    document.body.setAttribute('data-original-overflow', originalStyle);
     document.body.style.overflow = 'hidden';
   };
 
   const closeModal = () => {
     setSelectedImage(null);
-    document.body.style.overflow = 'unset';
+    // Restaurer l'état original ou auto par défaut
+    const originalOverflow = document.body.getAttribute('data-original-overflow') || 'auto';
+    document.body.style.overflow = originalOverflow;
+    document.body.removeAttribute('data-original-overflow');
+    
+    // Force le navigateur à recalculer le scroll
+    setTimeout(() => {
+      document.body.style.overflow = '';
+    }, 50);
   };
 
   // Navigation clavier pour le modal
@@ -122,6 +133,17 @@ const Portfolio: React.FC = () => {
     document.addEventListener('keydown', handleKeyPress);
     return () => document.removeEventListener('keydown', handleKeyPress);
   }, [selectedImage, portfolioImages.length]);
+
+  // Cleanup au démontage du composant
+  useEffect(() => {
+    return () => {
+      // S'assurer que le scroll est restauré si le composant se démonte avec modal ouverte
+      if (selectedImage) {
+        document.body.style.overflow = '';
+        document.body.removeAttribute('data-original-overflow');
+      }
+    };
+  }, [selectedImage]);
 
   return (
     <section id="portfolio" className="py-20 bg-karasu-900 japanese-texture">

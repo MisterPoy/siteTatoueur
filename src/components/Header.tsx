@@ -27,6 +27,7 @@ const Header: React.FC = () => {
     { id: 'artists', label: 'Artistes' },
     { id: 'portfolio', label: 'Réalisations' },
     { id: 'gallery', label: 'Spécialités' },
+    { id: 'reviews', label: 'Avis' },
     { id: 'infos', label: 'Infos' },
     { id: 'contact', label: 'Contact' },
   ];

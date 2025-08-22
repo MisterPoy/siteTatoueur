@@ -1,6 +1,6 @@
+import React, { useState, useEffect } from 'react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
-import { FaStar, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import { useState } from 'react';
+import { FaStar, FaChevronLeft, FaChevronRight, FaPlay, FaPause } from 'react-icons/fa';
 
 interface Testimonial {
   name: string;
@@ -16,7 +16,11 @@ interface Testimonial {
 export default function Testimonials() {
   const headerRef = useScrollReveal();
   const testimonialsRef = useScrollReveal();
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const [isManualControl, setIsManualControl] = useState(false);
+  const containerRef = React.useRef<HTMLDivElement>(null);
+  const animationRef = React.useRef<number | null>(null);
+  const scrollPositionRef = React.useRef(0);
 
   const testimonials: Testimonial[] = [
     {
@@ -90,23 +94,85 @@ export default function Testimonials() {
     ));
   };
 
-  const totalSlides = testimonials.length;
+  const duplicatedTestimonials = [...testimonials, ...testimonials]; // Double pour boucle
+  const cardWidth = 326; // width + gap
+  const resetPoint = testimonials.length * cardWidth;
 
-  const nextSlide = () => {
-    setCurrentIndex(prev => (prev + 1) % totalSlides);
-  };
+  // Animation continue
+  useEffect(() => {
+    if (!containerRef.current) return;
 
-  const prevSlide = () => {
-    setCurrentIndex(prev => prev === 0 ? totalSlides - 1 : prev - 1);
-  };
+    const scrollSpeed = 0.5; // pixels par frame
 
-  const getVisibleTestimonials = () => {
-    // Affiche 3 témoignages consécutifs en carousel infini
-    const visible = [];
-    for (let i = 0; i < 3; i++) {
-      visible.push(testimonials[(currentIndex + i) % totalSlides]);
+    const animate = () => {
+      if (!isPaused && !isManualControl && containerRef.current) {
+        scrollPositionRef.current += scrollSpeed;
+        
+        // Reset invisible à la fin du premier set
+        if (scrollPositionRef.current >= resetPoint) {
+          scrollPositionRef.current = 0;
+        }
+        
+        containerRef.current.scrollLeft = scrollPositionRef.current;
+      }
+      animationRef.current = requestAnimationFrame(animate);
+    };
+
+    animationRef.current = requestAnimationFrame(animate);
+
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
+  }, [isPaused, isManualControl, resetPoint]);
+
+  // Contrôles manuels avec boucle infinie
+  const scrollNext = () => {
+    if (!containerRef.current) return;
+    setIsManualControl(true);
+    
+    let newPosition = scrollPositionRef.current + cardWidth;
+    
+    // Si on dépasse la fin, on recommence au début (boucle infinie)
+    if (newPosition >= resetPoint) {
+      newPosition = 0;
     }
-    return visible;
+    
+    scrollPositionRef.current = newPosition;
+    containerRef.current.scrollTo({ left: newPosition, behavior: 'smooth' });
+    
+    // Reprendre l'auto-scroll après 5 secondes
+    setTimeout(() => setIsManualControl(false), 5000);
+  };
+
+  const scrollPrev = () => {
+    if (!containerRef.current) return;
+    setIsManualControl(true);
+    
+    let newPosition = scrollPositionRef.current - cardWidth;
+    
+    // Si on va avant le début, on va à la fin (boucle infinie)
+    if (newPosition < 0) {
+      newPosition = resetPoint - cardWidth;
+    }
+    
+    scrollPositionRef.current = newPosition;
+    containerRef.current.scrollTo({ left: newPosition, behavior: 'smooth' });
+    
+    // Reprendre l'auto-scroll après 5 secondes
+    setTimeout(() => setIsManualControl(false), 5000);
+  };
+
+  const toggleAutoScroll = () => {
+    setIsPaused(!isPaused);
+    setIsManualControl(false);
+  };
+
+  // Pause au hover
+  const handleMouseEnter = () => setIsPaused(true);
+  const handleMouseLeave = () => {
+    if (!isManualControl) setIsPaused(false);
   };
 
   return (
@@ -130,13 +196,13 @@ export default function Testimonials() {
 
         {/* Testimonials carousel */}
         <div ref={testimonialsRef} className="scroll-reveal">
-          {/* Navigation buttons */}
+          {/* Contrôles */}
           <div className="flex justify-center items-center gap-4 mb-8">
             <button
-              onClick={prevSlide}
-              className="w-12 h-12 bg-karasu-800 hover:bg-primary border border-karasu-600 hover:border-primary rounded-full flex items-center justify-center text-bone transition-all duration-300 hover-lift"
+              onClick={scrollPrev}
+              className="w-12 h-12 bg-karasu-800 hover:bg-primary border border-karasu-600 hover:border-primary rounded-full flex items-center justify-center text-bone transition-all duration-300 hover-lift group"
             >
-              <FaChevronLeft size={16} />
+              <FaChevronLeft size={16} className="group-hover:scale-110 transition-transform" />
             </button>
             
             {/* Pagination dots */}
@@ -144,34 +210,65 @@ export default function Testimonials() {
               {testimonials.map((_, i) => (
                 <button
                   key={i}
-                  onClick={() => setCurrentIndex(i)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    i === currentIndex ? 'bg-primary scale-125' : 'bg-karasu-600 hover:bg-karasu-500'
+                  onClick={() => {
+                    setIsManualControl(true);
+                    const targetPosition = i * cardWidth;
+                    scrollPositionRef.current = targetPosition;
+                    if (containerRef.current) {
+                      containerRef.current.scrollTo({ left: targetPosition, behavior: 'smooth' });
+                    }
+                    setTimeout(() => setIsManualControl(false), 5000);
+                  }}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 hover:scale-110 ${
+                    Math.round(scrollPositionRef.current / cardWidth) === i
+                      ? 'bg-primary scale-125 shadow-lg shadow-primary/50' 
+                      : 'bg-karasu-600 hover:bg-karasu-500'
                   }`}
                 />
               ))}
             </div>
+            
+            <button
+              onClick={toggleAutoScroll}
+              className="w-12 h-12 bg-karasu-800 hover:bg-gold border border-karasu-600 hover:border-gold rounded-full flex items-center justify-center text-bone transition-all duration-300 hover-lift group"
+            >
+              {isPaused ? <FaPlay size={14} /> : <FaPause size={14} />}
+            </button>
 
             <button
-              onClick={nextSlide}
-              className="w-12 h-12 bg-karasu-800 hover:bg-primary border border-karasu-600 hover:border-primary rounded-full flex items-center justify-center text-bone transition-all duration-300 hover-lift"
+              onClick={scrollNext}
+              className="w-12 h-12 bg-karasu-800 hover:bg-primary border border-karasu-600 hover:border-primary rounded-full flex items-center justify-center text-bone transition-all duration-300 hover-lift group"
             >
-              <FaChevronRight size={16} />
+              <FaChevronRight size={16} className="group-hover:scale-110 transition-transform" />
             </button>
           </div>
 
-          {/* Carousel container */}
-          <div className="relative overflow-hidden">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-              {getVisibleTestimonials().map((testimonial, index) => (
+          {/* Scroll container avec padding pour hover */}
+          <div className="relative px-4" style={{ paddingTop: '16px', paddingBottom: '16px' }}>
+            <div 
+              ref={containerRef}
+              className="flex gap-6 overflow-x-hidden scrollbar-hide"
+              style={{ 
+                scrollbarWidth: 'none', 
+                msOverflowStyle: 'none',
+                marginTop: '-16px',
+                marginBottom: '-16px',
+                paddingTop: '16px',
+                paddingBottom: '16px'
+              }}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              {duplicatedTestimonials.map((testimonial, idx) => (
                 <div
-                  key={`${currentIndex}-${index}`}
-                  className="glass-card p-5 hover-lift transition-all duration-300 group border-l-3 border-primary animate-fadeIn max-w-sm mx-auto"
+                  key={`${testimonial.name}-${idx}`}
+                  className="glass-card p-5 hover-lift transition-all duration-300 group border-l-3 border-primary flex-shrink-0 w-80"
+                  style={{ minWidth: '320px' }}
                 >
                 {/* Header compact */}
                 <div className="flex items-center justify-between mb-3">
                   <div className="flex items-center space-x-2">
-                    <div className="w-10 h-10 bg-gradient-to-br from-primary to-purple rounded-full flex items-center justify-center text-bone font-bold text-sm">
+                    <div className="w-10 h-10 bg-gradient-to-br from-primary to-purple rounded-full flex items-center justify-center text-bone font-bold text-sm group-hover:scale-110 transition-transform duration-300">
                       {testimonial.avatar}
                     </div>
                     <div>
@@ -189,10 +286,12 @@ export default function Testimonials() {
                 </div>
 
                 {/* Citation compacte */}
-                <blockquote className="text-karasu-200 leading-relaxed mb-3 group-hover:text-karasu-100 transition-colors duration-300 text-sm">
-                  <span className="text-lg text-primary/40 kanji-style">"</span>
-                  {testimonial.text}
-                  <span className="text-lg text-primary/40 kanji-style">"</span>
+                <blockquote className="text-karasu-200 leading-relaxed mb-3 group-hover:text-karasu-100 transition-colors duration-500 text-sm">
+                  <span className="text-lg text-primary/40 kanji-style opacity-60">"</span>
+                  <span className="group-hover:text-bone transition-colors duration-500">
+                    {testimonial.text}
+                  </span>
+                  <span className="text-lg text-primary/40 kanji-style opacity-60">"</span>
                 </blockquote>
 
                 {/* Détails optimisés */}
@@ -204,14 +303,18 @@ export default function Testimonials() {
                     </div>
                     <div className="text-karasu-300">{testimonial.duration}</div>
                   </div>
-                  <div className="flex items-center">
-                    <span className="text-emerald kanji-style">✓</span>
-                    <span className="text-emerald ml-1">Recommande</span>
+                  <div className="flex items-center group-hover:scale-105 transition-transform duration-300">
+                    <span className="text-emerald kanji-style animate-pulse">✓</span>
+                    <span className="text-emerald ml-1 font-medium">Recommande</span>
                   </div>
                 </div>
               </div>
             ))}
-          </div>
+            </div>
+            
+            {/* Scroll masking gradients */}
+            <div className="absolute left-4 top-0 bottom-0 w-8 bg-gradient-to-r from-karasu-800 to-transparent pointer-events-none z-10"></div>
+            <div className="absolute right-4 top-0 bottom-0 w-8 bg-gradient-to-l from-karasu-800 to-transparent pointer-events-none z-10"></div>
           </div>
         </div>
 
