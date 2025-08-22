@@ -15,8 +15,8 @@ function App() {
       <Header />
       <main id="main">
         <Hero />
-        <Artists />
         <Portfolio />
+        <Artists />
         <CallToAction />
         <Gallery />
         <CallToAction />

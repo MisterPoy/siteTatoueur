@@ -248,7 +248,7 @@ const Artists: React.FC = () => {
               </div>
               <div className='flex flex-col items-center'>
                 <div className="w-12 h-12 bg-emerald/20 rounded-full flex items-center justify-center mb-4 mx-auto md:mx-0
-                text-emerald hover:bg-emerald hover:text-bone transition-all duration-300 cursor-alias cursor-context-menu  ">
+                text-emerald hover:bg-emerald hover:text-bone transition-all duration-300 cursor-context-menu  ">
                   <span className=" kanji-style text-xl">実</span>
                 </div>
                 <h4 className="text-bone font-accent mb-2">3. Réalisation</h4>

@@ -20,62 +20,62 @@ const Portfolio: React.FC = () => {
     {
       id: 1,
       src: "./images/gallery/grue-japonaise.jpg",
-      alt: "Grue Japonaise",
-      description: "Tatouage d'une grue dans le style japonais traditionnel"
+      alt: "Grue Japonaise Traditionnelle",
+      description: "Grue authentique avec fleurs délicates dans l'art japonais"
     },
     {
       id: 2,
       src: "./images/gallery/allef-vinicius.jpg",
-      alt: "Tatouage Artistique", 
-      description: "Création délicate aux détails minutieux"
+      alt: "Processus Créatif", 
+      description: "Création de motifs géométriques en cours de réalisation"
     },
     {
       id: 3,
       src: "./images/gallery/benjamin-lehman.jpg",
-      alt: "Tatouage Complexe",
-      description: "Tatouage complexe aux détails minutieux"
+      alt: "Techniques Avancées",
+      description: "Maîtrise technique dans l'art du tatouage traditionnel japonais"
     },
     {
       id: 4,
       src: "./images/gallery/collins-lesulie-PWK6CeCJtJw-unsplash.jpg",
-      alt: "Style Contemporain",
-      description: "Style contemporain avec influences culturelles"
+      alt: "Précision Artistique",
+      description: "Précision et minutie dans chaque trait et détail"
     },
     {
       id: 5,
       src: "./images/gallery/eduardo-vaccari-pIltvcnqsfU-unsplash.jpg",
-      alt: "Art Traditionnel",
-      description: "Fusion harmonieuse entre art traditionnel et vision moderne"
+      alt: "Réalisme Floral",
+      description: "Composition florale black & grey aux détails saisissants"
     },
     {
       id: 6,
       src: "./images/gallery/jasmin-chew-WbWOF8z_NGQ-unsplash.jpg",
-      alt: "Création Personnalisée",
-      description: "Création personnalisée reflétant l'univers du client"
+      alt: "Maîtrise Ornementale",
+      description: "Création complexe mêlant motifs floraux et ornementaux"
     },
     {
       id: 7,
       src: "./images/gallery/jj-jordan-eenumTwM6Ec-unsplash.jpg",
-      alt: "Œuvre Colorée",
-      description: "Œuvre colorée aux techniques mixtes"
+      alt: "Géométrie Sacrée",
+      description: "Mandala aux motifs géométriques parfaitement équilibrés"
     },
     {
       id: 8,
       src: "./images/gallery/matheus-ferrero-RBsrv4yV5KY-unsplash.jpg",
-      alt: "Design Dynamique",
-      description: "Design dynamique et expression artistique forte"
+      alt: "Style Traditional",
+      description: "Hommage au tatouage old-school américain authentique"
     },
     {
       id: 9,
       src: "./images/gallery/pexels-photo-2183131.jpeg",
-      alt: "Tatouage Réaliste",
-      description: "Tatouage hyperréaliste aux détails saisissants"
+      alt: "Manche Irezumi Complète",
+      description: "Réalisation d'une manche japonaise traditionnelle authentique"
     },
     {
       id: 10,
       src: "./images/gallery/pexels-photo-8767196.jpeg",
-      alt: "Art Corporel",
-      description: "Expression artistique sur toile vivante"
+      alt: "Art Japonais Contemporain",
+      description: "Fusion moderne de l'art traditionnel japonais"
     }
   ];
 

@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
           <div className={`transition-all duration-1500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
             {/* Caractère japonais principal - KARASU */}
             <div className="mb-8">
-              <span className="text-7xl sm:text-9xl md:text-[12rem] kanji-style text-primary text-shadow-primary animate-reveal leading-none">
+              <span className="text-6xl sm:text-8xl md:text-[10rem] lg:text-[12rem] kanji-style text-primary text-shadow-primary animate-reveal leading-none block">
                 墨
               </span>
               <div className="text-lg font-accent text-primary tracking-widest mt-4 mb-2">

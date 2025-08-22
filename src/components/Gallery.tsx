@@ -24,11 +24,11 @@ const Gallery: React.FC = () => {
     {
       id: 1,
       src: "./images/gallery/grue-japonaise.jpg",
-      alt: "Dragon Manga",
-      category: "manga",
+      alt: "Grue Japonaise",
+      category: "neo-japonais",
       artist: "Hiro",
-      description: "Dragon stylisé inspiré du manga japonais",
-      style: "Style manga moderne",
+      description: "Grue traditionnelle japonaise avec fleurs et motifs délicats",
+      style: "Neo-japonais traditionnel",
       height: 300
     },
     {
@@ -44,11 +44,11 @@ const Gallery: React.FC = () => {
     {
       id: 3,
       src: "./images/gallery/tatouage-2.jpg",
-      alt: "Carpe Koi",
-      category: "neo-japonais",
-      artist: "Hiro",
-      description: "Koi nageant dans les vagues traditionnelles",
-      style: "Neo-japonais traditionnel",
+      alt: "Oni Black & Grey",
+      category: "black-white",
+      artist: "Akira",
+      description: "Masques Oni traditionnels avec fleurs en noir et gris",
+      style: "Black & Grey japonais",
       height: 350
     },
     {
@@ -64,92 +64,92 @@ const Gallery: React.FC = () => {
     {
       id: 5,
       src: "./images/gallery/allef-vinicius.jpg",
-      alt: "Yokai Moderne",
-      category: "neo-japonais",
-      artist: "Hiro",
-      description: "Créature mythologique style manga",
-      style: "Neo-japonais",
+      alt: "Processus Géométrique",
+      category: "process",
+      artist: "Akira",
+      description: "Artiste en pleine création de motifs géométriques tribaux",
+      style: "Géométrique moderne",
       height: 325
     },
     {
       id: 6,
       src: "./images/gallery/benjamin-lehman.jpg",
-      alt: "Calligraphie Artistique",
-      category: "pop-culture",
+      alt: "Processus Neo-Japonais",
+      category: "process",
       artist: "Hiro",
-      description: "Caractères japonais stylisés",
-      style: "Pop-culture japonaise",
+      description: "Création en cours de tatouage aux nuages traditionnels",
+      style: "Neo-japonais en action",
       height: 225
     },
     {
       id: 7,
       src: "./images/gallery/collins-lesulie-PWK6CeCJtJw-unsplash.jpg",
-      alt: "Oni Traditionnel",
-      category: "neo-japonais",
-      artist: "Hiro",
-      description: "Masque de démon japonais coloré",
-      style: "Neo-japonais coloré",
+      alt: "Processus Ornamental",
+      category: "process",
+      artist: "Akira",
+      description: "Artiste tatouant des motifs floraux et ornementaux",
+      style: "Processus créatif",
       height: 275
     },
     {
       id: 8,
       src: "./images/gallery/eduardo-vaccari-pIltvcnqsfU-unsplash.jpg",
-      alt: "Héros Manga",
-      category: "manga",
-      artist: "Hiro",
-      description: "Héros de manga dans un style moderne et dynamique",
-      style: "Style manga moderne",
+      alt: "Pivoines Black & Grey",
+      category: "floral",
+      artist: "Akira",
+      description: "Composition florale avec pivoines et feuillages détaillés",
+      style: "Black & Grey réaliste",
       height: 250
     },
     {
       id: 9,
       src: "./images/gallery/jasmin-chew-WbWOF8z_NGQ-unsplash.jpg",
-      alt: "Héros Manga",
-      category: "neo-japonais",
-      artist: "Hiro",
-      description: "Personnage d'animation stylisé",
-      style: "Neo-japonais contemporain",
+      alt: "Pivoine Dragon",
+      category: "floral",
+      artist: "Akira",
+      description: "Grande pivoine accompagnée de motifs serpentins ornementaux",
+      style: "Réalisme floral complexe",
       height: 300
     },
     {
       id: 10,
       src: "./images/gallery/jj-jordan-eenumTwM6Ec-unsplash.jpg",
-      alt: "Lotus Zen",
+      alt: "Mandala Dorsal",
       category: "floral",
       artist: "Hiro",
-      description: "Fleur de lotus en trait unique",
-      style: "Floral minimaliste",
+      description: "Mandala complexe aux motifs floraux géométriques",
+      style: "Géométrique ornamental",
       height: 200
     },
     {
       id: 11,
       src: "./images/gallery/matheus-ferrero-RBsrv4yV5KY-unsplash.jpg",
-      alt: "Phoenix Irezumi",
-      category: "neo-japonais",
-      artist: "Hiro",
-      description: "Oiseau légendaire aux couleurs vives",
-      style: "Neo-japonais majestueux",
+      alt: "Traditional Américain",
+      category: "traditional",
+      artist: "Akira",
+      description: "Style old-school avec banderole et couleurs vives",
+      style: "Traditional américain",
       height: 375
     },
     {
       id: 12,
       src: "./images/gallery/pexels-photo-2183131.jpeg",
-      alt: "Mandala Japonais",
-      category: "floral",
+      alt: "Manche Irezumi",
+      category: "neo-japonais",
       artist: "Hiro",
-      description: "Motifs circulaires traditionnels",
-      style: "Floral géométrique",
+      description: "Manche japonaise complète avec koï, cerisiers et nuages",
+      style: "Irezumi traditionnel",
       height: 175
     },
     // Styles d'Akira - Réalisme et Black & White
     {
       id: 13,
       src: "./images/gallery/pexels-photo-8767196.jpeg",
-      alt: "Portrait Réaliste",
-      category: "realisme",
-      artist: "Akira",
-      description: "Portrait réaliste aux détails saisissants",
-      style: "Réalisme photographique",
+      alt: "Dos Neo-Japonais",
+      category: "neo-japonais",
+      artist: "Hiro",
+      description: "Tatouage du dos aux motifs japonais sous éclairage coloré",
+      style: "Neo-japonais contemporain",
       height: 300
     },
     {
@@ -186,11 +186,11 @@ const Gallery: React.FC = () => {
 
   const categories = [
     { id: 'all', name: 'Tous', kanji: '全', color: 'text-bone' },
-    { id: 'manga', name: 'Manga', kanji: '漫', color: 'text-primary' },
-    { id: 'neo-japonais', name: 'Neo-Japonais', kanji: '新', color: 'text-purple' },
-    { id: 'pop-culture', name: 'Pop-Culture', kanji: '流', color: 'text-teal' },
     { id: 'floral', name: 'Floral', kanji: '花', color: 'text-emerald' },
     { id: 'realisme', name: 'Réalisme', kanji: '実', color: 'text-purple' },
+    { id: 'traditional', name: 'Traditional', kanji: '古', color: 'text-gold' },
+    { id: 'process', name: 'Processus', kanji: '工', color: 'text-teal' },
+    { id: 'neo-japonais', name: 'Neo-Japonais', kanji: '新', color: 'text-primary' },
     { id: 'black-white', name: 'Black & White', kanji: '白黒', color: 'text-karasu-300' }
   ];
 
@@ -298,6 +298,18 @@ const Gallery: React.FC = () => {
                 onClick={() => setFilters(f => ({...f, category: f.category === 'floral' ? undefined : 'floral'}))}
               >
                 Floral
+              </button>
+              <button
+                className={`px-3 py-1 rounded-full border text-sm transition-all duration-300 hover:scale-105 ${filters.category === 'process' ? 'bg-primary text-karasu-950' : 'text-bone border-karasu-700 hover:border-primary'}`}
+                onClick={() => setFilters(f => ({...f, category: f.category === 'process' ? undefined : 'process'}))}
+              >
+                Processus
+              </button>
+              <button
+                className={`px-3 py-1 rounded-full border text-sm transition-all duration-300 hover:scale-105 ${filters.category === 'traditional' ? 'bg-primary text-karasu-950' : 'text-bone border-karasu-700 hover:border-primary'}`}
+                onClick={() => setFilters(f => ({...f, category: f.category === 'traditional' ? undefined : 'traditional'}))}
+              >
+                Traditional
               </button>
               <button
                 className={`px-3 py-1 rounded-full border text-sm transition-all duration-300 hover:scale-105 ${filters.artist === 'Hiro' ? 'bg-primary text-karasu-950' : 'text-bone border-karasu-700 hover:border-primary'}`}
