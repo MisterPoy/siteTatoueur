@@ -9,6 +9,7 @@ interface FormData {
   subject: string;
   message: string;
   projectType: string;
+  company: string; // honeypot
 }
 
 const Contact: React.FC = () => {
@@ -20,7 +21,8 @@ const Contact: React.FC = () => {
     phone: '',
     subject: '',
     message: '',
-    projectType: ''
+    projectType: '',
+    company: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -35,6 +37,13 @@ const Contact: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Vérification honeypot - si rempli, c'est un bot
+    if (formData.company) {
+      console.log('Bot détecté via honeypot');
+      return;
+    }
+    
     setIsSubmitting(true);
     
     // Simulation d'envoi de formulaire
@@ -146,7 +155,18 @@ const Contact: React.FC = () => {
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  {/* Boutons directs */}
+                  <div className="mb-6 flex flex-wrap gap-3">
+                    <a href="https://wa.me/33600000000?text=Bonjour%2C%20j%27aimerais%20parler%20de%20mon%20projet%20tattoo"
+                       target="_blank" rel="noopener"
+                       className="rounded-lg px-4 py-2 bg-primary text-karasu-950">WhatsApp</a>
+                    <a href="https://instagram.com/inkritual.tattoo" target="_blank" rel="noopener"
+                       className="rounded-lg px-4 py-2 border border-primary">Instagram DM</a>
+                    <a href="tel:+33600000000" className="rounded-lg px-4 py-2 border border-karasu-600">Appeler</a>
+                  </div>
+
+                  <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-bone font-accent mb-2 text-sm tracking-wider uppercase">
@@ -177,6 +197,9 @@ const Contact: React.FC = () => {
                       />
                     </div>
                   </div>
+
+                  {/* Honeypot field - caché des utilisateurs normaux */}
+                  <input type="text" name="company" value={formData.company} onChange={handleInputChange} className="hidden" tabIndex={-1} autoComplete="off" />
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
@@ -268,7 +291,8 @@ const Contact: React.FC = () => {
                       </span>
                     )}
                   </button>
-                </form>
+                  </form>
+                </div>
               )}
             </div>
           </div>

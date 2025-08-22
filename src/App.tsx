@@ -4,6 +4,7 @@ import Artists from './components/Artist';
 import Portfolio from './components/Portfolio';
 import Gallery from './components/Gallery';
 import Infos from './components/Infos';
+import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -11,12 +12,13 @@ function App() {
   return (
     <div className="min-h-screen">
       <Header />
-      <main>
+      <main id="main">
         <Hero />
         <Artists />
         <Portfolio />
         <Gallery />
         <Infos />
+        <Testimonials />
         <Contact />
       </main>
       <Footer />

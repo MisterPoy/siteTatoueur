@@ -16,6 +16,7 @@ interface GalleryImage {
 const Gallery: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [filters, setFilters] = useState<{category?: string; artist?: string; style?: string}>({});
   const headerRef = useScrollReveal();
   const ctaRef = useScrollReveal();
 
@@ -193,9 +194,21 @@ const Gallery: React.FC = () => {
     { id: 'black-white', name: 'Black & White', kanji: '白黒', color: 'text-karasu-300' }
   ];
 
-  const filteredImages = selectedCategory === 'all' 
-    ? images 
-    : images.filter(img => img.category === selectedCategory);
+  const filteredImages = images.filter(img =>
+    (!filters.category || img.category === filters.category) &&
+    (!filters.artist || img.artist === filters.artist) &&
+    (!filters.style || img.style === filters.style) &&
+    (selectedCategory === 'all' || img.category === selectedCategory)
+  );
+
+  // Pré-filtrage via hash URL (depuis les liens artistes)
+  useEffect(() => {
+    const [, query] = window.location.hash.split('?');
+    if (!query) return;
+    const params = new URLSearchParams(query);
+    const artist = params.get('artist') || undefined;
+    setFilters(f => ({...f, artist}));
+  }, []);
 
   const openModal = (image: GalleryImage) => {
     setSelectedImage(image);
@@ -255,6 +268,36 @@ const Gallery: React.FC = () => {
             Akira dans le réalisme et le black & white.
           </p>
 
+          {/* Filtres avancés */}
+          <div className="mb-8 space-y-4">
+            <div className="flex flex-wrap justify-center gap-2">
+              <button
+                className={`px-3 py-1 rounded-full border text-sm ${filters.category === 'floral' ? 'bg-primary text-karasu-950' : 'text-bone border-karasu-700'}`}
+                onClick={() => setFilters(f => ({...f, category: f.category === 'floral' ? undefined : 'floral'}))}
+              >
+                Floral
+              </button>
+              <button
+                className={`px-3 py-1 rounded-full border text-sm ${filters.artist === 'Hiro' ? 'bg-primary text-karasu-950' : 'text-bone border-karasu-700'}`}
+                onClick={() => setFilters(f => ({...f, artist: f.artist === 'Hiro' ? undefined : 'Hiro'}))}
+              >
+                Hiro
+              </button>
+              <button
+                className={`px-3 py-1 rounded-full border text-sm ${filters.artist === 'Akira' ? 'bg-primary text-karasu-950' : 'text-bone border-karasu-700'}`}
+                onClick={() => setFilters(f => ({...f, artist: f.artist === 'Akira' ? undefined : 'Akira'}))}
+              >
+                Akira
+              </button>
+              <button
+                className={`px-3 py-1 rounded-full border text-sm ${filters.style === 'Réalisme' ? 'bg-primary text-karasu-950' : 'text-bone border-karasu-700'}`}
+                onClick={() => setFilters(f => ({...f, style: f.style === 'Réalisme' ? undefined : 'Réalisme'}))}
+              >
+                Réalisme
+              </button>
+            </div>
+          </div>
+
           {/* Filtres par catégorie */}
           <div className="flex flex-wrap justify-center gap-3">
             {categories.map((category) => (
@@ -300,6 +343,7 @@ const Gallery: React.FC = () => {
                     alt={image.alt}
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
                     loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                   
                   {/* Overlay avec effet */}
@@ -350,67 +394,19 @@ const Gallery: React.FC = () => {
 
       {/* Modal */}
       {selectedImage && (
-        <div className="fixed inset-0 bg-karasu-950/95 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="relative max-w-5xl max-h-[90vh] w-full">
-            {/* Boutons de contrôle */}
-            <div className="absolute top-4 right-4 z-10 flex space-x-2">
-              <button
-                onClick={closeModal}
-                className="w-12 h-12 bg-karasu-800/80 hover:bg-primary border border-karasu-600 rounded-full flex items-center justify-center text-bone transition-all duration-300 hover-lift"
-              >
-                <FaTimes size={16} />
-              </button>
-            </div>
-
-            {/* Navigation */}
-            <button
-              onClick={() => navigateImage('prev')}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-karasu-800/80 hover:bg-primary border border-karasu-600 rounded-full flex items-center justify-center text-bone transition-all duration-300 hover-lift"
-            >
-              <FaChevronLeft size={16} />
-            </button>
-            
-            <button
-              onClick={() => navigateImage('next')}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-karasu-800/80 hover:bg-primary border border-karasu-600 rounded-full flex items-center justify-center text-bone transition-all duration-300 hover-lift"
-            >
-              <FaChevronRight size={16} />
-            </button>
-
-            {/* Contenu du modal */}
-            <div className="glass-card overflow-hidden">
-              <div className="grid grid-cols-1 lg:grid-cols-3">
-                {/* Image */}
-                <div className="lg:col-span-2">
-                  <img
-                    src={selectedImage.src}
-                    alt={selectedImage.alt}
-                    className="w-full h-[60vh] lg:h-[70vh] object-cover"
-                  />
-                </div>
-                
-                {/* Informations */}
-                <div className="p-8 bg-karasu-900 flex flex-col justify-center">
-                  <div className="mb-6">
-                    <h3 className="text-2xl font-accent text-bone mb-3">{selectedImage.alt}</h3>
-                    <p className="text-primary font-body text-lg mb-2">{selectedImage.style}</p>
-                    <p className="text-karasu-300 font-body">Artiste : {selectedImage.artist}</p>
-                  </div>
-                  
-                  <p className="text-karasu-200 leading-relaxed font-body mb-6">
-                    {selectedImage.description}
-                  </p>
-                  
-                  <div className="border-t border-karasu-700 pt-4">
-                    <div className="flex items-center justify-between text-sm text-karasu-400">
-                      <span>Image {filteredImages.findIndex(img => img.id === selectedImage.id) + 1} / {filteredImages.length}</span>
-                      <span className="font-accent tracking-wider">ESC pour fermer</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div
+          role="dialog"
+          aria-modal="true"
+          className="fixed inset-0 z-[60] bg-black/90 flex items-center justify-center"
+          onKeyDown={(e) => {
+            if (e.key === 'Escape') setSelectedImage(null);
+            if (e.key === 'ArrowRight') navigateImage('next');
+            if (e.key === 'ArrowLeft') navigateImage('prev');
+          }}
+          tabIndex={-1}
+        >
+          <button className="absolute top-4 right-4 text-bone" onClick={() => setSelectedImage(null)} aria-label="Fermer">✕</button>
+          <img src={selectedImage.src} alt={selectedImage.alt} className="max-h-[90vh] max-w-[90vw] object-contain" />
         </div>
       )}
     </section>

@@ -247,6 +247,17 @@ const Infos: React.FC = () => {
               <em className="text-karasu-400">Chaque tatouage est une œuvre d'art unique</em>
             </p>
           </div>
+          
+          {/* Section Hygiène & Sécurité */}
+          <section aria-labelledby="hygiene" className="mt-16">
+            <h3 id="hygiene" className="text-xl font-accent text-bone mb-4">Hygiène & sécurité</h3>
+            <ul className="space-y-2 text-karasu-300 list-disc list-inside">
+              <li>Matériel stérile et usage unique</li>
+              <li>Procédures conformes aux normes sanitaires</li>
+              <li>Conseils de cicatrisation personnalisés</li>
+            </ul>
+          </section>
+
         </div>
       </div>
     </section>
