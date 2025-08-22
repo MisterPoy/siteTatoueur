@@ -61,7 +61,8 @@ const Contact: React.FC = () => {
         phone: '',
         subject: '',
         message: '',
-        projectType: ''
+        projectType: '',
+        company: ''
       });
     }, 4000);
   };
@@ -160,10 +161,10 @@ const Contact: React.FC = () => {
                   <div className="mb-6 flex flex-wrap gap-3">
                     <a href="https://wa.me/33600000000?text=Bonjour%2C%20j%27aimerais%20parler%20de%20mon%20projet%20tattoo"
                        target="_blank" rel="noopener"
-                       className="rounded-lg px-4 py-2 bg-primary text-karasu-950">WhatsApp</a>
+                       className="rounded-lg px-4 py-2 bg-primary text-karasu-950 transition-all duration-300 hover:brightness-110 hover:shadow-lg hover:shadow-primary/20">WhatsApp</a>
                     <a href="https://instagram.com/inkritual.tattoo" target="_blank" rel="noopener"
-                       className="rounded-lg px-4 py-2 border border-primary">Instagram DM</a>
-                    <a href="tel:+33600000000" className="rounded-lg px-4 py-2 border border-karasu-600">Appeler</a>
+                       className="rounded-lg px-4 py-2 border border-primary transition-all duration-300 hover:bg-primary/10 hover:shadow-lg">Instagram DM</a>
+                    <a href="tel:+33600000000" className="rounded-lg px-4 py-2 border border-karasu-600 transition-all duration-300 hover:border-primary hover:bg-karasu-800/50">Appeler</a>
                   </div>
 
                   <form onSubmit={handleSubmit} className="space-y-6">

@@ -9,12 +9,6 @@ const Hero: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const scrollToArtist = () => {
-    const element = document.getElementById('artists');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <section
@@ -72,10 +66,10 @@ const Hero: React.FC = () => {
 
             {/* Double CTA */}
             <div className="mt-8 flex items-center justify-center gap-4">
-              <a href="#gallery" className="rounded-xl px-5 py-3 bg-primary text-karasu-950 font-accent uppercase tracking-wider">
+              <a href="#gallery" className="rounded-xl px-5 py-3 bg-primary text-karasu-950 font-accent uppercase tracking-wider transition-all duration-300 hover-lift primary-glow">
                 Voir nos créations
               </a>
-              <a href="#contact" className="rounded-xl px-5 py-3 border border-primary text-bone hover:bg-primary/10 font-accent uppercase tracking-wider">
+              <a href="#contact" className="rounded-xl px-5 py-3 border border-primary text-bone hover:bg-primary/10 font-accent uppercase tracking-wider transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
                 Réserver un créneau
               </a>
             </div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaTimes, FaChevronLeft, FaChevronRight, FaExpand } from 'react-icons/fa';
+import { FaExpand } from 'react-icons/fa';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 interface GalleryImage {
@@ -272,25 +272,25 @@ const Gallery: React.FC = () => {
           <div className="mb-8 space-y-4">
             <div className="flex flex-wrap justify-center gap-2">
               <button
-                className={`px-3 py-1 rounded-full border text-sm ${filters.category === 'floral' ? 'bg-primary text-karasu-950' : 'text-bone border-karasu-700'}`}
+                className={`px-3 py-1 rounded-full border text-sm transition-all duration-300 hover:scale-105 ${filters.category === 'floral' ? 'bg-primary text-karasu-950' : 'text-bone border-karasu-700 hover:border-primary'}`}
                 onClick={() => setFilters(f => ({...f, category: f.category === 'floral' ? undefined : 'floral'}))}
               >
                 Floral
               </button>
               <button
-                className={`px-3 py-1 rounded-full border text-sm ${filters.artist === 'Hiro' ? 'bg-primary text-karasu-950' : 'text-bone border-karasu-700'}`}
+                className={`px-3 py-1 rounded-full border text-sm transition-all duration-300 hover:scale-105 ${filters.artist === 'Hiro' ? 'bg-primary text-karasu-950' : 'text-bone border-karasu-700 hover:border-primary'}`}
                 onClick={() => setFilters(f => ({...f, artist: f.artist === 'Hiro' ? undefined : 'Hiro'}))}
               >
                 Hiro
               </button>
               <button
-                className={`px-3 py-1 rounded-full border text-sm ${filters.artist === 'Akira' ? 'bg-primary text-karasu-950' : 'text-bone border-karasu-700'}`}
+                className={`px-3 py-1 rounded-full border text-sm transition-all duration-300 hover:scale-105 ${filters.artist === 'Akira' ? 'bg-primary text-karasu-950' : 'text-bone border-karasu-700 hover:border-primary'}`}
                 onClick={() => setFilters(f => ({...f, artist: f.artist === 'Akira' ? undefined : 'Akira'}))}
               >
                 Akira
               </button>
               <button
-                className={`px-3 py-1 rounded-full border text-sm ${filters.style === 'Réalisme' ? 'bg-primary text-karasu-950' : 'text-bone border-karasu-700'}`}
+                className={`px-3 py-1 rounded-full border text-sm transition-all duration-300 hover:scale-105 ${filters.style === 'Réalisme' ? 'bg-primary text-karasu-950' : 'text-bone border-karasu-700 hover:border-primary'}`}
                 onClick={() => setFilters(f => ({...f, style: f.style === 'Réalisme' ? undefined : 'Réalisme'}))}
               >
                 Réalisme

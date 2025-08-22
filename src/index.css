@@ -207,6 +207,19 @@
     position: relative;
   }
   
+  /* Focus styles pour l'accessibilité */
+  button:focus, a:focus, input:focus, textarea:focus, select:focus {
+    outline: none;
+    ring: 2px solid #0891b2;
+    ring-offset: 2px;
+    ring-offset-color: #09090b;
+  }
+  
+  button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+    outline: 2px solid #0891b2;
+    outline-offset: 2px;
+  }
+  
   .text-shimmer {
     background: linear-gradient(90deg, #f8fafc, #fbbf24, #f8fafc);
     background-size: 200% 100%;

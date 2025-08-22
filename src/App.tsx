@@ -5,6 +5,7 @@ import Portfolio from './components/Portfolio';
 import Gallery from './components/Gallery';
 import Infos from './components/Infos';
 import Testimonials from './components/Testimonials';
+import CallToAction from './components/CallToAction';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -16,7 +17,9 @@ function App() {
         <Hero />
         <Artists />
         <Portfolio />
+        <CallToAction />
         <Gallery />
+        <CallToAction />
         <Infos />
         <Testimonials />
         <Contact />
