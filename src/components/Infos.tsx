@@ -111,7 +111,7 @@ const Infos: React.FC = () => {
                   <div className="w-20 h-20 mx-auto bg-karasu-800 border-2 border-primary rounded-full flex items-center justify-center group-hover:bg-primary transition-all duration-300">
                     <span className="text-2xl kanji-style text-bone">{process.kanji}</span>
                   </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center text-bone font-bold text-sm">
+                  <div className="absolute -top-2 -left-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center text-bone font-bold text-sm">
                     {process.step}
                   </div>
                 </div>

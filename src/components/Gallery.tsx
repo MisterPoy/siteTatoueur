@@ -22,7 +22,7 @@ const Gallery: React.FC = () => {
   const images: GalleryImage[] = [
     {
       id: 1,
-      src: "https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?w=400&h=600&fit=crop",
+      src: "./images/gallery/grue-japonaise.jpg",
       alt: "Dragon Manga",
       category: "manga",
       artist: "Hiro",
@@ -32,7 +32,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 2,
-      src: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=400&h=500&fit=crop",
+      src: "./images/gallery/tatouage-1.jpg",
       alt: "Sakura Minimaliste",
       category: "floral",
       artist: "Hiro",
@@ -42,7 +42,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 3,
-      src: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=700&fit=crop",
+      src: "./images/gallery/tatouage-2.jpg",
       alt: "Carpe Koi",
       category: "neo-japonais",
       artist: "Hiro",
@@ -52,7 +52,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 4,
-      src: "https://images.unsplash.com/photo-1590736969955-71cc94901144?w=400&h=400&fit=crop",
+      src: "./images/gallery/tatouage-3.jpg",
       alt: "Personnage Pop-Culture",
       category: "pop-culture",
       artist: "Hiro",
@@ -62,7 +62,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 5,
-      src: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=400&h=650&fit=crop",
+      src: "./images/gallery/allef-vinicius.jpg",
       alt: "Yokai Moderne",
       category: "neo-japonais",
       artist: "Hiro",
@@ -72,7 +72,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 6,
-      src: "https://images.unsplash.com/photo-1606902965551-dce093cda6e7?w=400&h=450&fit=crop",
+      src: "./images/gallery/benjamin-lehman.jpg",
       alt: "Calligraphie Artistique",
       category: "pop-culture",
       artist: "Hiro",
@@ -82,7 +82,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 7,
-      src: "https://images.unsplash.com/photo-1588776814546-daab30c310ce?w=400&h=550&fit=crop",
+      src: "./images/gallery/collins-lesulie-PWK6CeCJtJw-unsplash.jpg",
       alt: "Oni Traditionnel",
       category: "neo-japonais",
       artist: "Hiro",
@@ -92,7 +92,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 8,
-      src: "https://images.unsplash.com/photo-1594736797933-d0fce9e2bbf7?w=400&h=500&fit=crop",
+      src: "./images/gallery/eduardo-vaccari-pIltvcnqsfU-unsplash.jpg",
       alt: "Héros Manga",
       category: "manga",
       artist: "Hiro",
@@ -102,7 +102,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 9,
-      src: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=600&fit=crop",
+      src: "./images/gallery/jasmin-chew-WbWOF8z_NGQ-unsplash.jpg",
       alt: "Héros Manga",
       category: "neo-japonais",
       artist: "Hiro",
@@ -112,7 +112,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 10,
-      src: "https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?w=400&h=400&fit=crop",
+      src: "./images/gallery/jj-jordan-eenumTwM6Ec-unsplash.jpg",
       alt: "Lotus Zen",
       category: "floral",
       artist: "Hiro",
@@ -122,7 +122,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 11,
-      src: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=750&fit=crop",
+      src: "./images/gallery/matheus-ferrero-RBsrv4yV5KY-unsplash.jpg",
       alt: "Phoenix Irezumi",
       category: "neo-japonais",
       artist: "Hiro",
@@ -132,7 +132,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 12,
-      src: "https://images.unsplash.com/photo-1567359781514-3b964e2b04d6?w=400&h=350&fit=crop",
+      src: "./images/gallery/pexels-photo-2183131.jpeg",
       alt: "Mandala Japonais",
       category: "floral",
       artist: "Hiro",
@@ -143,40 +143,40 @@ const Gallery: React.FC = () => {
     // Styles d'Akira - Réalisme et Black & White
     {
       id: 13,
-      src: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=600&fit=crop",
+      src: "./images/gallery/pexels-photo-8767196.jpeg",
       alt: "Portrait Réaliste",
       category: "realisme",
-      artist: "Th3ora",
+      artist: "Akira",
       description: "Portrait réaliste aux détails saisissants",
       style: "Réalisme photographique",
       height: 300
     },
     {
       id: 14,
-      src: "https://images.unsplash.com/photo-1567359781514-3b964e2b04d6?w=400&h=500&fit=crop",
+      src: "./images/gallery/Tatouage_d'une_grue_dans_le_style_japonais_par_l'artiste_tatoueur_Nico_Tatuto_basé_à_Bordeaux.jpg",
       alt: "Tatouage Black & White",
       category: "black-white",
-      artist: "Th3ora",
+      artist: "Akira",
       description: "Création en noir et blanc aux contrastes parfaits",
       style: "Black & White artistique",
       height: 250
     },
     {
       id: 15,
-      src: "https://images.unsplash.com/photo-1594736797933-d0fce9e2bbf7?w=400&h=400&fit=crop",
+      src: "./images/gallery/tatouage-1.jpg",
       alt: "Portrait Expressif",
       category: "realisme",
-      artist: "Th3ora",
+      artist: "Akira",
       description: "Portrait capturant l'émotion avec précision",
       style: "Réalisme expressif",
       height: 200
     },
     {
       id: 16,
-      src: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=550&fit=crop",
+      src: "./images/gallery/tatouage-2.jpg",
       alt: "Graphisme Noir & Blanc",
       category: "black-white",
-      artist: "Th3ora",
+      artist: "Akira",
       description: "Design graphique en monochrome",
       style: "Graphisme B&W",
       height: 275

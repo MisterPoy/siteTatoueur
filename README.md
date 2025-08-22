@@ -1,6 +1,6 @@
-# 🏮 Karasu Ink - 鴉 Site Vitrine Salon de Tatouage Japonais
+# 🏮 Ink Ritual Tattoo - 鴉 Site Vitrine Salon de Tatouage Japonais
 
-Un site vitrine immersif et esthétique pour le salon de tatouage japonais **Karasu Ink**, construit avec React, TypeScript et Tailwind CSS v4.
+Un site vitrine immersif et esthétique pour le salon de tatouage japonais **Ink Ritual Tattoo**, construit avec React, TypeScript et Tailwind CSS v4.
 
 ## ⛩️ Caractéristiques
 
@@ -259,4 +259,4 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
 **Fait avec ❤️ pour l'art du tatouage japonais 愛**
 
-*Karasu Ink - Où tradition et modernité se rencontrent dans l'art de l'encre*
+Ink Ritual Tattoo - Où tradition et modernité se rencontrent dans l'art de l'encre*

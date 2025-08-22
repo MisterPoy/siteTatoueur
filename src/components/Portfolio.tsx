@@ -19,51 +19,63 @@ const Portfolio: React.FC = () => {
   const portfolioImages: PortfolioImage[] = [
     {
       id: 1,
-      src: "https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?w=600&h=800&fit=crop",
-      alt: "Réalisation #1",
-      description: "Création artistique unique mêlant tradition et modernité"
+      src: "./images/gallery/grue-japonaise.jpg",
+      alt: "Grue Japonaise",
+      description: "Tatouage d'une grue dans le style japonais traditionnel"
     },
     {
       id: 2,
-      src: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=600&h=800&fit=crop",
-      alt: "Réalisation #2", 
-      description: "Œuvre délicate inspirée de l'esthétique japonaise"
+      src: "./images/gallery/allef-vinicius.jpg",
+      alt: "Tatouage Artistique", 
+      description: "Création délicate aux détails minutieux"
     },
     {
       id: 3,
-      src: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=800&fit=crop",
-      alt: "Réalisation #3",
+      src: "./images/gallery/benjamin-lehman.jpg",
+      alt: "Tatouage Complexe",
       description: "Tatouage complexe aux détails minutieux"
     },
     {
       id: 4,
-      src: "https://images.unsplash.com/photo-1590736969955-71cc94901144?w=600&h=800&fit=crop",
-      alt: "Réalisation #4",
+      src: "./images/gallery/collins-lesulie-PWK6CeCJtJw-unsplash.jpg",
+      alt: "Style Contemporain",
       description: "Style contemporain avec influences culturelles"
     },
     {
       id: 5,
-      src: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=600&h=800&fit=crop",
-      alt: "Réalisation #5",
+      src: "./images/gallery/eduardo-vaccari-pIltvcnqsfU-unsplash.jpg",
+      alt: "Art Traditionnel",
       description: "Fusion harmonieuse entre art traditionnel et vision moderne"
     },
     {
       id: 6,
-      src: "https://images.unsplash.com/photo-1606902965551-dce093cda6e7?w=600&h=800&fit=crop",
-      alt: "Réalisation #6",
+      src: "./images/gallery/jasmin-chew-WbWOF8z_NGQ-unsplash.jpg",
+      alt: "Création Personnalisée",
       description: "Création personnalisée reflétant l'univers du client"
     },
     {
       id: 7,
-      src: "https://images.unsplash.com/photo-1588776814546-daab30c310ce?w=600&h=800&fit=crop",
-      alt: "Réalisation #7",
+      src: "./images/gallery/jj-jordan-eenumTwM6Ec-unsplash.jpg",
+      alt: "Œuvre Colorée",
       description: "Œuvre colorée aux techniques mixtes"
     },
     {
       id: 8,
-      src: "https://images.unsplash.com/photo-1594736797933-d0fce9e2bbf7?w=600&h=800&fit=crop",
-      alt: "Réalisation #8",
+      src: "./images/gallery/matheus-ferrero-RBsrv4yV5KY-unsplash.jpg",
+      alt: "Design Dynamique",
       description: "Design dynamique et expression artistique forte"
+    },
+    {
+      id: 9,
+      src: "./images/gallery/pexels-photo-2183131.jpeg",
+      alt: "Tatouage Réaliste",
+      description: "Tatouage hyperréaliste aux détails saisissants"
+    },
+    {
+      id: 10,
+      src: "./images/gallery/pexels-photo-8767196.jpeg",
+      alt: "Art Corporel",
+      description: "Expression artistique sur toile vivante"
     }
   ];
 

@@ -41,7 +41,7 @@ const Artists: React.FC = () => {
                 >
                   <img
                     src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&crop=face"
-                    alt="Akira - Grapheur et Tatoueur Réalisme"
+                    alt="Akira - Réalisme"
                     className={`w-full h-[500px] object-cover transition-all duration-500 ${
                       akiraActive ? 'grayscale-0' : 'grayscale group-hover:grayscale-0 group-active:grayscale-0'
                     }`}
@@ -214,8 +214,8 @@ const Artists: React.FC = () => {
             <h3 className="text-2xl md:text-3xl font-accent text-bone mb-6">
               Une Méthode <span className="text-primary">Sur-Mesure</span>
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-              <div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center justify-items-center">
+              <div className='flex flex-col items-center'>
                 <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mb-4 mx-auto md:mx-0">
                   <span className="text-primary kanji-style text-xl">相</span>
                 </div>
@@ -224,7 +224,7 @@ const Artists: React.FC = () => {
                   Échange approfondi pour comprendre votre vision et choisir l'artiste adapté.
                 </p>
               </div>
-              <div>
+              <div className='flex flex-col items-center'>
                 <div className="w-12 h-12 bg-purple/20 rounded-full flex items-center justify-center mb-4 mx-auto md:mx-0">
                   <span className="text-purple kanji-style text-xl">創</span>
                 </div>
@@ -233,7 +233,7 @@ const Artists: React.FC = () => {
                   Design personnalisé selon le style et l'expertise de votre artiste.
                 </p>
               </div>
-              <div>
+              <div className='flex flex-col items-center'>
                 <div className="w-12 h-12 bg-emerald/20 rounded-full flex items-center justify-center mb-4 mx-auto md:mx-0">
                   <span className="text-emerald kanji-style text-xl">実</span>
                 </div>
