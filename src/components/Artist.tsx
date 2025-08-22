@@ -98,7 +98,7 @@ const Artists: React.FC = () => {
                   </div>
 
                   {/* Contact */}
-                  <div className="flex justify-center">
+                  <div className="flex flex-col items-center space-y-4">
                     <a
                       href="https://instagram.com/akira.ink"
                       target="_blank"
@@ -107,6 +107,12 @@ const Artists: React.FC = () => {
                     >
                       <FaInstagram className="group-hover:scale-110 transition-transform duration-300" />
                       <span className="font-accent">@akira.ink</span>
+                    </a>
+                    <a
+                      href="#gallery"
+                      className="inline-flex rounded-lg border border-primary/60 px-3 py-2 text-sm font-accent uppercase tracking-wide"
+                    >
+                      Voir ses créations
                     </a>
                   </div>
                 </div>
@@ -185,7 +191,7 @@ const Artists: React.FC = () => {
                   </div>
 
                   {/* Contact */}
-                  <div className="flex justify-center">
+                  <div className="flex flex-col items-center space-y-4">
                     <a
                       href="https://instagram.com/hiro.tattoo"
                       target="_blank"
@@ -194,6 +200,12 @@ const Artists: React.FC = () => {
                     >
                       <FaInstagram className="group-hover:scale-110 transition-transform duration-300" />
                       <span className="font-accent">@hiro.tattoo</span>
+                    </a>
+                    <a
+                      href="#gallery"
+                      className="inline-flex rounded-lg border border-primary/60 px-3 py-2 text-sm font-accent uppercase tracking-wide"
+                    >
+                      Voir ses créations
                     </a>
                   </div>
                 </div>

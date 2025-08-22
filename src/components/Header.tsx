@@ -39,6 +39,10 @@ const Header: React.FC = () => {
           : 'bg-transparent'
       }`}
     >
+      <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2
+                          bg-bone text-karasu-900 px-3 py-2 rounded">
+        Aller au contenu
+      </a>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
@@ -80,12 +84,21 @@ const Header: React.FC = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
               </button>
             ))}
+            <a
+              href="#contact"
+              className="ml-6 inline-flex items-center rounded-xl px-4 py-2 font-accent text-sm uppercase tracking-wider
+                         bg-primary text-karasu-950 hover:brightness-110 transition-all shadow-lg shadow-primary/20"
+            >
+              Prendre rendez‑vous
+            </a>
           </nav>
 
           {/* Menu Mobile Button */}
           <button
             className="md:hidden text-bone hover:text-primary transition-colors duration-300 p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-nav"
           >
             <div className="relative w-6 h-6 flex items-center justify-center">
               {isMobileMenuOpen ? (
@@ -99,6 +112,7 @@ const Header: React.FC = () => {
 
         {/* Navigation Mobile */}
         <div
+          id="mobile-nav"
           className={`md:hidden absolute top-full left-0 right-0 karasu-gradient border-t border-karasu-800/50 transition-all duration-500 overflow-hidden ${
             isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
           }`}
@@ -114,6 +128,14 @@ const Header: React.FC = () => {
                 {item.label}
               </button>
             ))}
+            <a
+              href="#contact"
+              className="block w-full text-center mt-2 rounded-xl px-4 py-3 font-accent text-sm uppercase tracking-wider
+                         bg-primary text-karasu-950"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Prendre rendez‑vous
+            </a>
           </nav>
         </div>
       </div>

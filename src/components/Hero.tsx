@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
   }, []);
 
   const scrollToArtist = () => {
-    const element = document.getElementById('artist');
+    const element = document.getElementById('artists');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -65,25 +65,20 @@ const Hero: React.FC = () => {
               </span>
             </h1>
 
-            {/* Slogan */}
-            <p className="text-lg sm:text-xl md:text-2xl text-karasu-300 mb-12 max-w-3xl mx-auto leading-relaxed font-body">
-              Chez <span className="text-primary font-semibold kanji-style">Ink Ritual Tattoo</span>, 
-              nos <span className="text-primary font-semibold">artistes</span> vous proposent des tatouages uniques, 
-              <br className="hidden md:block" />
-              inspirés de la tradition japonaise et de l'esthétique moderne.
+            {/* Accroche orientée client */}
+            <p className="max-w-2xl mx-auto mt-4 text-karasu-300">
+              Un tatouage unique, pensé pour vous, réalisé avec exigence et hygiène irréprochable.
             </p>
 
-            {/* Bouton d'action */}
-            <button
-              onClick={scrollToArtist}
-              className="group relative inline-flex items-center px-10 py-4 bg-primary hover:bg-primary-dark text-bone font-accent text-lg tracking-wider uppercase transition-all duration-300 hover-lift primary-glow overflow-hidden"
-            >
-              <span className="relative z-10">Découvrir l'art</span>
-              <FaChevronDown className="ml-4 group-hover:translate-y-1 transition-transform duration-300" />
-              
-              {/* Effet de brillance */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
-            </button>
+            {/* Double CTA */}
+            <div className="mt-8 flex items-center justify-center gap-4">
+              <a href="#gallery" className="rounded-xl px-5 py-3 bg-primary text-karasu-950 font-accent uppercase tracking-wider">
+                Voir nos créations
+              </a>
+              <a href="#contact" className="rounded-xl px-5 py-3 border border-primary text-bone hover:bg-primary/10 font-accent uppercase tracking-wider">
+                Réserver un créneau
+              </a>
+            </div>
           </div>
 
           {/* Éléments décoratifs japonais - KARASU en vedette */}

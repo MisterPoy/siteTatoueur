@@ -115,11 +115,13 @@ const Portfolio: React.FC = () => {
     const handleKeyPress = (e: KeyboardEvent) => {
       if (!selectedImage) return;
       if (e.key === 'Escape') closeModal();
+      if (e.key === 'ArrowRight') setCurrentIndex((i) => (i + 1) % portfolioImages.length);
+      if (e.key === 'ArrowLeft') setCurrentIndex((i) => (i - 1 + portfolioImages.length) % portfolioImages.length);
     };
 
     document.addEventListener('keydown', handleKeyPress);
     return () => document.removeEventListener('keydown', handleKeyPress);
-  }, [selectedImage]);
+  }, [selectedImage, portfolioImages.length]);
 
   return (
     <section id="portfolio" className="py-20 bg-karasu-900 japanese-texture">
@@ -243,33 +245,19 @@ const Portfolio: React.FC = () => {
 
       {/* Modal */}
       {selectedImage && (
-        <div className="fixed inset-0 bg-karasu-950/95 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="relative max-w-4xl max-h-[90vh] w-full">
-            {/* Bouton fermer */}
-            <button
-              onClick={closeModal}
-              className="absolute top-4 right-4 z-10 w-12 h-12 bg-karasu-800/80 hover:bg-primary border border-karasu-600 rounded-full flex items-center justify-center text-bone transition-all duration-300 hover-lift"
-            >
-              <FaExpand size={16} className="rotate-45" />
-            </button>
-
-            {/* Image */}
-            <div className="glass-card overflow-hidden">
-              <img
-                src={selectedImage.src}
-                alt={selectedImage.alt}
-                className="w-full max-h-[80vh] object-contain"
-              />
-              <div className="p-6 bg-karasu-900">
-                <h3 className="text-2xl font-accent text-bone mb-2">
-                  {selectedImage.alt}
-                </h3>
-                <p className="text-karasu-200 font-body">
-                  {selectedImage.description}
-                </p>
-              </div>
-            </div>
-          </div>
+        <div
+          role="dialog"
+          aria-modal="true"
+          className="fixed inset-0 z-[60] bg-black/90 flex items-center justify-center"
+          onKeyDown={(e) => {
+            if (e.key === 'Escape') setSelectedImage(null);
+            if (e.key === 'ArrowRight') setCurrentIndex((i) => (i + 1) % portfolioImages.length);
+            if (e.key === 'ArrowLeft') setCurrentIndex((i) => (i - 1 + portfolioImages.length) % portfolioImages.length);
+          }}
+          tabIndex={-1}
+        >
+          <button className="absolute top-4 right-4 text-bone" onClick={() => setSelectedImage(null)} aria-label="Fermer">✕</button>
+          <img src={selectedImage.src} alt={selectedImage.alt} className="max-h-[90vh] max-w-[90vw] object-contain" />
         </div>
       )}
     </section>
