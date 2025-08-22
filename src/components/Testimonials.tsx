@@ -1,5 +1,6 @@
 import { useScrollReveal } from '../hooks/useScrollReveal';
-import { FaStar } from 'react-icons/fa';
+import { FaStar, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { useState } from 'react';
 
 interface Testimonial {
   name: string;
@@ -15,11 +16,12 @@ interface Testimonial {
 export default function Testimonials() {
   const headerRef = useScrollReveal();
   const testimonialsRef = useScrollReveal();
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const testimonials: Testimonial[] = [
     {
       name: "Alex M.",
-      text: "Akira a réalisé un tatouage réaliste de portrait qui dépasse toutes mes attentes. Le niveau de détail est incroyable, l'hygiène irréprochable et l'accompagnement parfait du début à la fin. 3 mois après, les couleurs sont toujours éclatantes !",
+      text: "Akira a réalisé un portrait réaliste qui dépasse mes attentes. Détails incroyables, hygiène irréprochable et suivi parfait. 3 mois après, les couleurs éclatent toujours !",
       rating: 5,
       artist: "Akira",
       style: "Réalisme",
@@ -29,7 +31,7 @@ export default function Testimonials() {
     },
     {
       name: "Sarah L.",
-      text: "Premier tatouage avec Hiro et une expérience magique ! Il a su adapter mon idée en style japonais traditionnel. Studio ultra propre, matériel stérilisé devant moi, et des conseils post-soins au top. Je recommande les yeux fermés !",
+      text: "Premier tatouage avec Hiro, expérience magique ! Adaptation parfaite en style japonais. Studio ultra propre, matériel stérilisé devant moi. Je recommande !",
       rating: 5,
       artist: "Hiro", 
       style: "Japonais traditionnel",
@@ -39,7 +41,7 @@ export default function Testimonials() {
     },
     {
       name: "Marc D.",
-      text: "Cover-up complexe transformé en chef-d'œuvre par Akira. J'avais un vieux tatouage raté, maintenant c'est une pièce dont je suis fier. Professionnel, à l'écoute, et un résultat qui en jette. Le prix en vaut vraiment la chandelle.",
+      text: "Cover-up transformé en chef-d'œuvre par Akira ! Vieux tattoo raté devenu pièce dont je suis fier. Professionnel, à l'écoute, résultat bluffant.",
       rating: 5,
       artist: "Akira",
       style: "Cover-up réalisme", 
@@ -49,7 +51,7 @@ export default function Testimonials() {
     },
     {
       name: "Émilie R.",
-      text: "Tatouage floral délicat sur l'avant-bras. Hiro a parfaitement compris ma vision et l'a sublimée. Technique ligne fine impressionnante, douleur très supportable grâce à sa douceur. Cicatrisation parfaite grâce à ses conseils précis.",
+      text: "Floral délicat sur avant-bras. Hiro a compris et sublimé ma vision. Technique ligne fine impressionnante, douleur supportable. Cicatrisation parfaite !",
       rating: 5,
       artist: "Hiro",
       style: "Floral ligne fine",
@@ -59,7 +61,7 @@ export default function Testimonials() {
     },
     {
       name: "Thomas B.",
-      text: "Manche japonaise en cours avec Hiro depuis 1 an. Chaque séance est un plaisir, le design évolue parfaitement et la cohérence est remarquable. Studio accueillant, ambiance zen, et un artiste passionné qui explique chaque détail.",
+      text: "Manche japonaise en cours depuis 1 an. Chaque séance un plaisir, design parfaitement cohérent. Studio zen, artiste passionné qui explique tout.",
       rating: 5,
       artist: "Hiro",
       style: "Manche japonaise",
@@ -69,7 +71,7 @@ export default function Testimonials() {
     },
     {
       name: "Léa K.",
-      text: "Tatouage memento en black & grey par Akira d'une finesse inouïe. Il a su traduire mes émotions en art corporel avec une sensibilité rare. Résultat : des larmes de joie et un tatouage qui raconte parfaitement mon histoire personnelle.",
+      text: "Memento black & grey d'une finesse inouïe par Akira. Il a traduit mes émotions avec sensibilité. Résultat : larmes de joie, tattoo qui raconte mon histoire.",
       rating: 5,
       artist: "Akira",
       style: "Black & Grey",
@@ -86,6 +88,25 @@ export default function Testimonials() {
         className={`text-sm ${i < rating ? 'text-gold' : 'text-karasu-600'}`}
       />
     ));
+  };
+
+  const totalSlides = testimonials.length;
+
+  const nextSlide = () => {
+    setCurrentIndex(prev => (prev + 1) % totalSlides);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex(prev => prev === 0 ? totalSlides - 1 : prev - 1);
+  };
+
+  const getVisibleTestimonials = () => {
+    // Affiche 3 témoignages consécutifs en carousel infini
+    const visible = [];
+    for (let i = 0; i < 3; i++) {
+      visible.push(testimonials[(currentIndex + i) % totalSlides]);
+    }
+    return visible;
   };
 
   return (
@@ -107,22 +128,54 @@ export default function Testimonials() {
           </p>
         </div>
 
-        {/* Testimonials grid */}
+        {/* Testimonials carousel */}
         <div ref={testimonialsRef} className="scroll-reveal">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="glass-card p-6 hover-lift transition-all duration-500 group border-l-4 border-primary"
-              >
-                {/* Header avec avatar et étoiles */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-purple rounded-full flex items-center justify-center text-bone font-bold">
+          {/* Navigation buttons */}
+          <div className="flex justify-center items-center gap-4 mb-8">
+            <button
+              onClick={prevSlide}
+              className="w-12 h-12 bg-karasu-800 hover:bg-primary border border-karasu-600 hover:border-primary rounded-full flex items-center justify-center text-bone transition-all duration-300 hover-lift"
+            >
+              <FaChevronLeft size={16} />
+            </button>
+            
+            {/* Pagination dots */}
+            <div className="flex space-x-2">
+              {testimonials.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrentIndex(i)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    i === currentIndex ? 'bg-primary scale-125' : 'bg-karasu-600 hover:bg-karasu-500'
+                  }`}
+                />
+              ))}
+            </div>
+
+            <button
+              onClick={nextSlide}
+              className="w-12 h-12 bg-karasu-800 hover:bg-primary border border-karasu-600 hover:border-primary rounded-full flex items-center justify-center text-bone transition-all duration-300 hover-lift"
+            >
+              <FaChevronRight size={16} />
+            </button>
+          </div>
+
+          {/* Carousel container */}
+          <div className="relative overflow-hidden">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+              {getVisibleTestimonials().map((testimonial, index) => (
+                <div
+                  key={`${currentIndex}-${index}`}
+                  className="glass-card p-5 hover-lift transition-all duration-300 group border-l-3 border-primary animate-fadeIn max-w-sm mx-auto"
+                >
+                {/* Header compact */}
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-10 h-10 bg-gradient-to-br from-primary to-purple rounded-full flex items-center justify-center text-bone font-bold text-sm">
                       {testimonial.avatar}
                     </div>
                     <div>
-                      <h4 className="font-accent text-bone">{testimonial.name}</h4>
+                      <h4 className="font-accent text-bone text-sm">{testimonial.name}</h4>
                       <div className="flex space-x-1">
                         {renderStars(testimonial.rating)}
                       </div>
@@ -135,34 +188,30 @@ export default function Testimonials() {
                   </div>
                 </div>
 
-                {/* Citation */}
-                <blockquote className="text-karasu-200 leading-relaxed mb-4 group-hover:text-karasu-100 transition-colors duration-300">
-                  <span className="text-2xl text-primary/40 kanji-style">"</span>
+                {/* Citation compacte */}
+                <blockquote className="text-karasu-200 leading-relaxed mb-3 group-hover:text-karasu-100 transition-colors duration-300 text-sm">
+                  <span className="text-lg text-primary/40 kanji-style">"</span>
                   {testimonial.text}
-                  <span className="text-2xl text-primary/40 kanji-style">"</span>
+                  <span className="text-lg text-primary/40 kanji-style">"</span>
                 </blockquote>
 
-                {/* Détails techniques */}
-                <div className="grid grid-cols-2 gap-3 pt-4 border-t border-karasu-700">
-                  <div>
-                    <div className="text-xs text-karasu-400 uppercase tracking-wide">Artiste</div>
-                    <div className="text-sm font-accent text-bone">{testimonial.artist}</div>
-                  </div>
-                  <div>
-                    <div className="text-xs text-karasu-400 uppercase tracking-wide">Style</div>
-                    <div className="text-sm text-primary">{testimonial.style}</div>
-                  </div>
-                  <div>
-                    <div className="text-xs text-karasu-400 uppercase tracking-wide">Durée</div>
-                    <div className="text-sm text-karasu-300">{testimonial.duration}</div>
+                {/* Détails optimisés */}
+                <div className="flex justify-between items-center pt-3 border-t border-karasu-700 text-xs">
+                  <div className="flex items-center space-x-3">
+                    <div>
+                      <span className="text-karasu-400">Par </span>
+                      <span className="font-accent text-primary">{testimonial.artist}</span>
+                    </div>
+                    <div className="text-karasu-300">{testimonial.duration}</div>
                   </div>
                   <div className="flex items-center">
-                    <span className="text-xs text-emerald kanji-style">✓</span>
-                    <span className="text-xs text-emerald ml-1">Recommande</span>
+                    <span className="text-emerald kanji-style">✓</span>
+                    <span className="text-emerald ml-1">Recommande</span>
                   </div>
                 </div>
               </div>
             ))}
+          </div>
           </div>
         </div>
 
