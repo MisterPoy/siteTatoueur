@@ -99,7 +99,7 @@ const Contact: React.FC = () => {
   ];
 
   const socialLinks = [
-    { icon: <FaInstagram />, name: "Instagram", url: "https://instagram.com/inkritual.tattoo", handle: "@inkritual.tattoo" },
+    { icon: <FaInstagram />, name: "Instagram", url: "https://instagram.com/votre_salon_tattoo", handle: "@votre_salon" },
     { icon: <FaTwitter />, name: "Twitter", url: "https://twitter.com/inkritual_art", handle: "@inkritual_art" },
     { icon: <FaTiktok />, name: "TikTok", url: "https://tiktok.com/@inkritual", handle: "@inkritual" }
   ];
@@ -162,7 +162,7 @@ const Contact: React.FC = () => {
                     <a href="https://wa.me/33600000000?text=Bonjour%2C%20j%27aimerais%20parler%20de%20mon%20projet%20tattoo"
                        target="_blank" rel="noopener"
                        className="rounded-lg px-4 py-2 bg-primary text-karasu-950 transition-all duration-300 hover:brightness-110 hover:shadow-lg hover:shadow-primary/20">WhatsApp</a>
-                    <a href="https://instagram.com/inkritual.tattoo" target="_blank" rel="noopener"
+                    <a href="https://instagram.com/votre_salon_tattoo" target="_blank" rel="noopener"
                        className="rounded-lg px-4 py-2 border border-primary transition-all duration-300 hover:bg-primary/10 hover:shadow-lg">Instagram DM</a>
                     <a href="tel:+33600000000" className="rounded-lg px-4 py-2 border border-karasu-600 transition-all duration-300 hover:border-primary hover:bg-karasu-800/50">Appeler</a>
                   </div>

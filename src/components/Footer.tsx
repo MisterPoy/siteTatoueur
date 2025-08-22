@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
   ];
 
   const socialLinks = [
-    { icon: <FaInstagram />, name: "Instagram", url: "https://instagram.com/inkritual.tattoo", handle: "@inkritual.tattoo" },
+    { icon: <FaInstagram />, name: "Instagram", url: "https://instagram.com/votre_salon_tattoo", handle: "@votre_salon" },
     { icon: <FaTwitter />, name: "Twitter", url: "https://twitter.com/inkritual_art", handle: "@inkritual_art" },
     { icon: <FaTiktok />, name: "TikTok", url: "https://tiktok.com/@inkritual", handle: "@inkritual" }
   ];

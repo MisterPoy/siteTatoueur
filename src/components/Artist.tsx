@@ -100,13 +100,13 @@ const Artists: React.FC = () => {
                   {/* Contact */}
                   <div className="flex flex-col items-center space-y-4">
                     <a
-                      href="https://instagram.com/akira.ink"
+                      href="https://instagram.com/akira_artiste_exemple"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center space-x-3 px-6 py-3 bg-purple/20 hover:bg-purple border border-purple hover:border-purple rounded-lg text-bone transition-all duration-300 hover-lift group"
                     >
                       <FaInstagram className="group-hover:scale-110 transition-transform duration-300" />
-                      <span className="font-accent">@akira.ink</span>
+                      <span className="font-accent">@akira_artiste</span>
                     </a>
                     <a
                       href="#gallery"
@@ -193,13 +193,13 @@ const Artists: React.FC = () => {
                   {/* Contact */}
                   <div className="flex flex-col items-center space-y-4">
                     <a
-                      href="https://instagram.com/hiro.tattoo"
+                      href="https://instagram.com/hiro_artiste_exemple"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center space-x-3 px-6 py-3 bg-primary/20 hover:bg-primary border border-primary hover:border-primary rounded-lg text-bone transition-all duration-300 hover-lift group"
                     >
                       <FaInstagram className="group-hover:scale-110 transition-transform duration-300" />
-                      <span className="font-accent">@hiro.tattoo</span>
+                      <span className="font-accent">@hiro_artiste</span>
                     </a>
                     <a
                       href="#gallery"
