@@ -56,7 +56,7 @@ const Hero: React.FC = () => {
         <div className="absolute bottom-1/3 left-1/3 w-3 h-3 sm:w-1 sm:h-1 bg-teal rounded-full animate-float opacity-80 sm:opacity-50 z-10" style={{ animationDelay: '2s' }}></div>
         <div className="absolute top-2/3 right-1/4 w-3 h-3 sm:w-1 sm:h-1 bg-emerald rounded-full animate-float opacity-75 sm:opacity-45 z-10" style={{ animationDelay: '3s' }}></div>
         <div className="absolute bottom-1/4 right-2/3 w-4 h-4 sm:w-2 sm:h-2 bg-gold rounded-full animate-float opacity-65 sm:opacity-35 z-10" style={{ animationDelay: '4s' }}></div>
-        <div className="absolute top-1/2 left-1/6 w-3 h-3 sm:w-1 sm:h-1 bg-indigo rounded-full animate-float opacity-70 sm:opacity-30 z-10" style={{ animationDelay: '5s' }}></div>
+        <div className="absolute top-1/2 left-1/6 w-3 h-3 sm:w-1 sm:h-1 bg-purple rounded-full animate-float opacity-70 sm:opacity-30 z-10" style={{ animationDelay: '5s' }}></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">

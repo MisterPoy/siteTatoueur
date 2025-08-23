@@ -285,7 +285,7 @@ const Contact: React.FC = () => {
                     className={`w-full py-4 rounded font-accent text-lg tracking-wider uppercase transition-all duration-300 cursor-pointer ${
                       isSubmitting
                         ? 'bg-karasu-600 cursor-not-allowed text-karasu-400'
-                        : 'bg-primary hover:bg-primary-dark text-bone hover-lift primary-glow'
+                        : 'bg-primary hover:bg-teal text-bone hover-lift primary-glow'
                     }`}
                   >
                     {isSubmitting ? (

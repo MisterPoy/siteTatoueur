@@ -76,7 +76,7 @@ const Footer: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`w-12 h-12 bg-karasu-800/50 border border-karasu-700 rounded-lg flex items-center justify-center text-bone transition-all duration-300 hover-lift group ${
-                    index === 0 ? 'hover:bg-gradient-to-br hover:from-primary hover:to-sakura hover:border-sakura' :
+                    index === 0 ? 'hover:bg-gradient-to-br hover:from-primary hover:to-gold hover:border-gold' :
                     index === 1 ? 'hover:bg-gradient-to-br hover:from-purple hover:to-teal hover:border-teal' :
                     'hover:bg-gradient-to-br hover:from-gold hover:to-primary hover:border-gold'
                   }`}
@@ -231,7 +231,7 @@ const Footer: React.FC = () => {
         onClick={() => {
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }}
-        className="fixed bottom-8 right-8 w-14 h-14 bg-primary hover:bg-primary-dark border-2 border-karasu-700 hover:border-primary text-bone rounded-full flex items-center justify-center shadow-xl hover-lift transition-all duration-300 z-40 group cursor-pointer"
+        className="fixed bottom-8 right-8 w-14 h-14 bg-primary hover:bg-teal border-2 border-karasu-700 hover:border-primary text-bone rounded-full flex items-center justify-center shadow-xl hover-lift transition-all duration-300 z-40 group cursor-pointer"
         title="Retour en haut"
       >
         <FaArrowUp className="group-hover:-translate-y-1 transition-transform duration-300" size={18} />

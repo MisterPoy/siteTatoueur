@@ -182,7 +182,7 @@ export default function Testimonials() {
       <div className="absolute inset-0 pointer-events-none">
         <div className="kanji-giant kanji-giant-colossal kanji-serif text-emerald absolute top-1/4 -right-48 kanji-float-4" style={{ '--rotation': '20deg' } as React.CSSProperties}>鴉</div>
         <div className="kanji-giant kanji-giant-xs kanji-sans text-primary absolute top-20 left-20 kanji-float-1" style={{ '--rotation': '-10deg' } as React.CSSProperties}>鴉</div>
-        <div className="kanji-giant kanji-giant-lg kanji-decorative text-sakura absolute -bottom-32 left-1/4 kanji-float-5" style={{ '--rotation': '16deg' } as React.CSSProperties}>鴉</div>
+        <div className="kanji-giant kanji-giant-lg kanji-decorative text-gold absolute -bottom-32 left-1/4 kanji-float-5" style={{ '--rotation': '16deg' } as React.CSSProperties}>鴉</div>
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -294,7 +294,7 @@ export default function Testimonials() {
                 </div>
 
                 {/* Citation compacte */}
-                <blockquote className="text-karasu-200 leading-relaxed mb-3 group-hover:text-karasu-100 transition-colors duration-500 text-sm">
+                <blockquote className="text-karasu-200 leading-relaxed mb-3 group-hover:text-karasu-200 transition-colors duration-500 text-sm">
                   <span className="text-lg text-primary/40 kanji-style opacity-60">"</span>
                   <span className="group-hover:text-bone transition-colors duration-500">
                     {testimonial.text}

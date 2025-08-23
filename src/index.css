@@ -7,8 +7,9 @@
   --font-body: 'Noto Sans JP', sans-serif;
   --font-accent: 'Cinzel', serif;
   
-  --color-karasu-50: #fafafa;
-  --color-karasu-100: #f4f4f5;
+  /* === PALETTE OPTIMISÉE INK RITUAL (14 couleurs) === */
+  
+  /* Base Karasu - 8 nuances essentielles */
   --color-karasu-200: #e4e4e7;
   --color-karasu-300: #d4d4d8;
   --color-karasu-400: #a1a1aa;
@@ -19,20 +20,15 @@
   --color-karasu-900: #18181b;
   --color-karasu-950: #09090b;
   
+  /* Couleurs fonctionnelles - 5 accents */
   --color-primary: #0891b2;
-  --color-primary-rgb: 8, 145, 178;
-  --color-primary-dark: #0e7490;
-  --color-primary-light: #67e8f9;
-  --color-secondary: #8b5cf6;
-  --color-bone: #f8fafc;
-  --color-gold: #fbbf24;
-  --color-sakura: #ffb7c5;
-  --color-teal: #14b8a6;
-  --color-teal-rgb: 20, 184, 166;
   --color-purple: #8b5cf6;
-  --color-purple-rgb: 139, 92, 246;
+  --color-gold: #fbbf24;
   --color-emerald: #10b981;
-  --color-indigo: #6366f1;
+  --color-teal: #14b8a6;
+  
+  /* Texte principal */
+  --color-bone: #f8fafc;
   
   --animate-fade-in: fadeIn 1.2s ease-out;
   --animate-slide-up: slideUp 0.8s ease-out;
