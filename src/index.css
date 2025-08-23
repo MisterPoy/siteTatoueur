@@ -20,6 +20,7 @@
   --color-karasu-950: #09090b;
   
   --color-primary: #0891b2;
+  --color-primary-rgb: 8, 145, 178;
   --color-primary-dark: #0e7490;
   --color-primary-light: #67e8f9;
   --color-secondary: #8b5cf6;
@@ -27,7 +28,9 @@
   --color-gold: #fbbf24;
   --color-sakura: #ffb7c5;
   --color-teal: #14b8a6;
+  --color-teal-rgb: 20, 184, 166;
   --color-purple: #8b5cf6;
+  --color-purple-rgb: 139, 92, 246;
   --color-emerald: #10b981;
   --color-indigo: #6366f1;
   
@@ -166,6 +169,32 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;  /* Chrome, Safari, Opera */
   }
+
+  /* Dégradés très subtils */
+  .artistic-gradient-1 {
+    background: 
+      linear-gradient(135deg, rgba(8, 145, 178, 0.06) 0%, rgba(8, 145, 178, 0.02) 40%, transparent 70%),
+      linear-gradient(45deg, transparent 30%, rgba(139, 92, 246, 0.04) 60%, rgba(139, 92, 246, 0.01) 100%);
+  }
+
+  .artistic-gradient-2 {
+    background: 
+      linear-gradient(-45deg, rgba(20, 184, 166, 0.05) 0%, rgba(20, 184, 166, 0.015) 50%, transparent 80%),
+      radial-gradient(ellipse at 80% 20%, rgba(8, 145, 178, 0.03) 0%, rgba(8, 145, 178, 0.01) 40%, transparent 70%);
+  }
+
+  .artistic-gradient-3 {
+    background: 
+      linear-gradient(120deg, rgba(139, 92, 246, 0.045) 0%, rgba(139, 92, 246, 0.015) 45%, transparent 75%),
+      linear-gradient(-60deg, transparent 25%, rgba(8, 145, 178, 0.035) 55%, rgba(8, 145, 178, 0.01) 100%);
+  }
+
+  .artistic-spots {
+    background: 
+      radial-gradient(circle at 15% 25%, rgba(8, 145, 178, 0.04) 0%, rgba(8, 145, 178, 0.015) 25%, transparent 50%),
+      radial-gradient(circle at 85% 75%, rgba(139, 92, 246, 0.03) 0%, rgba(139, 92, 246, 0.01) 30%, transparent 55%),
+      radial-gradient(circle at 50% 50%, rgba(20, 184, 166, 0.025) 0%, rgba(20, 184, 166, 0.005) 35%, transparent 60%);
+  }
   
   .kanji-style {
     font-family: 'Playfair Display', serif;
@@ -176,6 +205,128 @@
     /* Ajustements responsive pour éviter les débordements */
     word-break: keep-all;
     overflow-wrap: normal;
+  }
+
+  /* Kanji géants d'arrière-plan */
+  .kanji-giant {
+    font-family: 'Noto Sans JP', 'Playfair Display', serif;
+    font-weight: 900;
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+    text-shadow: 0 0 20px rgba(8, 145, 178, 0.3);
+  }
+
+  /* Animations de flottement pour les kanji */
+  .kanji-float-1 {
+    animation: floatGentle1 8s ease-in-out infinite;
+  }
+
+  .kanji-float-2 {
+    animation: floatGentle2 10s ease-in-out infinite;
+  }
+
+  .kanji-float-3 {
+    animation: floatGentle3 12s ease-in-out infinite;
+  }
+
+  .kanji-float-4 {
+    animation: floatGentle4 9s ease-in-out infinite;
+  }
+
+  .kanji-float-5 {
+    animation: floatGentle5 11s ease-in-out infinite;
+  }
+
+  @keyframes floatGentle1 {
+    0%, 100% { transform: translateY(0px) translateX(0px) rotate(var(--rotation)); }
+    25% { transform: translateY(-25px) translateX(12px) rotate(calc(var(--rotation) + 2deg)); }
+    50% { transform: translateY(-18px) translateX(-8px) rotate(calc(var(--rotation) - 1deg)); }
+    75% { transform: translateY(-35px) translateX(6px) rotate(calc(var(--rotation) + 1deg)); }
+  }
+
+  @keyframes floatGentle2 {
+    0%, 100% { transform: translateY(0px) translateX(0px) rotate(var(--rotation)); }
+    30% { transform: translateY(-28px) translateX(-15px) rotate(calc(var(--rotation) + 3deg)); }
+    60% { transform: translateY(-12px) translateX(10px) rotate(calc(var(--rotation) - 2deg)); }
+    80% { transform: translateY(-22px) translateX(-4px) rotate(calc(var(--rotation) + 1deg)); }
+  }
+
+  @keyframes floatGentle3 {
+    0%, 100% { transform: translateY(0px) translateX(0px) rotate(var(--rotation)); }
+    20% { transform: translateY(-20px) translateX(8px) rotate(calc(var(--rotation) - 2deg)); }
+    45% { transform: translateY(-40px) translateX(-12px) rotate(calc(var(--rotation) + 2deg)); }
+    70% { transform: translateY(-15px) translateX(5px) rotate(calc(var(--rotation) - 1deg)); }
+  }
+
+  @keyframes floatGentle4 {
+    0%, 100% { transform: translateY(0px) translateX(0px) rotate(var(--rotation)); }
+    35% { transform: translateY(-32px) translateX(16px) rotate(calc(var(--rotation) + 3deg)); }
+    65% { transform: translateY(-24px) translateX(-9px) rotate(calc(var(--rotation) - 2deg)); }
+    85% { transform: translateY(-10px) translateX(4px) rotate(calc(var(--rotation) + 1deg)); }
+  }
+
+  @keyframes floatGentle5 {
+    0%, 100% { transform: translateY(0px) translateX(0px) rotate(var(--rotation)); }
+    25% { transform: translateY(-16px) translateX(-6px) rotate(calc(var(--rotation) - 3deg)); }
+    55% { transform: translateY(-38px) translateX(14px) rotate(calc(var(--rotation) + 2deg)); }
+    80% { transform: translateY(-26px) translateX(-7px) rotate(calc(var(--rotation) - 1deg)); }
+  }
+
+  .kanji-giant-colossal {
+    font-size: clamp(500px, 55vw, 1000px);
+    opacity: 0.035;
+  }
+
+  .kanji-giant-massive {
+    font-size: clamp(400px, 45vw, 800px);
+    opacity: 0.04;
+  }
+
+  .kanji-giant-huge {
+    font-size: clamp(300px, 35vw, 600px);
+    opacity: 0.045;
+  }
+
+  .kanji-giant-xl {
+    font-size: clamp(250px, 30vw, 500px);
+    opacity: 0.05;
+  }
+
+  .kanji-giant-lg {
+    font-size: clamp(200px, 25vw, 400px);
+    opacity: 0.055;
+  }
+
+  .kanji-giant-md {
+    font-size: clamp(150px, 20vw, 300px);
+    opacity: 0.06;
+  }
+
+  .kanji-giant-sm {
+    font-size: clamp(120px, 15vw, 250px);
+    opacity: 0.065;
+  }
+
+  .kanji-giant-xs {
+    font-size: clamp(80px, 10vw, 180px);
+    opacity: 0.07;
+  }
+
+  /* Variantes de polices pour les kanji */
+  .kanji-serif {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+  }
+
+  .kanji-sans {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 900;
+  }
+
+  .kanji-decorative {
+    font-family: 'Cinzel', serif;
+    font-weight: 800;
   }
   
   /* Ajustements spécifiques pour très grandes tailles sur mobile */

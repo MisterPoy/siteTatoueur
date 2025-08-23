@@ -99,7 +99,7 @@ const Footer: React.FC = () => {
                 <li key={index}>
                   <button
                     onClick={() => scrollToSection(link.href)}
-                    className="text-karasu-300 hover:text-primary transition-colors duration-300 text-left font-body group flex items-center"
+                    className="text-karasu-300 hover:text-primary transition-colors duration-300 text-left font-body group flex items-center cursor-pointer"
                   >
                     <span className="w-0 group-hover:w-4 h-px bg-primary transition-all duration-300 mr-0 group-hover:mr-3"></span>
                     {link.name}
@@ -231,7 +231,7 @@ const Footer: React.FC = () => {
         onClick={() => {
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }}
-        className="fixed bottom-8 right-8 w-14 h-14 bg-primary hover:bg-primary-dark border-2 border-karasu-700 hover:border-primary text-bone rounded-full flex items-center justify-center shadow-xl hover-lift transition-all duration-300 z-40 group"
+        className="fixed bottom-8 right-8 w-14 h-14 bg-primary hover:bg-primary-dark border-2 border-karasu-700 hover:border-primary text-bone rounded-full flex items-center justify-center shadow-xl hover-lift transition-all duration-300 z-40 group cursor-pointer"
         title="Retour en haut"
       >
         <FaArrowUp className="group-hover:-translate-y-1 transition-transform duration-300" size={18} />

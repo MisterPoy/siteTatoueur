@@ -176,8 +176,16 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="reviews" className="py-20 bg-gradient-to-b from-karasu-900 to-karasu-800 japanese-texture">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="reviews" className="py-20 bg-gradient-to-b from-karasu-900 to-karasu-800 relative overflow-hidden">
+      
+      {/* Kanji géants d'arrière-plan */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="kanji-giant kanji-giant-colossal kanji-serif text-emerald absolute top-1/4 -right-48 kanji-float-4" style={{ '--rotation': '20deg' } as React.CSSProperties}>鴉</div>
+        <div className="kanji-giant kanji-giant-xs kanji-sans text-primary absolute top-20 left-20 kanji-float-1" style={{ '--rotation': '-10deg' } as React.CSSProperties}>鴉</div>
+        <div className="kanji-giant kanji-giant-lg kanji-decorative text-sakura absolute -bottom-32 left-1/4 kanji-float-5" style={{ '--rotation': '16deg' } as React.CSSProperties}>鴉</div>
+      </div>
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header avec kanji */}
         <div ref={headerRef} className="text-center mb-16 scroll-reveal">
           <div className="mb-6">
@@ -200,7 +208,7 @@ export default function Testimonials() {
           <div className="flex justify-center items-center gap-4 mb-8">
             <button
               onClick={scrollPrev}
-              className="w-12 h-12 bg-karasu-800 hover:bg-primary border border-karasu-600 hover:border-primary rounded-full flex items-center justify-center text-bone transition-all duration-300 hover-lift group"
+              className="w-12 h-12 bg-karasu-800 hover:bg-primary border border-karasu-600 hover:border-primary rounded-full flex items-center justify-center text-bone transition-all duration-300 hover-lift group cursor-pointer"
             >
               <FaChevronLeft size={16} className="group-hover:scale-110 transition-transform" />
             </button>
@@ -230,14 +238,14 @@ export default function Testimonials() {
             
             <button
               onClick={toggleAutoScroll}
-              className="w-12 h-12 bg-karasu-800 hover:bg-gold border border-karasu-600 hover:border-gold rounded-full flex items-center justify-center text-bone transition-all duration-300 hover-lift group"
+              className="w-12 h-12 bg-karasu-800 hover:bg-gold border border-karasu-600 hover:border-gold rounded-full flex items-center justify-center text-bone transition-all duration-300 hover-lift group cursor-pointer"
             >
               {isPaused ? <FaPlay size={14} /> : <FaPause size={14} />}
             </button>
 
             <button
               onClick={scrollNext}
-              className="w-12 h-12 bg-karasu-800 hover:bg-primary border border-karasu-600 hover:border-primary rounded-full flex items-center justify-center text-bone transition-all duration-300 hover-lift group"
+              className="w-12 h-12 bg-karasu-800 hover:bg-primary border border-karasu-600 hover:border-primary rounded-full flex items-center justify-center text-bone transition-all duration-300 hover-lift group cursor-pointer"
             >
               <FaChevronRight size={16} className="group-hover:scale-110 transition-transform" />
             </button>
@@ -262,7 +270,7 @@ export default function Testimonials() {
               {duplicatedTestimonials.map((testimonial, idx) => (
                 <div
                   key={`${testimonial.name}-${idx}`}
-                  className="glass-card p-5 hover-lift transition-all duration-300 group border-l-3 border-primary flex-shrink-0 w-80"
+                  className="glass-card p-5 hover-lift transition-all duration-300 group border-l-3 border-primary flex-shrink-0 w-80 cursor-context-menu"
                   style={{ minWidth: '320px' }}
                 >
                 {/* Header compact */}

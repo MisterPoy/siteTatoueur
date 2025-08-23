@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import React, { useState, useEffect } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -10,38 +10,41 @@ const Header: React.FC = () => {
       setIsScrolled(window.scrollY > 80);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
       setIsMobileMenuOpen(false);
     }
   };
 
   const navItems = [
-    { id: 'hero', label: 'Accueil' },
-    { id: 'artists', label: 'Artistes' },
-    { id: 'portfolio', label: 'Réalisations' },
-    { id: 'gallery', label: 'Spécialités' },
-    { id: 'reviews', label: 'Avis' },
-    { id: 'infos', label: 'Infos' },
-    { id: 'contact', label: 'Contact' },
+    { id: "hero", label: "Accueil" },
+    { id: "artists", label: "Artistes" },
+    { id: "portfolio", label: "Réalisations" },
+    { id: "gallery", label: "Spécialités" },
+    { id: "reviews", label: "Avis" },
+    { id: "infos", label: "Infos" },
+    { id: "contact", label: "Contact" },
   ];
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'bg-karasu-950/95 backdrop-blur-md shadow-2xl border-b border-karasu-800/50'
-          : 'bg-transparent'
+          ? "bg-karasu-950/95 backdrop-blur-md shadow-2xl border-b border-karasu-800/50"
+          : "bg-transparent"
       }`}
     >
-      <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2
-                          bg-bone text-karasu-900 px-3 py-2 rounded">
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2
+                          bg-bone text-karasu-900 px-3 py-2 rounded"
+      >
         Aller au contenu
       </a>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,17 +52,19 @@ const Header: React.FC = () => {
           {/* Logo */}
           <div
             className="flex items-center cursor-pointer group"
-            onClick={() => scrollToSection('hero')}
+            onClick={() => scrollToSection("hero")}
           >
             <div className="flex items-center space-x-3">
               {/* Icône Corbeau stylisée */}
               <div className="w-12 h-12 relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary via-purple to-teal rounded-full opacity-30 group-hover:opacity-50 transition-all duration-300 group-hover:animate-pulse"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-primary text-2xl font-bold kanji-style group-hover:text-purple transition-colors duration-300 group-hover:scale-110">烏</span>
+                  <span className="text-primary text-2xl font-bold kanji-style group-hover:text-purple transition-colors duration-300 group-hover:scale-110">
+                    烏
+                  </span>
                 </div>
               </div>
-              
+
               {/* Nom du salon */}
               <div>
                 <div className="text-2xl lg:text-3xl kanji-style text-bone group-hover:text-shimmer transition-all duration-300">
@@ -78,7 +83,7 @@ const Header: React.FC = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="relative group text-bone hover:text-primary transition-all duration-300 font-accent text-sm tracking-wider uppercase"
+                className="relative group text-bone hover:text-primary transition-all duration-300 font-accent text-sm tracking-wider uppercase cursor-pointer"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {item.label}
@@ -115,7 +120,7 @@ const Header: React.FC = () => {
         <div
           id="mobile-nav"
           className={`md:hidden absolute top-full left-0 right-0 karasu-gradient border-t border-karasu-800/50 transition-all duration-500 overflow-hidden ${
-            isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+            isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
           <nav className="p-6 space-y-4">

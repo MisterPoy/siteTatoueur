@@ -114,8 +114,16 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-karasu-950 japanese-texture">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-20 bg-gradient-to-br from-karasu-950 via-karasu-850 to-karasu-950 relative overflow-hidden">
+      
+      {/* Kanji géants d'arrière-plan */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="kanji-giant kanji-giant-massive kanji-serif text-purple absolute -bottom-40 -left-48 kanji-float-2" style={{ '--rotation': '16deg' } as React.CSSProperties}>鴉</div>
+        <div className="kanji-giant kanji-giant-sm kanji-decorative text-emerald absolute top-24 -right-24 kanji-float-5" style={{ '--rotation': '-28deg' } as React.CSSProperties}>鴉</div>
+        <div className="kanji-giant kanji-giant-xs kanji-sans text-teal absolute bottom-1/3 right-1/5 kanji-float-3" style={{ '--rotation': '12deg' } as React.CSSProperties}>鴉</div>
+      </div>
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div ref={headerRef} className="text-center mb-16 scroll-reveal">
           <div className="mb-6">
@@ -274,7 +282,7 @@ const Contact: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`w-full py-4 rounded font-accent text-lg tracking-wider uppercase transition-all duration-300 ${
+                    className={`w-full py-4 rounded font-accent text-lg tracking-wider uppercase transition-all duration-300 cursor-pointer ${
                       isSubmitting
                         ? 'bg-karasu-600 cursor-not-allowed text-karasu-400'
                         : 'bg-primary hover:bg-primary-dark text-bone hover-lift primary-glow'

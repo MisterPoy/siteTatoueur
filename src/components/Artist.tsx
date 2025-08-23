@@ -10,8 +10,16 @@ const Artists: React.FC = () => {
   const [hiroActive, setHiroActive] = useState(false);
 
   return (
-    <section id="artists" className="py-20 bg-karasu-900 japanese-texture">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="artists" className="py-20 bg-gradient-to-tr from-karasu-900 via-karasu-800 to-karasu-950 relative overflow-hidden">
+      
+      {/* Kanji géants d'arrière-plan */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="kanji-giant kanji-giant-massive kanji-decorative text-gold absolute -top-32 -left-40 kanji-float-2" style={{ '--rotation': '-15deg' } as React.CSSProperties}>鴉</div>
+        <div className="kanji-giant kanji-giant-xs kanji-sans text-primary absolute top-24 right-24 kanji-float-5" style={{ '--rotation': '18deg' } as React.CSSProperties}>鴉</div>
+        <div className="kanji-giant kanji-giant-lg kanji-serif text-emerald absolute -bottom-28 -right-32 kanji-float-1" style={{ '--rotation': '8deg' } as React.CSSProperties}>鴉</div>
+      </div>
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div ref={headerRef} className="text-center mb-16 scroll-reveal">
           <div className="mb-6">

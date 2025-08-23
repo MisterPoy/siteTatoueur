@@ -56,8 +56,16 @@ const Infos: React.FC = () => {
   ];
 
   return (
-    <section id="infos" className="py-20 bg-karasu-950 japanese-texture">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="infos" className="py-20 bg-gradient-to-tl from-karasu-950 via-karasu-900 to-karasu-950 relative overflow-hidden">
+      
+      {/* Kanji géants d'arrière-plan */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="kanji-giant kanji-giant-huge kanji-decorative text-teal absolute top-1/2 -left-40 kanji-float-3" style={{ '--rotation': '-22deg' } as React.CSSProperties}>鴉</div>
+        <div className="kanji-giant kanji-giant-xl kanji-sans text-gold absolute -top-28 right-1/4 kanji-float-1" style={{ '--rotation': '14deg' } as React.CSSProperties}>鴉</div>
+        <div className="kanji-giant kanji-giant-xs kanji-serif text-primary absolute bottom-28 right-28 kanji-float-4" style={{ '--rotation': '-8deg' } as React.CSSProperties}>鴉</div>
+      </div>
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div ref={headerRef} className="text-center mb-16 scroll-reveal">
           <div className="mb-6">

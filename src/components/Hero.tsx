@@ -17,36 +17,36 @@ const Hero: React.FC = () => {
     >
       {/* Image de fond avec masques artistiques */}
       <div className="absolute inset-0">
-        {/* Image de fond */}
+        {/* Image de fond avec fallback pour mobile */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
           style={{ 
-            backgroundImage: 'url("/images/gallery/imageFond.webp")',
+            backgroundImage: 'url("./images/gallery/imageFond.webp"), url("./images/gallery/grue-japonaise.jpg")',
             filter: 'brightness(0.6) contrast(1.1) saturate(1.1)'
           }}
         />
         
-        {/* Masques artistiques superposés */}
-        <div className="absolute inset-0 bg-gradient-to-br from-karasu-950/70 via-karasu-900/50 to-karasu-800/60" />
-        <div className="absolute inset-0 bg-gradient-to-t from-karasu-950/80 via-transparent to-karasu-900/40" />
-        <div className="absolute inset-0 bg-gradient-to-r from-karasu-950/60 via-transparent to-karasu-950/60" />
+        {/* Masques artistiques plus légers sur mobile */}
+        <div className="absolute inset-0 bg-gradient-to-br from-karasu-950/50 sm:from-karasu-950/70 via-karasu-900/30 sm:via-karasu-900/50 to-karasu-800/40 sm:to-karasu-800/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-karasu-950/60 sm:from-karasu-950/80 via-transparent to-karasu-900/20 sm:to-karasu-900/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-karasu-950/40 sm:from-karasu-950/60 via-transparent to-karasu-950/40 sm:to-karasu-950/60" />
         
-        {/* Masque radial pour fondu des bords */}
+        {/* Masque radial responsive */}
         <div 
           className="absolute inset-0" 
           style={{
-            background: 'radial-gradient(ellipse 70% 60% at center, transparent 40%, rgba(11, 15, 20, 0.3) 65%, rgba(11, 15, 20, 0.7) 85%, rgba(11, 15, 20, 0.9) 100%)'
+            background: 'radial-gradient(ellipse 80% 70% at center, transparent 30%, rgba(11, 15, 20, 0.2) 55%, rgba(11, 15, 20, 0.5) 75%, rgba(11, 15, 20, 0.7) 100%)'
           }}
         />
         
         {/* Overlay de texture japonaise */}
         <div className="absolute inset-0 japanese-texture opacity-20" />
         
-        {/* Motifs japonais subtils conservés */}
-        <div className="absolute top-20 left-20 w-64 h-64 opacity-5 z-10">
-          <div className="w-full h-full rounded-full border-2 border-primary"></div>
+        {/* Motifs japonais subtils responsive */}
+        <div className="absolute top-10 sm:top-20 left-4 sm:left-20 w-32 sm:w-64 h-32 sm:h-64 opacity-10 sm:opacity-5 z-10">
+          <div className="w-full h-full rounded-full border border-primary sm:border-2"></div>
         </div>
-        <div className="absolute bottom-32 right-16 w-48 h-48 opacity-5 z-10">
+        <div className="absolute bottom-16 sm:bottom-32 right-4 sm:right-16 w-24 sm:w-48 h-24 sm:h-48 opacity-10 sm:opacity-5 z-10">
           <div className="w-full h-full rounded-full border border-primary"></div>
         </div>
         

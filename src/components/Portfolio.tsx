@@ -146,8 +146,16 @@ const Portfolio: React.FC = () => {
   }, [selectedImage]);
 
   return (
-    <section id="portfolio" className="py-20 bg-karasu-900 japanese-texture">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="portfolio" className="py-20 bg-gradient-to-br from-karasu-900 via-karasu-950 to-karasu-900 relative overflow-hidden">
+      
+      {/* Kanji géants d'arrière-plan */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="kanji-giant kanji-giant-colossal kanji-sans text-primary absolute -top-40 -right-48 kanji-float-1" style={{ '--rotation': '12deg' } as React.CSSProperties}>鴉</div>
+        <div className="kanji-giant kanji-giant-xs kanji-serif text-purple absolute bottom-40 left-20 kanji-float-2" style={{ '--rotation': '-8deg' } as React.CSSProperties}>鴉</div>
+        <div className="kanji-giant kanji-giant-sm kanji-sans text-gold absolute top-3/4 right-16 kanji-float-4" style={{ '--rotation': '-15deg' } as React.CSSProperties}>鴉</div>
+      </div>
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div ref={headerRef} className="text-center mb-12 scroll-reveal">
           <div className="mb-4">
@@ -200,9 +208,9 @@ const Portfolio: React.FC = () => {
                   {/* Bouton zoom */}
                   <button
                     onClick={() => openModal(image)}
-                    className="absolute top-4 right-4 w-12 h-12 bg-karasu-800/80 hover:bg-primary border border-karasu-600 rounded-full flex items-center justify-center text-bone transition-all duration-300 hover-lift"
+                    className="absolute top-1/2 right-1/2 transform translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-karasu-800/80 hover:bg-primary border border-karasu-600 rounded-full flex items-center justify-center text-bone transition-all duration-300 hover-lift opacity-35 hover:opacity-65 cursor-pointer "
                   >
-                    <FaExpand size={16} />
+                    <FaExpand size={38} />
                   </button>
                 </div>
               ))}
@@ -211,14 +219,14 @@ const Portfolio: React.FC = () => {
             {/* Contrôles de navigation */}
             <button
               onClick={goToPrevious}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-karasu-800/80 hover:bg-primary border border-karasu-600 rounded-full flex items-center justify-center text-bone transition-all duration-300 hover-lift"
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-karasu-800/80 hover:bg-primary border border-karasu-600 rounded-full flex items-center justify-center text-bone transition-all duration-300 hover-lift cursor-pointer"
             >
               <FaChevronLeft size={16} />
             </button>
 
             <button
               onClick={goToNext}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-karasu-800/80 hover:bg-primary border border-karasu-600 rounded-full flex items-center justify-center text-bone transition-all duration-300 hover-lift"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-karasu-800/80 hover:bg-primary border border-karasu-600 rounded-full flex items-center justify-center text-bone transition-all duration-300 hover-lift cursor-pointer"
             >
               <FaChevronRight size={16} />
             </button>

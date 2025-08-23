@@ -156,4 +156,79 @@ public/images/gallery/
 
 ---
 
-*Dernière mise à jour : 2025-08-20*
+### 2025-08-22 - Session design & animations
+
+#### 🎨 **Refonte typographique majeure**
+- **Remplacement de police :** Zen Tokyo Zoo → Playfair Display
+  - **Raison :** Recherche d'une alternative gratuite à Ferryman pour plus d'élégance
+  - **Implementation :** Google Fonts + ajustements responsive complets
+  - **Breakpoints :** Tailles adaptées mobile (`text-6xl sm:text-8xl md:text-[10rem] lg:text-[12rem]`)
+  - **Résultat :** Typographie plus raffinée tout en gardant l'esthétique japonaise
+
+#### 🖼️ **Optimisation Hero section mobile**
+- **Problème résolu :** Image de fond invisible sur mobile Android
+  - **Cause :** Masques trop opaques + chemin absolu + format WebP non supporté
+  - **Solution :** 
+    - Chemin relatif : `/images/` → `./images/`
+    - Fallback JPG : `url("./images/gallery/imageFond.webp"), url("./images/gallery/grue-japonaise.jpg")`
+    - Masques allégés : opacités réduites de 50% sur mobile (`sm:from-karasu-950/70`)
+    - Cercles repositionnés et redimensionnés pour mobile
+- **Résultat :** Image parfaitement visible sur tous devices
+
+#### 🎌 **Kanji géants d'arrière-plan - Innovation majeure**
+- **Concept :** Kanji KARASU (鴉) géants flottants en arrière-plan de chaque section
+- **Tailles créées :**
+  - COLOSSAL : jusqu'à 1000px (`clamp(500px, 55vw, 1000px)`)
+  - MASSIVE : jusqu'à 800px
+  - HUGE : jusqu'à 600px  
+  - XL, LG, MD, SM, XS : gamme complète
+- **Polices variées :** Noto Sans JP, Playfair Display, Cinzel
+- **Positionnement artistique :** 3-4 kanji par section, répartition harmonieuse
+- **Opacités subtiles :** 0.025 à 0.06 pour effet watermark élégant
+
+#### 🌊 **Système d'animations fluides**
+- **5 animations de flottement :** `kanji-float-1` à `kanji-float-5`
+- **Amplitudes importantes :**
+  - Vertical : -10px à -40px (vs -3px à -15px initial)
+  - Horizontal : -15px à +16px (vs -4px à +4px initial)
+  - Rotations : ±1° à ±3° autour de la rotation de base
+- **Durées variées :** 8s à 12s pour éviter synchronisation
+- **CSS Variables :** `--rotation` pour préserver rotations d'origine
+- **Résultat :** Kanji qui "nagent" vraiment dans l'espace
+
+#### 🎯 **Arrière-plans de sections**
+- **Évolution :** Fonds unis → Dégradés subtils → Kanji géants
+- **Dégradés créés :** 
+  - Portfolio : `bg-gradient-to-br from-karasu-900 via-karasu-950 to-karasu-900`
+  - Gallery : `bg-gradient-to-bl from-karasu-800 via-karasu-900 to-karasu-850`
+  - Artists : `bg-gradient-to-tr from-karasu-900 via-karasu-800 to-karasu-950`
+  - Infos : `bg-gradient-to-tl from-karasu-950 via-karasu-900 to-karasu-950`
+  - Contact : `bg-gradient-to-br from-karasu-950 via-karasu-850 to-karasu-950`
+  - Testimonials : conservation du dégradé existant
+
+#### ⚖️ **Répartition harmonieuse finale**
+- **Anti-surcharge :** Évitement des "tas" de kanji par espacement optimisé
+- **Marges négatives :** `-left-48`, `-right-48`, `-bottom-40` pour débordements contrôlés
+- **Distribution stratégique :** Gros kanji en coins, petits en zones intermédiaires
+- **Résultat :** Composition équilibrée et aérée
+
+---
+
+## 🎯 **Objectifs réalisés (mise à jour)**
+
+✅ Site totalement anonymisé  
+✅ Identité visuelle japonaise cohérente  
+✅ Images réelles de tatouages intégrées  
+✅ Responsive design optimisé  
+✅ Configuration dev/prod simplifiée  
+✅ UX mobile améliorée (symboles visibles)  
+✅ Architecture modulaire et maintenable  
+✅ **Typographie élégante avec Playfair Display**  
+✅ **Image Hero mobile Android corrigée**  
+✅ **Kanji géants animés - innovation artistique majeure**  
+✅ **Système d'animations fluides et amples**  
+✅ **Arrière-plans différenciés par section**  
+
+---
+
+*Dernière mise à jour : 2025-08-22*
