@@ -114,7 +114,7 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-karasu-950 via-karasu-850 to-karasu-950 relative overflow-hidden">
+    <section id="contact" className="py-20 bg-gradient-to-br from-karasu-950 via-karasu-900 to-karasu-950 relative overflow-hidden">
       
       {/* Kanji géants d'arrière-plan */}
       <div className="absolute inset-0 pointer-events-none">

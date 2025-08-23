@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palette de Couleurs - Ink Ritual Tattoo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background: #09090b;
+            color: #f8fafc;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #0891b2, #8b5cf6, #fbbf24);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .subtitle {
+            font-family: 'Cinzel', serif;
+            color: #a1a1aa;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .kanji {
+            font-size: 4rem;
+            color: #0891b2;
+            margin: 1rem 0;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            color: #f8fafc;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, #0891b2, #8b5cf6);
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .color-card {
+            background: #18181b;
+            border: 1px solid #3f3f46;
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .color-card:hover {
+            transform: translateY(-4px);
+            border-color: #0891b2;
+            box-shadow: 0 8px 32px rgba(8, 145, 178, 0.15);
+        }
+
+        .color-preview {
+            width: 100%;
+            height: 80px;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border: 2px solid #3f3f46;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .color-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .color-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #f8fafc;
+            margin-bottom: 0.25rem;
+        }
+
+        .color-hex {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: #0891b2;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .color-usage {
+            font-size: 0.85rem;
+            color: #a1a1aa;
+            line-height: 1.4;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(8, 145, 178, 0.2);
+            border: 1px solid #0891b2;
+            color: #0891b2;
+            padding: 0.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .color-card:hover .copy-btn {
+            opacity: 1;
+        }
+
+        .copy-btn:hover {
+            background: #0891b2;
+            color: #f8fafc;
+        }
+
+        .copied {
+            background: #10b981 !important;
+            color: #f8fafc !important;
+            border-color: #10b981 !important;
+        }
+
+        .gradient-preview {
+            background: linear-gradient(135deg, #09090b 0%, #18181b 30%, #27272a 60%, #09090b 100%);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-card {
+            background: #18181b;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #3f3f46;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #0891b2;
+        }
+
+        .stat-label {
+            color: #a1a1aa;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .search-box {
+            background: #18181b;
+            border: 1px solid #3f3f46;
+            color: #f8fafc;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            width: 100%;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: #0891b2;
+            box-shadow: 0 0 0 2px rgba(8, 145, 178, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2rem;
+            }
+            .color-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .toast {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            background: #10b981;
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 500;
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .toast.show {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="kanji">鴉</div>
+            <h1 class="title">Palette de Couleurs</h1>
+            <p class="subtitle">Ink Ritual Tattoo</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number">25</div>
+                <div class="stat-label">Couleurs Total</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">11</div>
+                <div class="stat-label">Nuances Karasu</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">8</div>
+                <div class="stat-label">Couleurs d'Accent</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">6</div>
+                <div class="stat-label">Variantes RGB</div>
+            </div>
+        </div>
+
+        <input type="text" id="searchBox" class="search-box" placeholder="Rechercher une couleur..." />
+
+        <div class="section">
+            <h2 class="section-title">Palette Principale KARASU</h2>
+            <div class="color-grid" id="karasuGrid">
+                <!-- Couleurs Karasu générées par JavaScript -->
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Couleurs d'Accent</h2>
+            <div class="color-grid" id="accentGrid">
+                <!-- Couleurs d'accent générées par JavaScript -->
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Couleurs Spécialisées</h2>
+            <div class="color-grid" id="specialGrid">
+                <!-- Couleurs spécialisées générées par JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <div id="toast" class="toast">Couleur copiée dans le presse-papier !</div>
+
+    <script>
+        const colors = {
+            karasu: [
+                { name: 'Karasu 50', hex: '#fafafa', usage: 'Fond ultra-clair, highlights' },
+                { name: 'Karasu 100', hex: '#f4f4f5', usage: 'Fond clair, cards légères' },
+                { name: 'Karasu 200', hex: '#e4e4e7', usage: 'Bordures claires, séparateurs' },
+                { name: 'Karasu 300', hex: '#d4d4d8', usage: 'Texte secondaire sur fond clair' },
+                { name: 'Karasu 400', hex: '#a1a1aa', usage: 'Texte discret, placeholders' },
+                { name: 'Karasu 500', hex: '#71717a', usage: 'Texte neutre, icônes' },
+                { name: 'Karasu 600', hex: '#52525b', usage: 'Bordures sombres, hover states' },
+                { name: 'Karasu 700', hex: '#3f3f46', usage: 'Bordures principales, cards' },
+                { name: 'Karasu 800', hex: '#27272a', usage: 'Fond composants, overlays' },
+                { name: 'Karasu 900', hex: '#18181b', usage: 'Fond sections principales' },
+                { name: 'Karasu 950', hex: '#09090b', usage: 'Fond principal body' }
+            ],
+            accent: [
+                { name: 'Primary', hex: '#0891b2', usage: 'Couleur signature, liens, CTA' },
+                { name: 'Primary Dark', hex: '#0e7490', usage: 'Hover primary, états actifs' },
+                { name: 'Primary Light', hex: '#67e8f9', usage: 'Highlights, effets lumineux' },
+                { name: 'Bone', hex: '#f8fafc', usage: 'Texte principal sur fond sombre' },
+                { name: 'Gold', hex: '#fbbf24', usage: 'Accents chaleureux, kanjis spéciaux' },
+                { name: 'Sakura', hex: '#ffb7c5', usage: 'Touches délicates, style japonais' }
+            ],
+            special: [
+                { name: 'Purple', hex: '#8b5cf6', usage: 'Accent secondaire, artiste Akira' },
+                { name: 'Teal', hex: '#14b8a6', usage: 'Variante primary, catégories' },
+                { name: 'Emerald', hex: '#10b981', usage: 'Succès, validation, nature' },
+                { name: 'Indigo', hex: '#6366f1', usage: 'Accents profonds, variantes' },
+                { name: 'Secondary', hex: '#8b5cf6', usage: 'Équivalent purple, backup' }
+            ]
+        };
+
+        function createColorCard(color, category) {
+            return `
+                <div class="color-card" onclick="copyColor('${color.hex}', '${color.name}')" data-color="${color.name.toLowerCase()}" data-hex="${color.hex.toLowerCase()}">
+                    <div class="color-preview" style="background-color: ${color.hex};">
+                        <button class="copy-btn">Copier</button>
+                    </div>
+                    <div class="color-info">
+                        <div>
+                            <div class="color-name">${color.name}</div>
+                            <div class="color-hex">${color.hex.toUpperCase()}</div>
+                        </div>
+                    </div>
+                    <div class="color-usage">${color.usage}</div>
+                </div>
+            `;
+        }
+
+        function renderColors() {
+            document.getElementById('karasuGrid').innerHTML = colors.karasu.map(color => createColorCard(color, 'karasu')).join('');
+            document.getElementById('accentGrid').innerHTML = colors.accent.map(color => createColorCard(color, 'accent')).join('');
+            document.getElementById('specialGrid').innerHTML = colors.special.map(color => createColorCard(color, 'special')).join('');
+        }
+
+        function copyColor(hex, name) {
+            navigator.clipboard.writeText(hex).then(() => {
+                showToast(`${name} (${hex}) copié !`);
+            });
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2000);
+        }
+
+        function filterColors() {
+            const search = document.getElementById('searchBox').value.toLowerCase();
+            const cards = document.querySelectorAll('.color-card');
+            
+            cards.forEach(card => {
+                const colorName = card.dataset.color;
+                const colorHex = card.dataset.hex;
+                const usage = card.querySelector('.color-usage').textContent.toLowerCase();
+                
+                if (colorName.includes(search) || colorHex.includes(search) || usage.includes(search)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Event listeners
+        document.getElementById('searchBox').addEventListener('input', filterColors);
+
+        // Initialisation
+        renderColors();
+
+        // Effet de révélation
+        setTimeout(() => {
+            document.querySelectorAll('.color-card').forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 50);
+            });
+        }, 100);
+
+        // Styles d'animation initial
+        document.querySelectorAll('.color-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.5s ease';
+        });
+    </script>
+</body>
+</html>

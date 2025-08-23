@@ -296,7 +296,7 @@ const Gallery: React.FC = () => {
   return (
     <section
       id="gallery"
-      className="py-20 bg-gradient-to-bl from-karasu-800 via-karasu-900 to-karasu-850 relative overflow-hidden"
+      className="py-20 bg-gradient-to-bl from-karasu-800 via-karasu-900 to-karasu-900 relative overflow-hidden"
     >
       {/* Kanji géants d'arrière-plan */}
       <div className="absolute inset-0 pointer-events-none">
