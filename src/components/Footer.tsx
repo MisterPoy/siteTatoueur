@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
               </div>
             </div>
             
-            <p className="text-karasu-300 mb-6 leading-relaxed font-body">
+            <p className="text-karasu-400 mb-6 leading-relaxed font-body">
               Ink Ritual Tattoo - Studio de tatouage d'exception. 
               L'art de l'encre japonais au service de votre expression artistique.
             </p>
@@ -75,9 +75,9 @@ const Footer: React.FC = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w-12 h-12 bg-karasu-800/50 border border-karasu-700 rounded-lg flex items-center justify-center text-bone transition-all duration-300 hover-lift group ${
+                  className={`w-12 h-12 bg-karasu-800/50 border border-karasu-600 rounded-lg flex items-center justify-center text-bone transition-all duration-300 hover-lift group ${
                     index === 0 ? 'hover:bg-gradient-to-br hover:from-primary hover:to-gold hover:border-gold' :
-                    index === 1 ? 'hover:bg-gradient-to-br hover:from-purple hover:to-teal hover:border-teal' :
+                    index === 1 ? 'hover:bg-gradient-to-br hover:from-purple hover:to-primary hover:border-primary' :
                     'hover:bg-gradient-to-br hover:from-gold hover:to-primary hover:border-gold'
                   }`}
                   title={social.handle}
@@ -99,7 +99,7 @@ const Footer: React.FC = () => {
                 <li key={index}>
                   <button
                     onClick={() => scrollToSection(link.href)}
-                    className="text-karasu-300 hover:text-primary transition-colors duration-300 text-left font-body group flex items-center cursor-pointer"
+                    className="text-karasu-400 hover:text-primary transition-colors duration-300 text-left font-body group flex items-center cursor-pointer"
                   >
                     <span className="w-0 group-hover:w-4 h-px bg-primary transition-all duration-300 mr-0 group-hover:mr-3"></span>
                     {link.name}
@@ -116,17 +116,17 @@ const Footer: React.FC = () => {
               <h3 className="text-bone font-accent text-lg tracking-wider uppercase">Contact</h3>
             </div>
             <ul className="space-y-4">
-              <li className="flex items-start text-karasu-300">
+              <li className="flex items-start text-karasu-400">
                 <FaMapMarkerAlt className="text-primary mr-3 flex-shrink-0 mt-1" />
                 <span className="text-sm font-body">Ink Ritual Tattoo<br />123 Rue de l'Art<br />Quartier Créatif<br />75001 Paris, France</span>
               </li>
-              <li className="flex items-center text-karasu-300">
+              <li className="flex items-center text-karasu-400">
                 <FaPhone className="text-primary mr-3 flex-shrink-0" />
                 <a href="tel:+33142868788" className="text-sm hover:text-primary transition-colors duration-300 font-body">
                   +33 1 42 86 87 88
                 </a>
               </li>
-              <li className="flex items-center text-karasu-300">
+              <li className="flex items-center text-karasu-400">
                 <FaEnvelope className="text-primary mr-3 flex-shrink-0" />
                 <a href="mailto:contact@inkritual-tattoo.fr" className="text-sm hover:text-primary transition-colors duration-300 font-body">
                   contact@inkritual-tattoo.fr
@@ -135,9 +135,9 @@ const Footer: React.FC = () => {
             </ul>
             
             {/* Business Hours */}
-            <div className="mt-6 p-4 bg-karasu-800/30 rounded-lg border border-karasu-700/50">
+            <div className="mt-6 p-4 bg-karasu-800/30 rounded-lg border border-karasu-600/50">
               <h4 className="text-bone font-accent text-sm tracking-wider uppercase mb-3">Rendez-vous</h4>
-              <div className="text-karasu-300 text-sm space-y-1 font-body">
+              <div className="text-karasu-400 text-sm space-y-1 font-body">
                 <p className="text-primary font-semibold">Sur rendez-vous uniquement</p>
                 <p>Consultation préalable obligatoire</p>
                 <p>Contactez-nous pour planifier</p>
@@ -157,7 +157,7 @@ const Footer: React.FC = () => {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-karasu-300 hover:text-primary transition-colors duration-300 text-sm font-body"
+                    className="text-karasu-400 hover:text-primary transition-colors duration-300 text-sm font-body"
                   >
                     {link.name}
                   </a>
@@ -171,7 +171,7 @@ const Footer: React.FC = () => {
                 <span className="text-lg kanji-style text-primary mr-2">証</span>
                 <h4 className="text-bone font-accent text-sm tracking-wider uppercase">Certifications</h4>
               </div>
-              <div className="text-karasu-300 text-xs space-y-2 font-body">
+              <div className="text-karasu-400 text-xs space-y-2 font-body">
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-primary rounded-full mr-2 flex-shrink-0"></div>
                   <span>Studio agréé ARS</span>
@@ -198,7 +198,7 @@ const Footer: React.FC = () => {
           <div className="flex justify-center py-8">
             <div className="text-center">
               <span className="text-4xl kanji-style text-primary/30 block">和</span>
-              <div className="text-xs font-accent text-karasu-500 tracking-widest mt-2">
+              <div className="text-xs font-accent text-karasu-400 tracking-widest mt-2">
                 HARMONIE · RESPECT · TRADITION
               </div>
             </div>
@@ -231,7 +231,7 @@ const Footer: React.FC = () => {
         onClick={() => {
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }}
-        className="fixed bottom-8 right-8 w-14 h-14 bg-primary hover:bg-teal border-2 border-karasu-700 hover:border-primary text-bone rounded-full flex items-center justify-center shadow-xl hover-lift transition-all duration-300 z-40 group cursor-pointer"
+        className="fixed bottom-8 right-8 w-14 h-14 bg-primary hover:bg-primary/80 border-2 border-karasu-600 hover:border-primary text-bone rounded-full flex items-center justify-center shadow-xl hover-lift transition-all duration-300 z-40 group cursor-pointer"
         title="Retour en haut"
       >
         <FaArrowUp className="group-hover:-translate-y-1 transition-transform duration-300" size={18} />

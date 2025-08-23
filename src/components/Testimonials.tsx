@@ -180,7 +180,7 @@ export default function Testimonials() {
       
       {/* Kanji géants d'arrière-plan */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="kanji-giant kanji-giant-colossal kanji-serif text-emerald absolute top-1/4 -right-48 kanji-float-4" style={{ '--rotation': '20deg' } as React.CSSProperties}>鴉</div>
+        <div className="kanji-giant kanji-giant-colossal kanji-serif text-primary absolute top-1/4 -right-48 kanji-float-4" style={{ '--rotation': '20deg' } as React.CSSProperties}>鴉</div>
         <div className="kanji-giant kanji-giant-xs kanji-sans text-primary absolute top-20 left-20 kanji-float-1" style={{ '--rotation': '-10deg' } as React.CSSProperties}>鴉</div>
         <div className="kanji-giant kanji-giant-lg kanji-decorative text-gold absolute -bottom-32 left-1/4 kanji-float-5" style={{ '--rotation': '16deg' } as React.CSSProperties}>鴉</div>
       </div>
@@ -197,7 +197,7 @@ export default function Testimonials() {
           <h2 className="text-3xl md:text-4xl font-accent text-bone mb-4">
             Ce que disent nos clients
           </h2>
-          <p className="text-karasu-300 max-w-2xl mx-auto">
+          <p className="text-karasu-400 max-w-2xl mx-auto">
             Plus de 500 tatouages réalisés, des clients satisfaits qui partagent leur expérience unique chez Ink Ritual Tattoo
           </p>
         </div>
@@ -230,7 +230,7 @@ export default function Testimonials() {
                   className={`w-3 h-3 rounded-full transition-all duration-300 hover:scale-110 ${
                     Math.round(scrollPositionRef.current / cardWidth) === i
                       ? 'bg-primary scale-125 shadow-lg shadow-primary/50' 
-                      : 'bg-karasu-600 hover:bg-karasu-500'
+                      : 'bg-karasu-600 hover:bg-karasu-400'
                   }`}
                 />
               ))}
@@ -294,7 +294,7 @@ export default function Testimonials() {
                 </div>
 
                 {/* Citation compacte */}
-                <blockquote className="text-karasu-200 leading-relaxed mb-3 group-hover:text-karasu-200 transition-colors duration-500 text-sm">
+                <blockquote className="text-karasu-400 leading-relaxed mb-3 group-hover:text-karasu-400 transition-colors duration-500 text-sm">
                   <span className="text-lg text-primary/40 kanji-style opacity-60">"</span>
                   <span className="group-hover:text-bone transition-colors duration-500">
                     {testimonial.text}
@@ -303,17 +303,17 @@ export default function Testimonials() {
                 </blockquote>
 
                 {/* Détails optimisés */}
-                <div className="flex justify-between items-center pt-3 border-t border-karasu-700 text-xs">
+                <div className="flex justify-between items-center pt-3 border-t border-karasu-600 text-xs">
                   <div className="flex items-center space-x-3">
                     <div>
                       <span className="text-karasu-400">Par </span>
                       <span className="font-accent text-primary">{testimonial.artist}</span>
                     </div>
-                    <div className="text-karasu-300">{testimonial.duration}</div>
+                    <div className="text-karasu-400">{testimonial.duration}</div>
                   </div>
                   <div className="flex items-center group-hover:scale-105 transition-transform duration-300">
-                    <span className="text-emerald kanji-style animate-pulse">✓</span>
-                    <span className="text-emerald ml-1 font-medium">Recommande</span>
+                    <span className="text-primary kanji-style animate-pulse">✓</span>
+                    <span className="text-primary ml-1 font-medium">Recommande</span>
                   </div>
                 </div>
               </div>
@@ -328,7 +328,7 @@ export default function Testimonials() {
 
         {/* Call to action */}
         <div className="text-center mt-16">
-          <p className="text-karasu-300 mb-6">
+          <p className="text-karasu-400 mb-6">
             Rejoignez nos clients satisfaits et vivez l'expérience Ink Ritual Tattoo
           </p>
           <a 

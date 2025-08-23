@@ -151,7 +151,7 @@ const Portfolio: React.FC = () => {
       {/* Kanji géants d'arrière-plan */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="kanji-giant kanji-giant-colossal kanji-sans text-primary absolute -top-40 -right-48 kanji-float-1" style={{ '--rotation': '12deg' } as React.CSSProperties}>鴉</div>
-        <div className="kanji-giant kanji-giant-xs kanji-serif text-purple absolute bottom-40 left-20 kanji-float-2" style={{ '--rotation': '-8deg' } as React.CSSProperties}>鴉</div>
+        <div className="kanji-giant kanji-giant-xs kanji-serif text-karasu-400 absolute bottom-40 left-20 kanji-float-2" style={{ '--rotation': '-8deg' } as React.CSSProperties}>鴉</div>
         <div className="kanji-giant kanji-giant-sm kanji-sans text-gold absolute top-3/4 right-16 kanji-float-4" style={{ '--rotation': '-15deg' } as React.CSSProperties}>鴉</div>
       </div>
       
@@ -164,7 +164,7 @@ const Portfolio: React.FC = () => {
               ZATSU · RÉALISATIONS EN VRAC
             </div>
           </div>
-          <p className="text-lg text-karasu-300 max-w-2xl mx-auto leading-relaxed font-body">
+          <p className="text-lg text-karasu-400 max-w-2xl mx-auto leading-relaxed font-body">
             Un aperçu de mes diverses créations artistiques
           </p>
         </div>
@@ -199,7 +199,7 @@ const Portfolio: React.FC = () => {
                       <h3 className="text-2xl md:text-3xl font-accent text-bone mb-3">
                         {image.alt}
                       </h3>
-                      <p className="text-karasu-200 font-body leading-relaxed">
+                      <p className="text-karasu-400 font-body leading-relaxed">
                         {image.description}
                       </p>
                     </div>
@@ -240,7 +240,7 @@ const Portfolio: React.FC = () => {
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === currentIndex 
                       ? 'bg-primary scale-125' 
-                      : 'bg-karasu-600 hover:bg-karasu-500'
+                      : 'bg-karasu-600 hover:bg-karasu-400'
                   }`}
                 />
               ))}
@@ -256,7 +256,7 @@ const Portfolio: React.FC = () => {
                 className={`relative aspect-square overflow-hidden rounded border-2 transition-all duration-300 ${
                   index === currentIndex 
                     ? 'border-primary scale-105' 
-                    : 'border-karasu-600 hover:border-karasu-500'
+                    : 'border-karasu-600 hover:border-karasu-400'
                 }`}
               >
                 <img

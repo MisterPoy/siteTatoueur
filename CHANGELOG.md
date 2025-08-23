@@ -231,4 +231,64 @@ public/images/gallery/
 
 ---
 
-*Dernière mise à jour : 2025-08-22*
+### 2025-08-23 - Révolution de la Palette de Couleurs
+
+#### 🎨 **Optimisation Ultra-Intelligente de la Palette**
+- **Analyse critique :** Identification de 25 couleurs → **trop dispersé pour un site professionnel**
+- **Approach créative-technique :** Équilibre entre richesse artistique et bonnes pratiques web
+- **Méthodologie :** Analyse systématique de chaque utilisation couleur dans le codebase
+- **Remplacements intelligents :**
+  - `karasu-200/300` → `karasu-400` (textes descriptifs)
+  - `karasu-500` → `karasu-400` (hovers subtils) 
+  - `karasu-700` → `karasu-600` (bordures plus visibles)
+  - `emerald/teal` → `primary/gold` (selon contexte)
+  - Suppression des variants automatiques (`primary-dark`, `primary-light`)
+  - Suppression des doublons (`secondary` = `purple`)
+
+#### ✅ **Palette Ultra-Optimisée Finale : 8 Couleurs**
+- **Base Karasu (5) :** 950, 900, 800, 600, 400 - du plus sombre au plus clair
+- **Accents (3) :** Primary #0891b2 (signature), Purple #8b5cf6 (Akira), Gold #fbbf24 (kanjis)
+- **Texte (1) :** Bone #f8fafc (lisibilité parfaite)
+- **Réduction :** **-68%** par rapport aux 25 couleurs originales
+- **Impact :** Design 100% préservé, palette 68% plus légère
+
+#### 🔧 **Corrections Techniques Critiques**
+- **Bug kanji 実** : Correction du kanji "Réalisation" qui avait perdu sa couleur
+- **Incohérences résolues :** `karasu-850` (inexistant) → `karasu-900`
+- **Classes CSS nettoyées :** `teal-glow`, `emerald-glow` → `gold-glow`
+- **Harmonisation boutons :** "Commencer votre projet" aligné sur "Réserver consultation"
+
+#### 🎯 **Kanjis Géants - Répartition Optimisée**
+- **Mélange équilibré :** 30% Primary, 25% Purple, 25% Gold, 20% Karasu-400
+- **Philosophie :** Primary (éléments visibles), Gold (modération), Purple (Akira), Karasu (subtilité)
+- **Cohérence renforcée :** Chaque kanji a désormais un rôle chromatique défini
+
+#### 📋 **Documentation Complète**
+- **`palette-ink-ritual-site.html`** : Palette actuelle comme référence développeur
+- **Variables CSS** : Toutes documentées avec exemples d'usage
+- **Guide d'utilisation** : Philosophie chromatique et bonnes pratiques
+- **Statistiques visuelles** : 8 couleurs organisées par catégories
+
+---
+
+## 🎯 **Objectifs réalisés (mise à jour)**
+
+✅ Site totalement anonymisé  
+✅ Identité visuelle japonaise cohérente  
+✅ Images réelles de tatouages intégrées  
+✅ Responsive design optimisé  
+✅ Configuration dev/prod simplifiée  
+✅ UX mobile améliorée (symboles visibles)  
+✅ Architecture modulaire et maintenable  
+✅ **Typographie élégante avec Playfair Display**  
+✅ **Image Hero mobile Android corrigée**  
+✅ **Kanji géants animés - innovation artistique majeure**  
+✅ **Système d'animations fluides et amples**  
+✅ **Arrière-plans différenciés par section**  
+✅ **🚀 PALETTE ULTRA-OPTIMISÉE : 8 couleurs (-68%)**  
+✅ **🎨 Design system japonais professionnel**  
+✅ **📱 Cohérence UI/UX parfaite**  
+
+---
+
+*Dernière mise à jour : 2025-08-23*

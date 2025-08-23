@@ -119,8 +119,8 @@ const Contact: React.FC = () => {
       {/* Kanji géants d'arrière-plan */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="kanji-giant kanji-giant-massive kanji-serif text-purple absolute -bottom-40 -left-48 kanji-float-2" style={{ '--rotation': '16deg' } as React.CSSProperties}>鴉</div>
-        <div className="kanji-giant kanji-giant-sm kanji-decorative text-emerald absolute top-24 -right-24 kanji-float-5" style={{ '--rotation': '-28deg' } as React.CSSProperties}>鴉</div>
-        <div className="kanji-giant kanji-giant-xs kanji-sans text-teal absolute bottom-1/3 right-1/5 kanji-float-3" style={{ '--rotation': '12deg' } as React.CSSProperties}>鴉</div>
+        <div className="kanji-giant kanji-giant-sm kanji-decorative text-gold absolute top-24 -right-24 kanji-float-5" style={{ '--rotation': '-28deg' } as React.CSSProperties}>鴉</div>
+        <div className="kanji-giant kanji-giant-xs kanji-sans text-primary absolute bottom-1/3 right-1/5 kanji-float-3" style={{ '--rotation': '12deg' } as React.CSSProperties}>鴉</div>
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -135,7 +135,7 @@ const Contact: React.FC = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-accent text-bone mb-6 text-shadow-dark">
             Contactez <span className="text-primary brush-stroke">nos Artistes</span>
           </h2>
-          <p className="text-lg text-karasu-300 max-w-3xl mx-auto leading-relaxed font-body">
+          <p className="text-lg text-karasu-400 max-w-3xl mx-auto leading-relaxed font-body">
             Prêt à transformer votre vision en œuvre d'art permanente ? 
             Nos maîtres tatoueurs vous accompagnent dans votre projet artistique.
           </p>
@@ -157,7 +157,7 @@ const Contact: React.FC = () => {
                   </div>
                   <span className="text-4xl kanji-style text-gold block mb-3">感謝</span>
                   <h4 className="text-2xl font-accent text-bone mb-3">Message Envoyé !</h4>
-                  <p className="text-karasu-200 font-body leading-relaxed">
+                  <p className="text-karasu-400 font-body leading-relaxed">
                     Arigatō gozaimasu ! Votre message a été transmis à nos artistes.
                     <br />
                     Nous vous répondrons dans les plus brefs délais.
@@ -285,7 +285,7 @@ const Contact: React.FC = () => {
                     className={`w-full py-4 rounded font-accent text-lg tracking-wider uppercase transition-all duration-300 cursor-pointer ${
                       isSubmitting
                         ? 'bg-karasu-600 cursor-not-allowed text-karasu-400'
-                        : 'bg-primary hover:bg-teal text-bone hover-lift primary-glow'
+                        : 'bg-primary hover:bg-primary/80 text-bone hover-lift primary-glow'
                     }`}
                   >
                     {isSubmitting ? (
@@ -329,12 +329,12 @@ const Contact: React.FC = () => {
                       {info.link ? (
                         <a
                           href={info.link}
-                          className="text-karasu-200 hover:text-primary transition-colors duration-300 font-body"
+                          className="text-karasu-400 hover:text-primary transition-colors duration-300 font-body"
                         >
                           {info.content}
                         </a>
                       ) : (
-                        <p className="text-karasu-200 font-body">{info.content}</p>
+                        <p className="text-karasu-400 font-body">{info.content}</p>
                       )}
                     </div>
                   </div>
@@ -358,12 +358,12 @@ const Contact: React.FC = () => {
                     rel="noopener noreferrer"
                     className="flex items-center space-x-4 p-3 rounded border border-karasu-600 hover:border-primary hover:bg-primary/10 transition-all duration-300 group"
                   >
-                    <div className="w-10 h-10 bg-karasu-700 group-hover:bg-primary rounded-lg flex items-center justify-center text-bone transition-all duration-300">
+                    <div className="w-10 h-10 bg-karasu-600 group-hover:bg-primary rounded-lg flex items-center justify-center text-bone transition-all duration-300">
                       {social.icon}
                     </div>
                     <div>
                       <div className="text-bone font-accent text-sm">{social.name}</div>
-                      <div className="text-karasu-300 text-xs font-body">{social.handle}</div>
+                      <div className="text-karasu-400 text-xs font-body">{social.handle}</div>
                     </div>
                   </a>
                 ))}
@@ -398,7 +398,7 @@ const Contact: React.FC = () => {
                 YAKU · RÉSERVATION
               </div>
             </div>
-            <p className="text-karasu-200 font-body leading-relaxed">
+            <p className="text-karasu-400 font-body leading-relaxed">
               <strong className="text-bone">Consultation gratuite</strong> sur rendez-vous pour discuter de votre projet. 
               <br />
               Un acompte de 100€ sera demandé pour valider la réservation de votre session de tatouage.

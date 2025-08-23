@@ -192,10 +192,10 @@ const Gallery: React.FC = () => {
 
   const categories = [
     { id: "all", name: "Tous", kanji: "全", color: "text-bone" },
-    { id: "floral", name: "Floral", kanji: "花", color: "text-emerald" },
+    { id: "floral", name: "Floral", kanji: "花", color: "text-gold" },
     { id: "realisme", name: "Réalisme", kanji: "実", color: "text-purple" },
     { id: "traditional", name: "Traditional", kanji: "古", color: "text-gold" },
-    { id: "process", name: "Processus", kanji: "工", color: "text-teal" },
+    { id: "process", name: "Processus", kanji: "工", color: "text-primary" },
     {
       id: "neo-japonais",
       name: "Neo-Japonais",
@@ -206,7 +206,7 @@ const Gallery: React.FC = () => {
       id: "black-white",
       name: "Black & White",
       kanji: "白黒",
-      color: "text-karasu-300",
+      color: "text-karasu-400",
     },
   ];
 
@@ -301,7 +301,7 @@ const Gallery: React.FC = () => {
       {/* Kanji géants d'arrière-plan */}
       <div className="absolute inset-0 pointer-events-none">
         <div
-          className="kanji-giant kanji-giant-colossal kanji-sans text-teal absolute top-1/4 -left-48 kanji-float-3"
+          className="kanji-giant kanji-giant-colossal kanji-sans text-purple absolute top-1/4 -left-48 kanji-float-3"
           style={{ "--rotation": "6deg" } as React.CSSProperties}
         >
           鴉
@@ -338,7 +338,7 @@ const Gallery: React.FC = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-accent text-bone mb-6 text-shadow-dark">
             Nos <span className="text-primary brush-stroke">Spécialités</span>
           </h2>
-          <p className="text-lg text-karasu-300 max-w-3xl mx-auto leading-relaxed font-body mb-8">
+          <p className="text-lg text-karasu-400 max-w-3xl mx-auto leading-relaxed font-body mb-8">
             Découvrez les styles maîtrisés par nos artistes. Hiro excelle dans
             l'art japonais, Akira dans le réalisme et le black & white.
           </p>
@@ -350,7 +350,7 @@ const Gallery: React.FC = () => {
                 className={`px-3 py-1 rounded-full border text-sm cursor-pointer transition-all duration-300 hover:scale-105 ${
                   filters.category === "floral"
                     ? "bg-primary text-karasu-950"
-                    : "text-bone border-karasu-700 hover:border-primary"
+                    : "text-bone border-karasu-600 hover:border-primary"
                 }`}
                 onClick={() =>
                   setFilters((f) => ({
@@ -365,7 +365,7 @@ const Gallery: React.FC = () => {
                 className={`px-3 py-1 rounded-full border text-sm cursor-pointer transition-all duration-300 hover:scale-105 ${
                   filters.category === "process"
                     ? "bg-primary text-karasu-950"
-                    : "text-bone border-karasu-700 hover:border-primary"
+                    : "text-bone border-karasu-600 hover:border-primary"
                 }`}
                 onClick={() =>
                   setFilters((f) => ({
@@ -380,7 +380,7 @@ const Gallery: React.FC = () => {
                 className={`px-3 py-1 rounded-full border text-sm cursor-pointer transition-all duration-300 hover:scale-105 ${
                   filters.category === "traditional"
                     ? "bg-primary text-karasu-950"
-                    : "text-bone border-karasu-700 hover:border-primary"
+                    : "text-bone border-karasu-600 hover:border-primary"
                 }`}
                 onClick={() =>
                   setFilters((f) => ({
@@ -396,7 +396,7 @@ const Gallery: React.FC = () => {
                 className={`px-3 py-1 rounded-full border text-sm cursor-pointer transition-all duration-300 hover:scale-105 ${
                   filters.artist === "Hiro"
                     ? "bg-primary text-karasu-950"
-                    : "text-bone border-karasu-700 hover:border-primary"
+                    : "text-bone border-karasu-600 hover:border-primary"
                 }`}
                 onClick={() =>
                   setFilters((f) => ({
@@ -411,7 +411,7 @@ const Gallery: React.FC = () => {
                 className={`px-3 py-1 rounded-full border text-sm cursor-pointer transition-all duration-300 hover:scale-105 ${
                   filters.artist === "Akira"
                     ? "bg-primary text-karasu-950"
-                    : "text-bone border-karasu-700 hover:border-primary"
+                    : "text-bone border-karasu-600 hover:border-primary"
                 }`}
                 onClick={() =>
                   setFilters((f) => ({
@@ -426,7 +426,7 @@ const Gallery: React.FC = () => {
                 className={`px-3 py-1 rounded-full border text-sm cursor-pointer transition-all duration-300 hover:scale-105 ${
                   filters.style === "Réalisme"
                     ? "bg-primary text-karasu-950"
-                    : "text-bone border-karasu-700 hover:border-primary"
+                    : "text-bone border-karasu-600 hover:border-primary"
                 }`}
                 onClick={() =>
                   setFilters((f) => ({
@@ -450,7 +450,7 @@ const Gallery: React.FC = () => {
                    ${
                      selectedCategory === category.id
                        ? `bg-gradient-to-r from-primary to-purple text-bone soft-glow`
-                       : "bg-karasu-700/50 text-karasu-300 hover:bg-gradient-to-r hover:from-karasu-600 hover:to-karasu-500 hover:text-bone border border-karasu-600"
+                       : "bg-karasu-600/50 text-karasu-400 hover:bg-gradient-to-r hover:from-karasu-600 hover:to-karasu-400 hover:text-bone border border-karasu-600"
                    }`}
               >
                 <span className="relative z-10 flex items-center space-x-2">
@@ -466,7 +466,7 @@ const Gallery: React.FC = () => {
                   <span>{category.name}</span>
                 </span>
                 {selectedCategory !== category.id && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple/20 via-teal/20 to-primary/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple/20 via-primary/20 to-primary/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
                 )}
               </button>
             ))}
@@ -511,7 +511,7 @@ const Gallery: React.FC = () => {
                   <p className="text-primary text-sm font-body mb-2">
                     {image.style}
                   </p>
-                  <p className="text-karasu-300 text-xs">Par {image.artist}</p>
+                  <p className="text-karasu-400 text-xs">Par {image.artist}</p>
                 </div>
               </div>
             </div>
@@ -527,7 +527,7 @@ const Gallery: React.FC = () => {
                 YUME · RÉALISEZ VOS RÊVES
               </div>
             </div>
-            <p className="text-karasu-200 mb-6 font-body">
+            <p className="text-karasu-400 mb-6 font-body">
               Vous avez un projet de tatouage en tête ? Nos artistes sont là
               pour donner vie à vos idées.
             </p>
@@ -536,10 +536,10 @@ const Gallery: React.FC = () => {
                 const element = document.getElementById("contact");
                 element?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="group relative px-8 py-4 bg-gradient-to-r from-primary via-purple to-emerald hover:from-emerald hover:via-purple hover:to-primary text-bone font-accent text-lg tracking-wider uppercase transition-all duration-500 hover-lift soft-glow overflow-hidden cursor-pointer"
+              className="inline-flex items-center rounded-xl px-8 py-4 bg-gradient-to-r from-primary to-purple text-bone font-accent uppercase tracking-wider transition-all duration-300 hover-lift primary-glow cursor-pointer"
             >
-              <span className="relative z-10">Commencer votre projet</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
+              <span className="kanji-style mr-3">始</span>
+              Commencer votre projet
             </button>
           </div>
         </div>

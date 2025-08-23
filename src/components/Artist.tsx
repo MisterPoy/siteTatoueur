@@ -16,7 +16,7 @@ const Artists: React.FC = () => {
       <div className="absolute inset-0 pointer-events-none">
         <div className="kanji-giant kanji-giant-massive kanji-decorative text-gold absolute -top-32 -left-40 kanji-float-2" style={{ '--rotation': '-15deg' } as React.CSSProperties}>鴉</div>
         <div className="kanji-giant kanji-giant-xs kanji-sans text-primary absolute top-24 right-24 kanji-float-5" style={{ '--rotation': '18deg' } as React.CSSProperties}>鴉</div>
-        <div className="kanji-giant kanji-giant-lg kanji-serif text-emerald absolute -bottom-28 -right-32 kanji-float-1" style={{ '--rotation': '8deg' } as React.CSSProperties}>鴉</div>
+        <div className="kanji-giant kanji-giant-lg kanji-serif text-primary absolute -bottom-28 -right-32 kanji-float-1" style={{ '--rotation': '8deg' } as React.CSSProperties}>鴉</div>
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -31,7 +31,7 @@ const Artists: React.FC = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-accent text-bone mb-6 text-shadow-dark">
             Nos <span className="text-primary brush-stroke">Artistes</span>
           </h2>
-          <p className="text-lg text-karasu-300 max-w-3xl mx-auto leading-relaxed font-body">
+          <p className="text-lg text-karasu-400 max-w-3xl mx-auto leading-relaxed font-body">
             Deux univers artistiques complémentaires au service de votre expression créative.
           </p>
         </div>
@@ -68,7 +68,7 @@ const Artists: React.FC = () => {
                     </h3>
                     <div className="flex items-center space-x-3">
                       <FaPalette className="text-purple" />
-                      <span className="text-karasu-200 font-body">Grapheur & Tatoueur Réalisme</span>
+                      <span className="text-karasu-400 font-body">Grapheur & Tatoueur Réalisme</span>
                     </div>
                   </div>
                 </div>
@@ -99,7 +99,7 @@ const Artists: React.FC = () => {
                       <span className="text-gold kanji-style mr-3">心</span>
                       Approche
                     </h4>
-                    <blockquote className="border-l-4 border-purple pl-4 italic text-karasu-200 font-body leading-relaxed text-sm">
+                    <blockquote className="border-l-4 border-purple pl-4 italic text-karasu-400 font-body leading-relaxed text-sm">
                       "Transformer la réalité en art permanent. Chaque tatouage réaliste 
                       capture l'essence et l'émotion avec une précision technique absolue."
                     </blockquote>
@@ -153,7 +153,7 @@ const Artists: React.FC = () => {
                     </h3>
                     <div className="flex items-center space-x-3">
                       <span className="text-primary kanji-style text-xl">鴉</span>
-                      <span className="text-karasu-200 font-body">Tatoueur Art Japonais</span>
+                      <span className="text-karasu-400 font-body">Tatoueur Art Japonais</span>
                     </div>
                   </div>
                 </div>
@@ -176,11 +176,11 @@ const Artists: React.FC = () => {
                         <span className="text-sm font-accent text-bone">Neo-Japonais</span>
                       </div>
                       <div className="glass-card p-3 text-center">
-                        <span className="text-lg kanji-style text-teal block mb-1">流</span>
+                        <span className="text-lg kanji-style text-primary block mb-1">流</span>
                         <span className="text-sm font-accent text-bone">Pop-Culture</span>
                       </div>
                       <div className="glass-card p-3 text-center">
-                        <span className="text-lg kanji-style text-emerald block mb-1">花</span>
+                        <span className="text-lg kanji-style text-gold block mb-1">花</span>
                         <span className="text-sm font-accent text-bone">Floral</span>
                       </div>
                     </div>
@@ -192,7 +192,7 @@ const Artists: React.FC = () => {
                       <span className="text-gold kanji-style mr-3">心</span>
                       Philosophie
                     </h4>
-                    <blockquote className="border-l-4 border-primary pl-4 italic text-karasu-200 font-body leading-relaxed text-sm">
+                    <blockquote className="border-l-4 border-primary pl-4 italic text-karasu-400 font-body leading-relaxed text-sm">
                       "Fusionner tradition japonaise et modernité. Chaque création raconte 
                       votre histoire à travers l'esthétique intemporelle du Pays du Soleil Levant."
                     </blockquote>
@@ -240,7 +240,7 @@ const Artists: React.FC = () => {
                   <span className=" kanji-style text-xl">相</span>
                 </div>
                 <h4 className="text-bone font-accent mb-2">1. Consultation</h4>
-                <p className="text-karasu-300 text-sm font-body">
+                <p className="text-karasu-400 text-sm font-body">
                   Échange approfondi pour comprendre votre vision et choisir l'artiste adapté.
                 </p>
               </div>
@@ -250,17 +250,17 @@ const Artists: React.FC = () => {
                   <span className=" kanji-style text-xl">創</span>
                 </div>
                 <h4 className="text-bone font-accent mb-2">2. Création</h4>
-                <p className="text-karasu-300 text-sm font-body">
+                <p className="text-karasu-400 text-sm font-body">
                   Design personnalisé selon le style et l'expertise de votre artiste.
                 </p>
               </div>
               <div className='flex flex-col items-center'>
-                <div className="w-12 h-12 bg-emerald/20 rounded-full flex items-center justify-center mb-4 mx-auto md:mx-0
-                text-emerald hover:bg-emerald hover:text-bone transition-all duration-300 cursor-context-menu  ">
+                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mb-4 mx-auto md:mx-0
+                text-primary hover:bg-primary hover:text-bone transition-all duration-300 cursor-context-menu  ">
                   <span className=" kanji-style text-xl">実</span>
                 </div>
                 <h4 className="text-bone font-accent mb-2">3. Réalisation</h4>
-                <p className="text-karasu-300 text-sm font-body">
+                <p className="text-karasu-400 text-sm font-body">
                   Tatouage exécuté avec passion, technique et respect de votre projet.
                 </p>
               </div>

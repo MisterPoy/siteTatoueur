@@ -7,25 +7,19 @@
   --font-body: 'Noto Sans JP', sans-serif;
   --font-accent: 'Cinzel', serif;
   
-  /* === PALETTE OPTIMISÉE INK RITUAL (14 couleurs) === */
+  /* === PALETTE ULTRA-OPTIMISÉE INK RITUAL (8 couleurs) === */
   
-  /* Base Karasu - 8 nuances essentielles */
-  --color-karasu-200: #e4e4e7;
-  --color-karasu-300: #d4d4d8;
+  /* Base Karasu - 5 nuances essentielles */
   --color-karasu-400: #a1a1aa;
-  --color-karasu-500: #71717a;
   --color-karasu-600: #52525b;
-  --color-karasu-700: #3f3f46;
   --color-karasu-800: #27272a;
   --color-karasu-900: #18181b;
   --color-karasu-950: #09090b;
   
-  /* Couleurs fonctionnelles - 5 accents */
+  /* Couleurs fonctionnelles - 3 accents */
   --color-primary: #0891b2;
   --color-purple: #8b5cf6;
   --color-gold: #fbbf24;
-  --color-emerald: #10b981;
-  --color-teal: #14b8a6;
   
   /* Texte principal */
   --color-bone: #f8fafc;
@@ -111,16 +105,12 @@
     box-shadow: 0 0 20px rgba(139, 92, 246, 0.15);
   }
   
-  .teal-glow {
-    box-shadow: 0 0 25px rgba(20, 184, 166, 0.2);
-  }
-  
-  .emerald-glow {
-    box-shadow: 0 0 25px rgba(16, 185, 129, 0.2);
+  .gold-glow {
+    box-shadow: 0 0 25px rgba(251, 191, 36, 0.2);
   }
   
   .glass-card {
-    @apply bg-karasu-900/70 backdrop-blur-md border border-karasu-700/50 rounded-lg;
+    @apply bg-karasu-900/70 backdrop-blur-md border border-karasu-600/50 rounded-lg;
   }
   
   .hover-lift {

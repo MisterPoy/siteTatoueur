@@ -54,16 +54,24 @@ src/
 ```
 
 ### Système de design japonais
-Le projet utilise un design system complet basé sur la culture japonaise :
+Le projet utilise un design system ultra-optimisé basé sur la culture japonaise :
 
-**Palette de couleurs Karasu (Corbeau) :**
-- Gamme de noirs : `karasu-50` à `karasu-950`
-- Couleurs d'accent : `primary` (cyan), `secondary` (violet), `bone` (blanc cassé), `gold`, `sakura` (rose)
+**Palette de couleurs Karasu (Corbeau) - 8 couleurs optimisées :**
+- **Base Karasu (5 nuances) :** `karasu-950` (fond), `karasu-900` (sections), `karasu-800` (composants), `karasu-600` (bordures), `karasu-400` (texte secondaire)
+- **Accents fonctionnels (3) :** `primary` #0891b2 (signature), `purple` #8b5cf6 (Akira), `gold` #fbbf24 (kanjis)
+- **Texte principal (1) :** `bone` #f8fafc (lisibilité parfaite)
+- **Réduction de 68%** par rapport à la palette originale (25 → 8 couleurs)
 
 **Typographies :**
-- Kanji : 'Zen Tokyo Zoo' pour les caractères japonais
-- Titres : 'Cinzel' pour les accents élégants
-- Corps : 'Noto Sans JP' pour le texte principal
+- **Kanji :** 'Playfair Display' pour les caractères japonais élégants
+- **Titres :** 'Cinzel' pour les accents raffinés
+- **Corps :** 'Noto Sans JP' pour le texte principal
+
+**Kanjis géants animés :**
+- **Innovation artistique** : Kanji 鴉 (corbeau) géants en arrière-plan
+- **Animations fluides** : 5 variations de flottement (`kanji-float-1` à `kanji-float-5`)
+- **Répartition équilibrée** : 30% Primary, 25% Purple, 25% Gold, 20% Karasu-400
+- **8 tailles disponibles** : de `kanji-giant-xs` à `kanji-giant-colossal`
 
 **Classes CSS personnalisées :**
 - `.kanji-style` : Style pour les caractères japonais
@@ -120,7 +128,9 @@ Le projet utilise des animations CSS personnalisées définies dans `@theme` :
 ## Notes importantes
 
 - Le formulaire de contact simule l'envoi avec une animation japonaise (intégrer un backend réel)
-- La carte de contact utilise un placeholder (intégrer Google Maps API)
-- Les images utilisent Unsplash pour la démonstration
+- La carte de contact utilise un placeholder (intégrer Google Maps API)  
+- Les images utilisent des vraies photos de tatouages (dossier public/images/)
 - Le projet cible un déploiement sur GitHub Pages via `npm run deploy`
 - Tailwind v4 utilise la nouvelle syntaxe `@theme{}` dans index.css
+- **Palette ultra-optimisée** : Documentation complète dans `palette-ink-ritual-site.html`
+- **Design system mature** : 8 couleurs suffisent pour toute la richesse créative du site

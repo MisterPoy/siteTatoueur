@@ -60,9 +60,9 @@ const Infos: React.FC = () => {
       
       {/* Kanji géants d'arrière-plan */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="kanji-giant kanji-giant-huge kanji-decorative text-teal absolute top-1/2 -left-40 kanji-float-3" style={{ '--rotation': '-22deg' } as React.CSSProperties}>鴉</div>
+        <div className="kanji-giant kanji-giant-huge kanji-decorative text-gold absolute top-1/2 -left-40 kanji-float-3" style={{ '--rotation': '-22deg' } as React.CSSProperties}>鴉</div>
         <div className="kanji-giant kanji-giant-xl kanji-sans text-gold absolute -top-28 right-1/4 kanji-float-1" style={{ '--rotation': '14deg' } as React.CSSProperties}>鴉</div>
-        <div className="kanji-giant kanji-giant-xs kanji-serif text-primary absolute bottom-28 right-28 kanji-float-4" style={{ '--rotation': '-8deg' } as React.CSSProperties}>鴉</div>
+        <div className="kanji-giant kanji-giant-xs kanji-serif text-karasu-400 absolute bottom-28 right-28 kanji-float-4" style={{ '--rotation': '-8deg' } as React.CSSProperties}>鴉</div>
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -86,12 +86,12 @@ const Infos: React.FC = () => {
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-accent text-bone mb-2">{tier.name}</h3>
                 <div className="text-3xl kanji-style text-primary mb-2">{tier.price}</div>
-                <p className="text-karasu-300 text-sm">{tier.description}</p>
+                <p className="text-karasu-400 text-sm">{tier.description}</p>
               </div>
               
               <ul className="space-y-3">
                 {tier.details.map((detail, index) => (
-                  <li key={index} className="flex items-center text-karasu-200">
+                  <li key={index} className="flex items-center text-karasu-400">
                     <div className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0"></div>
                     <span className="font-body text-sm">{detail}</span>
                   </li>
@@ -107,7 +107,7 @@ const Infos: React.FC = () => {
             <h3 className="text-2xl md:text-3xl font-accent text-bone mb-4">
               Notre <span className="text-primary">Démarche</span>
             </h3>
-            <p className="text-karasu-300 max-w-2xl mx-auto font-body">
+            <p className="text-karasu-400 max-w-2xl mx-auto font-body">
               Un processus respectueux et professionnel pour créer votre tatouage parfait
             </p>
           </div>
@@ -124,7 +124,7 @@ const Infos: React.FC = () => {
                   </div>
                 </div>
                 <h4 className="text-xl font-accent text-bone mb-3">{process.title}</h4>
-                <p className="text-karasu-300 text-sm leading-relaxed font-body">
+                <p className="text-karasu-400 text-sm leading-relaxed font-body">
                   {process.description}
                 </p>
               </div>
@@ -147,7 +147,7 @@ const Infos: React.FC = () => {
                   <FaMapMarkerAlt className="text-primary mr-2" />
                   Adresse
                 </h4>
-                <p className="text-karasu-200 font-body ml-6">
+                <p className="text-karasu-400 font-body ml-6">
                   Ink Ritual Tattoo<br />
                   123 Rue de l'Art<br />
                   Quartier Créatif<br />
@@ -160,7 +160,7 @@ const Infos: React.FC = () => {
                   <FaClock className="text-primary mr-2" />
                   Rendez-vous
                 </h4>
-                <div className="text-karasu-200 font-body ml-6 space-y-1">
+                <div className="text-karasu-400 font-body ml-6 space-y-1">
                   <p className="text-primary font-semibold">Sur rendez-vous uniquement</p>
                   <p>Consultation préalable obligatoire</p>
                   <p>Devis personnalisé après entretien</p>
@@ -172,7 +172,7 @@ const Infos: React.FC = () => {
                   <FaPhoneAlt className="text-primary mr-2" />
                   Contact
                 </h4>
-                <p className="text-karasu-200 font-body ml-6">
+                <p className="text-karasu-400 font-body ml-6">
                   +33 1 42 86 87 88
                 </p>
               </div>
@@ -193,7 +193,7 @@ const Infos: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-bone font-accent text-sm mb-1">Matériel stérilisé</h4>
-                  <p className="text-karasu-300 text-sm font-body">
+                  <p className="text-karasu-400 text-sm font-body">
                     Aiguilles à usage unique, matériel autoclavé selon les normes européennes
                   </p>
                 </div>
@@ -205,7 +205,7 @@ const Infos: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-bone font-accent text-sm mb-1">Encres certifiées</h4>
-                  <p className="text-karasu-300 text-sm font-body">
+                  <p className="text-karasu-400 text-sm font-body">
                     Encres de qualité professionnelle, testées et approuvées
                   </p>
                 </div>
@@ -217,7 +217,7 @@ const Infos: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-bone font-accent text-sm mb-1">Âge minimum</h4>
-                  <p className="text-karasu-300 text-sm font-body">
+                  <p className="text-karasu-400 text-sm font-body">
                     18 ans révolus avec pièce d'identité valide
                   </p>
                 </div>
@@ -229,7 +229,7 @@ const Infos: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-bone font-accent text-sm mb-1">Suivi post-tatouage</h4>
-                  <p className="text-karasu-300 text-sm font-body">
+                  <p className="text-karasu-400 text-sm font-body">
                     Conseils personnalisés et retouches gratuites si nécessaire
                   </p>
                 </div>
@@ -246,7 +246,7 @@ const Infos: React.FC = () => {
               <span className="text-xl kanji-style text-bone">心</span>
               <FaHeart className="text-primary text-xl ml-3" />
             </div>
-            <p className="text-karasu-200 font-body leading-relaxed">
+            <p className="text-karasu-400 font-body leading-relaxed">
               <strong className="text-bone">Acompte de 100€ requis</strong> pour confirmer votre rendez-vous. 
               Cet acompte sera déduit du montant total. 
               <br />
@@ -259,7 +259,7 @@ const Infos: React.FC = () => {
           {/* Section Hygiène & Sécurité */}
           <section aria-labelledby="hygiene" className="mt-16">
             <h3 id="hygiene" className="text-xl font-accent text-bone mb-4">Hygiène & sécurité</h3>
-            <ul className="space-y-2 text-karasu-300 list-disc list-inside">
+            <ul className="space-y-2 text-karasu-400 list-disc list-inside">
               <li>Matériel stérile et usage unique</li>
               <li>Procédures conformes aux normes sanitaires</li>
               <li>Conseils de cicatrisation personnalisés</li>

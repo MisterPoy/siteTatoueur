@@ -53,8 +53,8 @@ const Hero: React.FC = () => {
         {/* Particules flottantes colorées conservées */}
         <div className="absolute top-1/4 left-1/4 w-3 h-3 sm:w-1 sm:h-1 bg-primary rounded-full animate-float opacity-80 sm:opacity-60 z-10"></div>
         <div className="absolute top-1/3 right-1/3 w-4 h-4 sm:w-2 sm:h-2 bg-purple rounded-full animate-float opacity-70 sm:opacity-40 z-10" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-1/3 left-1/3 w-3 h-3 sm:w-1 sm:h-1 bg-teal rounded-full animate-float opacity-80 sm:opacity-50 z-10" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-2/3 right-1/4 w-3 h-3 sm:w-1 sm:h-1 bg-emerald rounded-full animate-float opacity-75 sm:opacity-45 z-10" style={{ animationDelay: '3s' }}></div>
+        <div className="absolute bottom-1/3 left-1/3 w-3 h-3 sm:w-1 sm:h-1 bg-primary rounded-full animate-float opacity-80 sm:opacity-50 z-10" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-2/3 right-1/4 w-3 h-3 sm:w-1 sm:h-1 bg-gold rounded-full animate-float opacity-75 sm:opacity-45 z-10" style={{ animationDelay: '3s' }}></div>
         <div className="absolute bottom-1/4 right-2/3 w-4 h-4 sm:w-2 sm:h-2 bg-gold rounded-full animate-float opacity-65 sm:opacity-35 z-10" style={{ animationDelay: '4s' }}></div>
         <div className="absolute top-1/2 left-1/6 w-3 h-3 sm:w-1 sm:h-1 bg-purple rounded-full animate-float opacity-70 sm:opacity-30 z-10" style={{ animationDelay: '5s' }}></div>
       </div>
@@ -85,7 +85,7 @@ const Hero: React.FC = () => {
             </h1>
 
             {/* Accroche orientée client */}
-            <p className="max-w-2xl mx-auto mt-4 text-karasu-300">
+            <p className="max-w-2xl mx-auto mt-4 text-karasu-400">
               Un tatouage unique, pensé pour vous, réalisé avec exigence et hygiène irréprochable.
             </p>
 
