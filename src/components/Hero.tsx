@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
           style={{ 
-            backgroundImage: 'url("./images/gallery/imageFond.webp"), url("./images/gallery/grue-japonaise.jpg")',
+            backgroundImage: 'url("./images/gallery/imageFond.webp"), url("./images/gallery/grue-japonaise.webp")',
             filter: 'brightness(0.6) contrast(1.1) saturate(1.1)'
           }}
         />

@@ -27,7 +27,7 @@ const Gallery: React.FC = () => {
   const images: GalleryImage[] = [
     {
       id: 1,
-      src: "./images/gallery/grue-japonaise.jpg",
+      src: "./images/gallery/grue-japonaise.webp",
       alt: "Grue Japonaise",
       category: "neo-japonais",
       artist: "Hiro",
@@ -38,7 +38,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 2,
-      src: "./images/gallery/tatouage-1.jpg",
+      src: "./images/gallery/tatouage-1.webp",
       alt: "Sakura Minimaliste",
       category: "floral",
       artist: "Hiro",
@@ -48,7 +48,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 3,
-      src: "./images/gallery/tatouage-2.jpg",
+      src: "./images/gallery/tatouage-2.webp",
       alt: "Oni Black & Grey",
       category: "black-white",
       artist: "Akira",
@@ -58,7 +58,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 4,
-      src: "./images/gallery/tatouage-3.jpg",
+      src: "./images/gallery/tatouage-3.webp",
       alt: "Personnage Pop-Culture",
       category: "pop-culture",
       artist: "Hiro",
@@ -68,7 +68,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 5,
-      src: "./images/gallery/allef-vinicius.jpg",
+      src: "./images/gallery/allef-vinicius.webp",
       alt: "Processus Géométrique",
       category: "process",
       artist: "Akira",
@@ -78,7 +78,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 6,
-      src: "./images/gallery/benjamin-lehman.jpg",
+      src: "./images/gallery/benjamin-lehman.webp",
       alt: "Processus Neo-Japonais",
       category: "process",
       artist: "Hiro",
@@ -88,7 +88,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 7,
-      src: "./images/gallery/collins-lesulie-PWK6CeCJtJw-unsplash.jpg",
+      src: "./images/gallery/collins-lesulie-PWK6CeCJtJw-unsplash.webp",
       alt: "Processus Ornamental",
       category: "process",
       artist: "Akira",
@@ -98,7 +98,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 8,
-      src: "./images/gallery/eduardo-vaccari-pIltvcnqsfU-unsplash.jpg",
+      src: "./images/gallery/eduardo-vaccari-pIltvcnqsfU-unsplash.webp",
       alt: "Pivoines Black & Grey",
       category: "floral",
       artist: "Akira",
@@ -108,7 +108,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 9,
-      src: "./images/gallery/jasmin-chew-WbWOF8z_NGQ-unsplash.jpg",
+      src: "./images/gallery/jasmin-chew-WbWOF8z_NGQ-unsplash.webp",
       alt: "Pivoine Dragon",
       category: "floral",
       artist: "Akira",
@@ -119,7 +119,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 10,
-      src: "./images/gallery/jj-jordan-eenumTwM6Ec-unsplash.jpg",
+      src: "./images/gallery/jj-jordan-eenumTwM6Ec-unsplash.webp",
       alt: "Mandala Dorsal",
       category: "floral",
       artist: "Hiro",
@@ -129,7 +129,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 11,
-      src: "./images/gallery/matheus-ferrero-RBsrv4yV5KY-unsplash.jpg",
+      src: "./images/gallery/matheus-ferrero-RBsrv4yV5KY-unsplash.webp",
       alt: "Traditional Américain",
       category: "traditional",
       artist: "Akira",
@@ -139,7 +139,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 12,
-      src: "./images/gallery/pexels-photo-2183131.jpeg",
+      src: "./images/gallery/pexels-photo-2183131.webp",
       alt: "Manche Irezumi",
       category: "neo-japonais",
       artist: "Hiro",
@@ -160,7 +160,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 14,
-      src: "./images/gallery/Tatouage_d'une_grue_dans_le_style_japonais_par_l'artiste_tatoueur_Nico_Tatuto_basé_à_Bordeaux.jpg",
+      src: "./images/gallery/Tatouage_d'une_grue_dans_le_style_japonais_par_l'artiste_tatoueur_Nico_Tatuto_basé_à_Bordeaux.webp",
       alt: "Tatouage Black & White",
       category: "black-white",
       artist: "Akira",
@@ -170,7 +170,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 15,
-      src: "./images/gallery/tatouage-1.jpg",
+      src: "./images/gallery/tatouage-1.webp",
       alt: "Portrait Expressif",
       category: "realisme",
       artist: "Akira",
@@ -180,7 +180,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 16,
-      src: "./images/gallery/tatouage-2.jpg",
+      src: "./images/gallery/tatouage-2.webp",
       alt: "Graphisme Noir & Blanc",
       category: "black-white",
       artist: "Akira",

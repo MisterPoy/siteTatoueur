@@ -21,56 +21,56 @@ const Portfolio: React.FC = () => {
   const portfolioImages: PortfolioImage[] = [
     {
       id: 1,
-      src: "./images/gallery/grue-japonaise.jpg",
+      src: "./images/gallery/grue-japonaise.webp",
       alt: "Grue Japonaise Traditionnelle",
       description: "Grue authentique avec fleurs délicates dans l'art japonais",
     },
     {
       id: 2,
-      src: "./images/gallery/allef-vinicius.jpg",
+      src: "./images/gallery/allef-vinicius.webp",
       alt: "Processus Créatif",
       description: "Création de motifs géométriques en cours de réalisation",
     },
     {
       id: 3,
-      src: "./images/gallery/benjamin-lehman.jpg",
+      src: "./images/gallery/benjamin-lehman.webp",
       alt: "Techniques Avancées",
       description:
         "Maîtrise technique dans l'art du tatouage traditionnel japonais",
     },
     {
       id: 4,
-      src: "./images/gallery/collins-lesulie-PWK6CeCJtJw-unsplash.jpg",
+      src: "./images/gallery/collins-lesulie-PWK6CeCJtJw-unsplash.webp",
       alt: "Précision Artistique",
       description: "Précision et minutie dans chaque trait et détail",
     },
     {
       id: 5,
-      src: "./images/gallery/eduardo-vaccari-pIltvcnqsfU-unsplash.jpg",
+      src: "./images/gallery/eduardo-vaccari-pIltvcnqsfU-unsplash.webp",
       alt: "Réalisme Floral",
       description: "Composition florale black & grey aux détails saisissants",
     },
     {
       id: 6,
-      src: "./images/gallery/jasmin-chew-WbWOF8z_NGQ-unsplash.jpg",
+      src: "./images/gallery/jasmin-chew-WbWOF8z_NGQ-unsplash.webp",
       alt: "Maîtrise Ornementale",
       description: "Création complexe mêlant motifs floraux et ornementaux",
     },
     {
       id: 7,
-      src: "./images/gallery/jj-jordan-eenumTwM6Ec-unsplash.jpg",
+      src: "./images/gallery/jj-jordan-eenumTwM6Ec-unsplash.webp",
       alt: "Géométrie Sacrée",
       description: "Mandala aux motifs géométriques parfaitement équilibrés",
     },
     {
       id: 8,
-      src: "./images/gallery/matheus-ferrero-RBsrv4yV5KY-unsplash.jpg",
+      src: "./images/gallery/matheus-ferrero-RBsrv4yV5KY-unsplash.webp",
       alt: "Style Traditional",
       description: "Hommage au tatouage old-school américain authentique",
     },
     {
       id: 9,
-      src: "./images/gallery/pexels-photo-2183131.jpeg",
+      src: "./images/gallery/pexels-photo-2183131.webp",
       alt: "Manche Irezumi Complète",
       description:
         "Réalisation d'une manche japonaise traditionnelle authentique",
