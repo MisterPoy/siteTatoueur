@@ -14,17 +14,24 @@ const Infos: React.FC = () => {
     },
     {
       id: 2,
-      name: "Tatouage Simple",
-      price: "150€ - 300€",
-      description: "Motifs de petite à moyenne taille",
-      details: ["Jusqu'à 10cm", "Session 2-4h", "Retouches incluses", "Soins premium"]
+      name: "Tatouage Flash",
+      price: "À partir de 120€",
+      description: "Motifs pré-dessinés et créations simples",
+      details: ["Jusqu'à 8cm", "Session 1-3h", "Base 100€/h", "Retouches incluses"]
     },
     {
       id: 3,
-      name: "Œuvre Complexe",
-      price: "400€+",
-      description: "Créations élaborées et grandes pièces",
-      details: ["Taille illimitée", "Plusieurs sessions", "Art personnalisé", "Suivi complet"]
+      name: "Création Personnalisée",
+      price: "À partir de 250€",
+      description: "Design sur-mesure et œuvres moyennes",
+      details: ["Jusqu'à 15cm", "Session 2-6h", "100€/h + design", "Suivi complet"]
+    },
+    {
+      id: 4,
+      name: "Œuvre d'Art",
+      price: "À partir de 600€",
+      description: "Créations complexes et grandes pièces",
+      details: ["Taille illimitée", "Plusieurs sessions", "100-120€/h selon complexité", "Service premium"]
     }
   ];
 
@@ -80,7 +87,7 @@ const Infos: React.FC = () => {
         </div>
 
         {/* Tarifs */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
           {pricingTiers.map((tier) => (
             <div key={tier.id} className="glass-card p-8 hover-lift group">
               <div className="text-center mb-6">
@@ -100,6 +107,8 @@ const Infos: React.FC = () => {
             </div>
           ))}
         </div>
+        <p className='text-center mb-20'><strong className="text-primary">Tarif horaire : à partir de 100€/h</strong> selon la complexité et l'artiste choisi.
+              </p>
 
         {/* Processus */}
         <div className="mb-20">
@@ -249,6 +258,7 @@ const Infos: React.FC = () => {
             <p className="text-karasu-400 font-body leading-relaxed">
               <strong className="text-bone">Acompte de 100€ requis</strong> pour confirmer votre rendez-vous. 
               Cet acompte sera déduit du montant total. 
+
               <br />
               <span className="text-primary font-accent">每個紋身都是獨一無二的藝術品</span>
               <br />

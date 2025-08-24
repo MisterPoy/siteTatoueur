@@ -1,7 +1,11 @@
 import React from 'react';
 import { FaInstagram, FaTwitter, FaTiktok, FaPhone, FaEnvelope, FaMapMarkerAlt, FaHeart, FaArrowUp } from 'react-icons/fa';
 
-const Footer: React.FC = () => {
+interface FooterProps {
+  onShowMentions?: () => void;
+}
+
+const Footer: React.FC<FooterProps> = ({ onShowMentions }) => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
@@ -13,9 +17,9 @@ const Footer: React.FC = () => {
   ];
 
   const legalLinks = [
-    { name: 'Mentions légales', href: '#' },
-    { name: 'Politique de confidentialité', href: '#' },
-    { name: 'CGV', href: '#' },
+    { name: 'Mentions légales', href: '#mentions-legales' },
+    { name: 'Template sur demande', href: 'https://www.linkedin.com/in/grégory-poupaux' },
+    { name: 'Mon Portfolio', href: 'https://misterpoy.github.io/GregDev-PortFolio/' },
     { name: 'Soins & Conseils', href: '#' }
   ];
 
@@ -155,12 +159,23 @@ const Footer: React.FC = () => {
             <ul className="space-y-2 mb-8">
               {legalLinks.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
-                    className="text-karasu-400 hover:text-primary transition-colors duration-300 text-sm font-body"
-                  >
-                    {link.name}
-                  </a>
+                  {link.name === 'Mentions légales' ? (
+                    <button
+                      onClick={onShowMentions}
+                      className="text-karasu-400 hover:text-primary transition-colors duration-300 text-sm font-body text-left cursor-pointer"
+                    >
+                      {link.name}
+                    </button>
+                  ) : (
+                    <a
+                      href={link.href}
+                      target={link.href.startsWith('http') ? "_blank" : undefined}
+                      rel={link.href.startsWith('http') ? "noopener noreferrer" : undefined}
+                      className="text-karasu-400 hover:text-primary transition-colors duration-300 text-sm font-body"
+                    >
+                      {link.name}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
@@ -209,18 +224,29 @@ const Footer: React.FC = () => {
         <div className="pb-8">
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
             <div className="text-karasu-400 text-sm text-center lg:text-left font-body">
-              © {currentYear} Ink Ritual Tattoo. Tous droits réservés.
+              © {currentYear} Ink Ritual Tattoo (Démo) – Tous droits réservés.
+              <br />
+              <span className="text-xs">Création & développement : <a href="https://www.linkedin.com/in/grégory-poupaux" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-gold transition-colors duration-300">Gregory Poupaux</a></span>
             </div>
             
             <div className="flex items-center text-karasu-400 text-sm font-body">
-              <span>Fait avec</span>
+              <span>Template développé avec</span>
               <FaHeart className="text-primary mx-2 animate-pulse" />
-              <span>pour l'art japonais</span>
+              <span>par</span>
+              <a 
+                href="https://misterpoy.github.io/GregDev-PortFolio/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="ml-1 text-primary hover:text-gold transition-colors duration-300 font-semibold"
+              >
+                GregDev
+              </a>
               <span className="kanji-style text-primary ml-2">愛</span>
             </div>
             
             <div className="text-karasu-400 text-sm text-center lg:text-right font-body">
-              <p>SIRET: 891 234 567 00012</p>
+              <p className="text-xs">SIRET: 01234567890123 (fictif)</p>
+              <p className="text-xs mt-1">⚠️ Site de démonstration</p>
             </div>
           </div>
         </div>

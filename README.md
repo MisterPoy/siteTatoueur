@@ -1,262 +1,260 @@
-# 🏮 Ink Ritual Tattoo - 鴉 Site Vitrine Salon de Tatouage Japonais
+# 🏮 Template Site Vitrine - Salon de Tatouage Japonais
 
-Un site vitrine immersif et esthétique pour le salon de tatouage japonais **Ink Ritual Tattoo**, construit avec React, TypeScript et Tailwind CSS v4.
+Un template de site vitrine professionnel pour **salons de tatouage**, avec une esthétique japonaise authentique. Construit avec React 19, TypeScript et Tailwind CSS v4.
 
 ## ⛩️ Caractéristiques
 
-- **Esthétique Japonaise** : Design sombre et immersif inspiré de l'art traditionnel japonais
-- **Typographie Authentique** : Polices Zen Tokyo Zoo, Noto Sans JP et caractères Kanji intégrés
-- **Single Page Application** : Navigation fluide avec scroll smooth et ancrage japonais
-- **Responsive Design** : Parfaitement adapté mobile, tablette et desktop
-- **Animations Sophistiquées** : Effets reveal, hover-lift et transitions cinématographiques
-- **Grille Masonry** : Galerie dynamique avec modal interactif et navigation clavier
-- **Palette Karasu** : Gamme de noirs (karasu-950 à karasu-50), rouge carmin et blanc cassé
-- **Design System Japonais** : Classes CSS personnalisées avec thème @theme{} pour Tailwind v4
+- **Design Japonais Immersif** : Esthétique sombre inspirée de l'art traditionnel japonais
+- **Kanjis Intégrés** : Caractères japonais dans le design et animations flottantes thématiques  
+- **Palette Optimisée** : 8 couleurs soigneusement sélectionnées pour un rendu professionnel
+- **Single Page Application** : Navigation fluide avec scroll smooth et ancres
+- **Responsive Mobile-First** : Parfaitement adapté à tous les écrans
+- **Animations Sophistiquées** : Effets scroll-reveal, hover-lift et transitions cinématographiques
+- **Galeries Dynamiques** : Masonry + Carrousel avec modal interactif
+- **Design System Complet** : Classes CSS personnalisées et thème Tailwind moderne
 
 ## 🚀 Démarrage rapide
 
 ### Prérequis
-- Node.js (version 18 ou supérieure)
+- Node.js 18+ 
 - npm ou yarn
 
 ### Installation
 
-1. **Cloner le projet**
 ```bash
+# Cloner le projet
 git clone <votre-repo>
 cd ink-ritual-tattoo
-```
 
-2. **Installer les dépendances**
-```bash
+# Installer les dépendances
 npm install
-```
 
-3. **Lancer le serveur de développement**
-```bash
+# Lancer le serveur de développement
 npm run dev
-```
 
-4. **Ouvrir dans le navigateur**
-```
-http://localhost:5178
+# Ouvrir dans le navigateur
+# http://localhost:5173
 ```
 
 ### Scripts disponibles
 
 ```bash
-# Développement
-npm run dev
-
-# Build de production
-npm run build
-
-# Prévisualiser le build
-npm run preview
-
-# Linting
-npm run lint
+npm run dev        # Serveur de développement
+npm run build      # Build de production  
+npm run preview    # Prévisualiser le build
+npm run lint       # Vérification ESLint
+npm run deploy     # Déploiement GitHub Pages
 ```
 
 ## 📱 Sections du site
 
 ### 🏠 Header
-- Logo Karasu avec kanji 烏 (crow) et effet crimson
-- Navigation sticky avec transitions japonaises
-- Menu burger responsive avec animations
+- Navigation sticky responsive avec menu burger
+- Logo personnalisable avec effets visuels
+- Transitions japonaises fluides
 
-### 🎯 Hero Section
-- Grand kanji 墨 (encre) central avec animations flottantes
-- Philosophie japonaise et message d'accueil immersif
-- Effets de texture et dégradés sombres
-- Bouton d'action vers les artistes avec glow effect
+### 🎯 Hero Section  
+- Grand kanji central (墨 - encre) avec animations
+- Kanjis flottants thématiques (encre, art, pinceau...)
+- Message d'accueil personnalisable
+- Double CTA avec effets lumineux
 
-### 👨‍🎨 Nos Artistes
-- Carrousel de 4 artistes japonais avec noms authentiques
-- Philosophies personnelles et spécialités détaillées
-- Navigation par flèches et miniatures
-- Design cards avec bordures dorées et effets hover
+### 👨‍🎨 Section Artistes
+- Profils de tatoueurs avec système de toggle mobile
+- Philosophies artistiques et spécialités
+- Images grayscale avec révélation couleur
+- Processus de travail en 3 étapes (consultation, création, réalisation)
 
-### 🖼️ Galerie
-- Grille masonry responsive avec hauteurs variables
-- Filtres par catégorie avec kanji (入墨, 新, 花, 幾, 書)
-- Modal fullscreen avec navigation clavier (ESC, flèches)
-- Effets grayscale/couleur et transformations au hover
+### 🖼️ Galerie Masonry
+- Grille responsive avec hauteurs variables
+- Filtres par catégorie de tatouage  
+- Modal fullscreen avec navigation clavier
+- Effets grayscale/couleur sophistiqués
 
-### 💰 Infos & Prestations
-- Tarification avec design japonais et kanji intégrés
-- Processus en étapes avec icônes traditionnelles
-- Informations studio et certifications
-- Cards glass-effect avec bordures crimson
+### 📊 Portfolio Carrousel
+- Présentation des œuvres principales
+- Navigation automatique et manuelle
+- Descriptions détaillées avec overlay
+- Miniatures de navigation
+
+### 💰 Infos & Tarifs
+- Système de tarification "à partir de" + tarif horaire
+- 4 niveaux : Consultation gratuite, Flash, Personnalisé, Œuvre d'art
+- Processus de travail illustré avec kanjis
+- Section hygiène et certifications
 
 ### 📞 Contact
-- Formulaire complet avec types de projets japonais
-- Animation de succès avec message en japonais
-- Informations de contact avec kanji thématiques
-- Réseaux sociaux et placeholder carte interactive
+- Formulaire complet avec types de projets
+- Animation de succès avec kanji japonais
+- Informations de contact avec zones cliquables
+- Réseaux sociaux et placeholder carte
 
 ### 🦶 Footer
-- 4 colonnes avec sections kanji (案, 情, 法)
-- Liens navigation, contact, légal et certifications
-- Symbole d'harmonie 和 et bouton retour haut
-- Design minimaliste avec accents crimson et gold
+- 4 colonnes organisées (navigation, contact, infos, certifications)
+- Mentions légales et crédits développeur
+- Bouton retour haut animé
+- Design minimaliste avec accents colorés
 
 ## 🎨 Design & Technologies
 
 ### Stack technique
-- **React 18** avec TypeScript
-- **Vite** comme bundler
+- **React 19.1.0** avec TypeScript strict
+- **Vite 7.0.4** comme bundler ultra-rapide
 - **Tailwind CSS v4** avec plugin @tailwindcss/vite
 - **React Icons** pour les icônes
-- **Design System personnalisé** avec @theme{} syntax
+- **ESLint 9** avec configuration TypeScript moderne
 
-### Palette de couleurs Karasu
-- **Karasu (Noir)** : Du karasu-950 (#0a0a0a) au karasu-50 (#f8f9fa)
-- **Crimson (Rouge)** : #dc2626 avec variantes hover et glow
-- **Bone (Blanc cassé)** : #f5f5dc pour les textes principaux
-- **Gold (Or)** : #ffd700 pour les accents et kanji
-- **Japanese-texture** : Effets de fond avec opacité et gradients
+### Palette de couleurs (8 couleurs total)
+- **Base Karasu** : Du karasu-950 (#09090b) au karasu-400 (#a1a1aa)
+- **Primary** : #0891b2 (cyan signature)
+- **Purple** : #8b5cf6 (accent Akira)  
+- **Gold** : #fbbf24 (kanjis spéciaux)
+- **Bone** : #f8fafc (texte principal)
 
-### Typographies japonaises
-- **Kanji Style** : 'Zen Tokyo Zoo', serif pour les caractères japonais
-- **Accent** : 'Cinzel', serif pour les titres
-- **Body** : 'Noto Sans JP', sans-serif pour le corps de texte
-- **Classes personnalisées** : kanji-style, font-accent, font-body
+### Typographies
+- **Kanji** : Polices optimisées pour caractères japonais
+- **Accent** : Typographies élégantes pour titres
+- **Body** : Police lisible pour contenu
 
 ### Animations et effets
-- **Scroll-reveal** : Apparition progressive des sections
+- **Scroll-reveal** : Apparition progressive avec useScrollReveal hook
 - **Hover-lift** : Élévation 3D des éléments interactifs
-- **Crimson-glow** : Effet de lueur rouge sur les boutons
+- **Kanji géants** : Arrière-plans animés flottants
+- **Primary-glow** : Effets de lueur sur boutons
 - **Glass-card** : Effet de verre avec backdrop-blur
-- **Keyframes personnalisées** : fadeIn, slideUp, reveal, float, shimmer
 
 ## 📂 Structure du projet
 
 ```
 src/
-├── components/           # Composants React
-│   ├── Header.tsx       # Navigation sticky
-│   ├── Hero.tsx         # Section d'accueil
-│   ├── Artists.tsx      # Profils des artistes
-│   ├── Gallery.tsx      # Galerie de tatouages
-│   ├── Pricing.tsx      # Tarifs et prestations
-│   ├── Contact.tsx      # Formulaire de contact
-│   └── Footer.tsx       # Pied de page
-├── App.tsx              # Composant principal
-├── index.css            # Styles Tailwind + custom
-└── main.tsx             # Point d'entrée
+├── components/
+│   ├── Header.tsx           # Navigation sticky
+│   ├── Hero.tsx             # Section d'accueil + kanjis flottants
+│   ├── Artist.tsx           # Profils tatoueurs
+│   ├── Gallery.tsx          # Galerie masonry avec filtres
+│   ├── Portfolio.tsx        # Carrousel présentation
+│   ├── Infos.tsx            # Tarifs et informations
+│   ├── Contact.tsx          # Formulaire + infos contact
+│   ├── Footer.tsx           # Pied de page complet
+│   └── MentionsLegales.tsx  # Page mentions légales
+├── hooks/
+│   └── useScrollReveal.ts   # Hook animations scroll
+├── App.tsx                  # Composant racine
+├── index.css                # Styles Tailwind + custom @theme
+└── main.tsx                 # Point d'entrée React
 ```
 
 ## 🔧 Personnalisation
 
-### Modifier les couleurs
-Éditez le fichier `src/index.css` dans la section `@theme` pour ajuster la palette Karasu :
+### Adapter les couleurs
+Éditez `src/index.css` section `@theme` :
 
 ```css
 @theme {
-  --color-karasu-950: #0a0a0a;
-  --color-karasu-900: #1a1a1a;
-  --color-crimson: #dc2626;
-  --color-bone: #f5f5dc;
-  --color-gold: #ffd700;
+  --color-karasu-950: #09090b;  /* Fond principal */
+  --color-karasu-900: #18181b;  /* Sections */
+  --color-karasu-800: #27272a;  /* Composants */
+  --color-karasu-600: #52525b;  /* Bordures */
+  --color-karasu-400: #a1a1aa;  /* Texte secondaire */
+  --color-primary: #0891b2;     /* Couleur signature */
+  --color-purple: #8b5cf6;      /* Accent artiste */
+  --color-gold: #fbbf24;        /* Kanjis précieux */
+  --color-bone: #f8fafc;        /* Texte principal */
 }
 ```
 
-### Ajouter des artistes
-Modifiez le tableau `artists` dans `src/components/Artists.tsx` :
+### Personnaliser le contenu
+- **Artist.tsx** : Informations des tatoueurs, spécialités, philosophies
+- **Gallery.tsx** : Images de tatouages avec catégories et filtres
+- **Portfolio.tsx** : Sélection d'œuvres pour le carrousel
+- **Infos.tsx** : Tarifs, processus de travail, certifications
+- **Contact.tsx** : Informations de contact et réseaux sociaux
 
-```typescript
-const artists: Artist[] = [
-  {
-    id: 1,
-    name: "Nouveau Maître",
-    philosophy: "Philosophie artistique",
-    specialty: "Spécialité japonaise",
-    experience: "X ans d'expérience",
-    description: "Description détaillée...",
-    image: "URL_de_l_image",
-    instagram: "@handle.instagram"
-  },
-  // ...
-];
-```
-
-### Modifier la galerie
-Éditez le tableau `images` dans `src/components/Gallery.tsx` pour ajouter vos tatouages :
-
-```typescript
-{
-  id: 13,
-  src: "URL_de_votre_image",
-  alt: "Nom du tatouage",
-  category: "irezumi|neo-japonais|floral|geometrique|calligraphie",
-  artist: "Nom de l'artiste",
-  description: "Description du tatouage",
-  style: "Style artistique",
-  height: 300 // Hauteur pour la masonry
-}
-```
+### Adapter les kanjis
+- **Hero** : Kanjis flottants thématiques (墨, 絵, 芸, 筆, 線, 色)
+- **Sections** : Kanjis d'en-tête personnalisables
+- **Arrière-plans** : Kanjis géants décoratifs (鴉) avec animations
 
 ## 🌐 Déploiement
 
-### Build de production
+### GitHub Pages (recommandé)
 ```bash
-npm run build
+npm run deploy  # Build + déploiement automatique
 ```
 
-### Déploiement sur Vercel
-```bash
-npm install -g vercel
-vercel --prod
-```
-
-### Déploiement sur Netlify
-1. Connecter votre repo GitHub
-2. Build command: `npm run build`
-3. Publish directory: `dist`
+### Autres plateformes
+- **Vercel** : Build automatique depuis GitHub
+- **Netlify** : `npm run build`, dossier `dist`
+- **Hosting classique** : Contenu du dossier `dist` après build
 
 ## 🎨 Design System Japonais
 
 ### Classes CSS personnalisées
-- **kanji-style** : Typographie pour les caractères japonais
-- **japanese-texture** : Texture de fond subtile
-- **glass-card** : Effet de verre avec backdrop-blur
-- **hover-lift** : Animation d'élévation au survol
-- **crimson-glow** : Effet de lueur rouge
-- **masonry-grid** : Grille en maçonnerie responsive
-- **scroll-reveal** : Animation d'apparition au scroll
+- **kanji-style** : Typographie caractères japonais
+- **glass-card** : Effet verre backdrop-blur
+- **hover-lift** : Animation élévation 3D
+- **primary-glow** : Effets lumineux colorés
+- **brush-stroke** : Effet pinceau sur texte
+- **scroll-reveal** : Animation apparition scroll
 
-### Kanji utilisés
-- 鴉 (karasu) : Corbeau - Logo principal
-- 墨 (sumi) : Encre - Hero section
-- 師 (shi) : Maître - Section artistes
-- 作品 (sakuhin) : Œuvres - Galerie
-- 連絡 (renraku) : Contact
-- 和 (wa) : Harmonie - Footer
+### Kanjis utilisés (exemples)
+- **鴉** (karasu) : Arrière-plans géants flottants
+- **墨** (sumi) : Encre - Hero et éléments thématiques
+- **職人** (shokunin) : Artisans - Section tatoueurs  
+- **雑** (zatsu) : Réalisations - Portfolio
+- **情報** (jōhō) : Informations - Tarifs
+- **連絡** (renraku) : Contact
 
-## 📝 Notes importantes
+## 📝 Notes techniques
 
-- **Images** : Utilise Unsplash pour les images de démonstration
-- **Formulaire** : Simulation d'envoi avec animation japonaise - intégrer backend
-- **Carte** : Placeholder pour Google Maps - intégrer l'API
-- **Tailwind v4** : Utilise la nouvelle syntaxe @theme{} et @tailwindcss/vite
-- **Performance** : Images lazy loading et optimisations CSS intégrées
-- **Accessibilité** : Navigation clavier complète dans la galerie modal
+- **Template de démonstration** : Site fictif "Ink Ritual Tattoo" à personnaliser
+- **Images incluses** : Dossier `public/images/gallery/` avec exemples
+- **Formulaire** : Simulation - à connecter avec votre backend
+- **Mentions légales** : Page dédiée avec informations développeur
+- **Performance** : Lazy loading et optimisations intégrées
+- **Mobile-first** : Design responsive avec breakpoints adaptés
+- **Accessibilité** : Navigation clavier, ARIA labels, contraste optimisé
 
-## 🤝 Contribution
+## 📜 Droits d'utilisation
 
-1. Fork le projet
-2. Créer une branche feature (`git checkout -b feature/nouvelle-fonctionnalite`)
-3. Commit les changements (`git commit -m 'Ajout nouvelle fonctionnalité'`)
-4. Push vers la branche (`git push origin feature/nouvelle-fonctionnalite`)
-5. Ouvrir une Pull Request
+⚠️ **Ce projet n'est pas open source.**
+
+**Propriété intellectuelle :**
+- Code source et design protégés par droit d'auteur
+- Propriétaire : **Gregory Poupaux** (GregDev)
+- Reproduction, modification ou utilisation sans autorisation interdite
+
+**Utilisation commerciale :**
+- Template disponible à la **vente et personnalisation sur demande**
+- Projets sur-mesure selon vos besoins
+- Intégration complète avec votre identité visuelle
+
+**Contact pour acquisition :**
+- 🔗 **LinkedIn :** [Gregory Poupaux](https://www.linkedin.com/in/grégory-poupaux)
+- 🌐 **Portfolio :** [GregDev](https://misterpoy.github.io/GregDev-PortFolio/)
+- 🎯 **Démo live :** [Template Salon Tatouage](https://misterpoy.github.io/siteTatoueur/)
+
+**Pourquoi ce template ?**
+- ✅ Design immersif japonais unique
+- ✅ Code moderne React 19 + TypeScript
+- ✅ Responsive et optimisé SEO
+- ✅ Palette couleurs professionnelle
+- ✅ Personnalisation complète
+- ✅ Support technique inclus
 
 ## 📄 Licence
 
-Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
+Copyright © 2025 Gregory Poupaux (GregDev)
+
+**Tous droits réservés.**
+
+Ce code source est la propriété de son auteur.  
+Aucune reproduction, diffusion ou modification n'est autorisée sans accord écrit préalable.
+
+Le projet est disponible uniquement dans le cadre d'une prestation commerciale.
 
 ---
 
-**Fait avec ❤️ pour l'art du tatouage japonais 愛**
+**Template développé avec ❤️ par Gregory Poupaux (GregDev) 愛**
 
-Ink Ritual Tattoo - Où tradition et modernité se rencontrent dans l'art de l'encre*
+*Solution professionnelle pour salons de tatouage - Disponible sur demande*

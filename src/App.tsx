@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Artists from './components/Artist';
@@ -7,9 +8,30 @@ import Infos from './components/Infos';
 import Testimonials from './components/Testimonials';
 import CallToAction from './components/CallToAction';
 import Contact from './components/Contact';
+import MentionsLegales from './components/MentionsLegales';
 import Footer from './components/Footer';
 
 function App() {
+  const [showMentions, setShowMentions] = useState(false);
+
+  const handleShowMentions = () => {
+    setShowMentions(true);
+    window.scrollTo(0, 0);
+  };
+
+  const handleBackToSite = () => {
+    setShowMentions(false);
+    window.scrollTo(0, 0);
+  };
+
+  if (showMentions) {
+    return (
+      <div className="min-h-screen">
+        <MentionsLegales onBack={handleBackToSite} />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -24,7 +46,7 @@ function App() {
         <Testimonials />
         <Contact />
       </main>
-      <Footer />
+      <Footer onShowMentions={handleShowMentions} />
     </div>
   );
 }

@@ -16,44 +16,44 @@ const Pricing: React.FC = () => {
     {
       id: 1,
       name: "Flash Tattoo",
-      price: "80€ - 150€",
+      price: "À partir de 120€",
       description: "Tatouages pré-dessinés, rapides et abordables",
       icon: <FaClock className="text-2xl" />,
       features: [
         "Designs pré-conçus",
-        "Séance 1-2h maximum",
+        "Séance 1-3h maximum",
+        "Base 100€/h",
         "Taille jusqu'à 8cm",
-        "Retouches incluses",
-        "Soins post-tatouage"
+        "Retouches incluses"
       ]
     },
     {
       id: 2,
       name: "Design Personnalisé",
-      price: "200€ - 500€",
+      price: "À partir de 250€",
       description: "Création sur-mesure selon vos envies",
       icon: <FaPalette className="text-2xl" />,
       features: [
         "Design 100% personnalisé",
         "Consultation préalable",
+        "100€/h + création design",
         "Séance 2-6h",
         "Taille jusqu'à 15cm",
-        "2 retouches incluses",
         "Suivi post-tatouage"
       ],
       popular: true
     },
     {
       id: 3,
-      name: "Pièce d'Art",
-      price: "500€+",
+      name: "Œuvre d'Art",
+      price: "À partir de 600€",
       description: "Œuvres complexes et de grande envergure",
       icon: <FaHeart className="text-2xl" />,
       features: [
         "Projet artistique complexe",
+        "100-120€/h selon complexité",
         "Plusieurs séances",
         "Taille sans limite",
-        "Collaboration artistique",
         "Retouches illimitées",
         "Service VIP"
       ]

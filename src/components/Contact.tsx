@@ -317,27 +317,37 @@ const Contact: React.FC = () => {
               
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
-                  <div key={index} className="flex items-start space-x-4 group">
-                    <div className="w-12 h-12 bg-primary/20 border border-primary/30 rounded-lg flex items-center justify-center text-primary flex-shrink-0 group-hover:bg-primary group-hover:text-bone transition-all duration-300">
-                      <div className="flex flex-col items-center">
-                        {info.icon}
-                        <span className="text-xs kanji-style mt-1">{info.kanji}</span>
+                  info.link ? (
+                    <a
+                      key={index}
+                      href={info.link}
+                      className="flex items-start space-x-4 group cursor-pointer"
+                    >
+                      <div className="w-12 h-12 bg-primary/20 border border-primary/30 rounded-lg flex items-center justify-center text-primary flex-shrink-0 group-hover:bg-primary group-hover:text-bone transition-all duration-300">
+                        <div className="flex flex-col items-center">
+                          {info.icon}
+                          <span className="text-xs kanji-style mt-1">{info.kanji}</span>
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="text-bone font-accent text-sm tracking-wider uppercase mb-1 group-hover:text-primary transition-colors duration-300">{info.title}</h4>
+                        <p className="text-karasu-400 font-body group-hover:text-primary transition-colors duration-300">{info.content}</p>
+                      </div>
+                    </a>
+                  ) : (
+                    <div key={index} className="flex items-start space-x-4 group cursor-context-menu">
+                      <div className="w-12 h-12 bg-primary/20 border border-primary/30 rounded-lg flex items-center justify-center text-primary flex-shrink-0 group-hover:bg-primary group-hover:text-bone transition-all duration-300">
+                        <div className="flex flex-col items-center">
+                          {info.icon}
+                          <span className="text-xs kanji-style mt-1">{info.kanji}</span>
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="text-bone font-accent text-sm tracking-wider uppercase mb-1">{info.title}</h4>
+                        <p className="text-karasu-400 font-body">{info.content}</p>
                       </div>
                     </div>
-                    <div>
-                      <h4 className="text-bone font-accent text-sm tracking-wider uppercase mb-1">{info.title}</h4>
-                      {info.link ? (
-                        <a
-                          href={info.link}
-                          className="text-karasu-400 hover:text-primary transition-colors duration-300 font-body"
-                        >
-                          {info.content}
-                        </a>
-                      ) : (
-                        <p className="text-karasu-400 font-body">{info.content}</p>
-                      )}
-                    </div>
-                  </div>
+                  )
                 ))}
               </div>
             </div>

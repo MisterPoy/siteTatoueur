@@ -50,13 +50,13 @@ const Hero: React.FC = () => {
           <div className="w-full h-full rounded-full border border-primary"></div>
         </div>
         
-        {/* Particules flottantes colorées conservées */}
-        <div className="absolute top-1/4 left-1/4 w-3 h-3 sm:w-1 sm:h-1 bg-primary rounded-full animate-float opacity-80 sm:opacity-60 z-10"></div>
-        <div className="absolute top-1/3 right-1/3 w-4 h-4 sm:w-2 sm:h-2 bg-purple rounded-full animate-float opacity-70 sm:opacity-40 z-10" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-1/3 left-1/3 w-3 h-3 sm:w-1 sm:h-1 bg-primary rounded-full animate-float opacity-80 sm:opacity-50 z-10" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-2/3 right-1/4 w-3 h-3 sm:w-1 sm:h-1 bg-gold rounded-full animate-float opacity-75 sm:opacity-45 z-10" style={{ animationDelay: '3s' }}></div>
-        <div className="absolute bottom-1/4 right-2/3 w-4 h-4 sm:w-2 sm:h-2 bg-gold rounded-full animate-float opacity-65 sm:opacity-35 z-10" style={{ animationDelay: '4s' }}></div>
-        <div className="absolute top-1/2 left-1/6 w-3 h-3 sm:w-1 sm:h-1 bg-purple rounded-full animate-float opacity-70 sm:opacity-30 z-10" style={{ animationDelay: '5s' }}></div>
+        {/* Kanji flottants thématiques - Art de l'encre */}
+        <div className="absolute top-1/4 left-1/4 text-base sm:text-lg kanji-style text-primary animate-float opacity-80 sm:opacity-60 z-10">墨</div>
+        <div className="absolute top-1/3 right-1/3 text-lg sm:text-xl kanji-style text-purple animate-float opacity-70 sm:opacity-40 z-10" style={{ animationDelay: '1s' }}>絵</div>
+        <div className="absolute bottom-1/3 left-1/3 text-base sm:text-lg kanji-style text-primary animate-float opacity-80 sm:opacity-50 z-10" style={{ animationDelay: '2s' }}>芸</div>
+        <div className="absolute top-2/3 right-1/4 text-base sm:text-lg kanji-style text-gold animate-float opacity-75 sm:opacity-45 z-10" style={{ animationDelay: '3s' }}>筆</div>
+        <div className="absolute bottom-1/4 right-2/3 text-lg sm:text-xl kanji-style text-gold animate-float opacity-65 sm:opacity-35 z-10" style={{ animationDelay: '4s' }}>線</div>
+        <div className="absolute top-1/2 left-1/6 text-base sm:text-lg kanji-style text-karasu-400 animate-float opacity-70 sm:opacity-30 z-10" style={{ animationDelay: '5s' }}>色</div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">

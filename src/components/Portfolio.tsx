@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { FaChevronLeft, FaChevronRight, FaExpand } from 'react-icons/fa';
-import { useScrollReveal } from '../hooks/useScrollReveal';
+import React, { useState, useEffect } from "react";
+import { FaChevronLeft, FaChevronRight, FaExpand } from "react-icons/fa";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
 interface PortfolioImage {
   id: number;
@@ -11,7 +11,9 @@ interface PortfolioImage {
 
 const Portfolio: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedImage, setSelectedImage] = useState<PortfolioImage | null>(null);
+  const [selectedImage, setSelectedImage] = useState<PortfolioImage | null>(
+    null
+  );
   const headerRef = useScrollReveal();
   const carouselRef = useScrollReveal();
 
@@ -21,62 +23,64 @@ const Portfolio: React.FC = () => {
       id: 1,
       src: "./images/gallery/grue-japonaise.jpg",
       alt: "Grue Japonaise Traditionnelle",
-      description: "Grue authentique avec fleurs délicates dans l'art japonais"
+      description: "Grue authentique avec fleurs délicates dans l'art japonais",
     },
     {
       id: 2,
       src: "./images/gallery/allef-vinicius.jpg",
-      alt: "Processus Créatif", 
-      description: "Création de motifs géométriques en cours de réalisation"
+      alt: "Processus Créatif",
+      description: "Création de motifs géométriques en cours de réalisation",
     },
     {
       id: 3,
       src: "./images/gallery/benjamin-lehman.jpg",
       alt: "Techniques Avancées",
-      description: "Maîtrise technique dans l'art du tatouage traditionnel japonais"
+      description:
+        "Maîtrise technique dans l'art du tatouage traditionnel japonais",
     },
     {
       id: 4,
       src: "./images/gallery/collins-lesulie-PWK6CeCJtJw-unsplash.jpg",
       alt: "Précision Artistique",
-      description: "Précision et minutie dans chaque trait et détail"
+      description: "Précision et minutie dans chaque trait et détail",
     },
     {
       id: 5,
       src: "./images/gallery/eduardo-vaccari-pIltvcnqsfU-unsplash.jpg",
       alt: "Réalisme Floral",
-      description: "Composition florale black & grey aux détails saisissants"
+      description: "Composition florale black & grey aux détails saisissants",
     },
     {
       id: 6,
       src: "./images/gallery/jasmin-chew-WbWOF8z_NGQ-unsplash.jpg",
       alt: "Maîtrise Ornementale",
-      description: "Création complexe mêlant motifs floraux et ornementaux"
+      description: "Création complexe mêlant motifs floraux et ornementaux",
     },
     {
       id: 7,
       src: "./images/gallery/jj-jordan-eenumTwM6Ec-unsplash.jpg",
       alt: "Géométrie Sacrée",
-      description: "Mandala aux motifs géométriques parfaitement équilibrés"
+      description: "Mandala aux motifs géométriques parfaitement équilibrés",
     },
     {
       id: 8,
       src: "./images/gallery/matheus-ferrero-RBsrv4yV5KY-unsplash.jpg",
       alt: "Style Traditional",
-      description: "Hommage au tatouage old-school américain authentique"
+      description: "Hommage au tatouage old-school américain authentique",
     },
     {
       id: 9,
       src: "./images/gallery/pexels-photo-2183131.jpeg",
       alt: "Manche Irezumi Complète",
-      description: "Réalisation d'une manche japonaise traditionnelle authentique"
+      description:
+        "Réalisation d'une manche japonaise traditionnelle authentique",
     },
     {
       id: 10,
       src: "./images/gallery/pexels-photo-8767196.jpeg",
       alt: "Art Japonais Contemporain",
-      description: "Fusion moderne de l'art traditionnel japonais"
-    }
+      description: "Fusion moderne de l'art traditionnel japonais",
+    },
   ];
 
   // Navigation automatique du carrousel
@@ -93,7 +97,9 @@ const Portfolio: React.FC = () => {
   };
 
   const goToPrevious = () => {
-    setCurrentIndex((prev) => prev === 0 ? portfolioImages.length - 1 : prev - 1);
+    setCurrentIndex((prev) =>
+      prev === 0 ? portfolioImages.length - 1 : prev - 1
+    );
   };
 
   const goToNext = () => {
@@ -104,20 +110,21 @@ const Portfolio: React.FC = () => {
     setSelectedImage(image);
     // Sauvegarder l'état original du body
     const originalStyle = window.getComputedStyle(document.body).overflow;
-    document.body.setAttribute('data-original-overflow', originalStyle);
-    document.body.style.overflow = 'hidden';
+    document.body.setAttribute("data-original-overflow", originalStyle);
+    document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
     setSelectedImage(null);
     // Restaurer l'état original ou auto par défaut
-    const originalOverflow = document.body.getAttribute('data-original-overflow') || 'auto';
+    const originalOverflow =
+      document.body.getAttribute("data-original-overflow") || "auto";
     document.body.style.overflow = originalOverflow;
-    document.body.removeAttribute('data-original-overflow');
-    
+    document.body.removeAttribute("data-original-overflow");
+
     // Force le navigateur à recalculer le scroll
     setTimeout(() => {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     }, 50);
   };
 
@@ -125,13 +132,17 @@ const Portfolio: React.FC = () => {
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
       if (!selectedImage) return;
-      if (e.key === 'Escape') closeModal();
-      if (e.key === 'ArrowRight') setCurrentIndex((i) => (i + 1) % portfolioImages.length);
-      if (e.key === 'ArrowLeft') setCurrentIndex((i) => (i - 1 + portfolioImages.length) % portfolioImages.length);
+      if (e.key === "Escape") closeModal();
+      if (e.key === "ArrowRight")
+        setCurrentIndex((i) => (i + 1) % portfolioImages.length);
+      if (e.key === "ArrowLeft")
+        setCurrentIndex(
+          (i) => (i - 1 + portfolioImages.length) % portfolioImages.length
+        );
     };
 
-    document.addEventListener('keydown', handleKeyPress);
-    return () => document.removeEventListener('keydown', handleKeyPress);
+    document.addEventListener("keydown", handleKeyPress);
+    return () => document.removeEventListener("keydown", handleKeyPress);
   }, [selectedImage, portfolioImages.length]);
 
   // Cleanup au démontage du composant
@@ -139,22 +150,39 @@ const Portfolio: React.FC = () => {
     return () => {
       // S'assurer que le scroll est restauré si le composant se démonte avec modal ouverte
       if (selectedImage) {
-        document.body.style.overflow = '';
-        document.body.removeAttribute('data-original-overflow');
+        document.body.style.overflow = "";
+        document.body.removeAttribute("data-original-overflow");
       }
     };
   }, [selectedImage]);
 
   return (
-    <section id="portfolio" className="py-20 bg-gradient-to-br from-karasu-900 via-karasu-950 to-karasu-900 relative overflow-hidden">
-      
+    <section
+      id="portfolio"
+      className="py-20 bg-gradient-to-br from-karasu-900 via-karasu-950 to-karasu-900 relative overflow-hidden"
+    >
       {/* Kanji géants d'arrière-plan */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="kanji-giant kanji-giant-colossal kanji-sans text-primary absolute -top-40 -right-48 kanji-float-1" style={{ '--rotation': '12deg' } as React.CSSProperties}>鴉</div>
-        <div className="kanji-giant kanji-giant-xs kanji-serif text-karasu-400 absolute bottom-40 left-20 kanji-float-2" style={{ '--rotation': '-8deg' } as React.CSSProperties}>鴉</div>
-        <div className="kanji-giant kanji-giant-sm kanji-sans text-gold absolute top-3/4 right-16 kanji-float-4" style={{ '--rotation': '-15deg' } as React.CSSProperties}>鴉</div>
+        <div
+          className="kanji-giant kanji-giant-colossal kanji-sans text-primary absolute -top-40 -right-48 kanji-float-1"
+          style={{ "--rotation": "12deg" } as React.CSSProperties}
+        >
+          鴉
+        </div>
+        <div
+          className="kanji-giant kanji-giant-xs kanji-serif text-karasu-400 absolute bottom-40 left-20 kanji-float-2"
+          style={{ "--rotation": "-8deg" } as React.CSSProperties}
+        >
+          鴉
+        </div>
+        <div
+          className="kanji-giant kanji-giant-sm kanji-sans text-gold absolute top-3/4 right-16 kanji-float-4"
+          style={{ "--rotation": "-15deg" } as React.CSSProperties}
+        >
+          鴉
+        </div>
       </div>
-      
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div ref={headerRef} className="text-center mb-12 scroll-reveal">
@@ -178,11 +206,11 @@ const Portfolio: React.FC = () => {
                 <div
                   key={image.id}
                   className={`absolute inset-0 transition-all duration-700 ${
-                    index === currentIndex 
-                      ? 'opacity-100 translate-x-0' 
-                      : index < currentIndex 
-                        ? 'opacity-0 -translate-x-full' 
-                        : 'opacity-0 translate-x-full'
+                    index === currentIndex
+                      ? "opacity-100 translate-x-0"
+                      : index < currentIndex
+                      ? "opacity-0 -translate-x-full"
+                      : "opacity-0 translate-x-full"
                   }`}
                 >
                   <img
@@ -192,7 +220,7 @@ const Portfolio: React.FC = () => {
                     onClick={() => openModal(image)}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-karasu-950/80 via-transparent to-transparent"></div>
-                  
+
                   {/* Overlay avec infos */}
                   <div className="absolute bottom-0 left-0 right-0 p-8">
                     <div className="max-w-2xl">
@@ -208,7 +236,7 @@ const Portfolio: React.FC = () => {
                   {/* Bouton zoom */}
                   <button
                     onClick={() => openModal(image)}
-                    className="absolute top-1/2 right-1/2 transform translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-karasu-800/80 hover:bg-primary border border-karasu-600 rounded-full flex items-center justify-center text-bone transition-all duration-300 hover-lift opacity-35 hover:opacity-65 cursor-pointer "
+                    className="absolute top-1/2 right-1/2 transform translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-karasu-800/80 hover:bg-primary border border-karasu-600 rounded-full flex items-center justify-center text-bone  opacity-35 hover:opacity-65 hover:scale-120 cursor-pointer transition-all duration-300 hover-lift "
                   >
                     <FaExpand size={38} />
                   </button>
@@ -238,9 +266,9 @@ const Portfolio: React.FC = () => {
                   key={index}
                   onClick={() => goToSlide(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentIndex 
-                      ? 'bg-primary scale-125' 
-                      : 'bg-karasu-600 hover:bg-karasu-400'
+                    index === currentIndex
+                      ? "bg-primary scale-125"
+                      : "bg-karasu-600 hover:bg-karasu-400"
                   }`}
                 />
               ))}
@@ -254,9 +282,9 @@ const Portfolio: React.FC = () => {
                 key={image.id}
                 onClick={() => goToSlide(index)}
                 className={`relative aspect-square overflow-hidden rounded border-2 transition-all duration-300 ${
-                  index === currentIndex 
-                    ? 'border-primary scale-105' 
-                    : 'border-karasu-600 hover:border-karasu-400'
+                  index === currentIndex
+                    ? "border-primary scale-105"
+                    : "border-karasu-600 hover:border-karasu-400"
                 }`}
               >
                 <img
@@ -280,14 +308,28 @@ const Portfolio: React.FC = () => {
           aria-modal="true"
           className="fixed inset-0 z-[60] bg-black/90 flex items-center justify-center"
           onKeyDown={(e) => {
-            if (e.key === 'Escape') setSelectedImage(null);
-            if (e.key === 'ArrowRight') setCurrentIndex((i) => (i + 1) % portfolioImages.length);
-            if (e.key === 'ArrowLeft') setCurrentIndex((i) => (i - 1 + portfolioImages.length) % portfolioImages.length);
+            if (e.key === "Escape") setSelectedImage(null);
+            if (e.key === "ArrowRight")
+              setCurrentIndex((i) => (i + 1) % portfolioImages.length);
+            if (e.key === "ArrowLeft")
+              setCurrentIndex(
+                (i) => (i - 1 + portfolioImages.length) % portfolioImages.length
+              );
           }}
           tabIndex={-1}
         >
-          <button className="absolute top-4 right-4 text-bone" onClick={() => setSelectedImage(null)} aria-label="Fermer">✕</button>
-          <img src={selectedImage.src} alt={selectedImage.alt} className="max-h-[90vh] max-w-[90vw] object-contain" />
+          <button
+            className="absolute top-4 right-4 text-bone"
+            onClick={() => setSelectedImage(null)}
+            aria-label="Fermer"
+          >
+            ✕
+          </button>
+          <img
+            src={selectedImage.src}
+            alt={selectedImage.alt}
+            className="max-h-[90vh] max-w-[90vw] object-contain"
+          />
         </div>
       )}
     </section>

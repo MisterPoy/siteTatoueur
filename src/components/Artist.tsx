@@ -44,7 +44,7 @@ const Artists: React.FC = () => {
               {/* THEORA - Grapheur & Réalisme */}
               <div className="group">
                 <div 
-                  className="relative overflow-hidden rounded-lg border-2 border-primary/30 hover:border-primary transition-all duration-300 mb-6 cursor-pointer"
+                  className="relative overflow-hidden rounded-lg border-2 border-primary/30 hover:border-primary transition-all duration-300 mb-6 cursor-context-menu"
                   onClick={() => setAkiraActive(!akiraActive)}
                 >
                   <img
