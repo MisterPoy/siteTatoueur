@@ -13,6 +13,9 @@ Un template de site vitrine professionnel pour **salons de tatouage**, avec une 
 - **Galeries Dynamiques** : Masonry + Carrousel avec modal interactif
 - **Design System Complet** : Classes CSS personnalisées et thème Tailwind moderne
 
+- 🎯 **Démo live :** [Template Salon Tatouage](https://misterpoy.github.io/siteTatoueur/)
+
+
 ## 🚀 Démarrage rapide
 
 ### Prérequis
