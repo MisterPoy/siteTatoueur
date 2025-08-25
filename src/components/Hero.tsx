@@ -59,42 +59,42 @@ const Hero: React.FC = () => {
         <div className="absolute top-1/2 left-1/6 text-base sm:text-lg kanji-style text-karasu-400 animate-float opacity-70 sm:opacity-30 z-10" style={{ animationDelay: '5s' }}>色</div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-        <div className="max-w-6xl mx-auto text-center">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-8 relative z-20">
+        <div className="max-w-6xl mx-auto text-center py-8 md:py-12">
           {/* Titre principal style Kanji */}
           <div className={`transition-all duration-1500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
             {/* Caractère japonais principal - KARASU */}
-            <div className="mb-8">
-              <span className="text-6xl sm:text-8xl md:text-[10rem] lg:text-[12rem] kanji-style text-primary text-shadow-primary animate-reveal leading-none block">
+            <div className="mb-8 md:mb-10">
+              <span className="text-6xl sm:text-8xl md:text-[8rem] lg:text-[10rem] xl:text-[12rem] kanji-style text-primary text-shadow-primary animate-reveal leading-none block">
                 墨
               </span>
-              <div className="text-lg font-accent text-primary tracking-widest mt-4 mb-2">
+              <div className="text-base sm:text-lg md:text-xl font-accent text-primary tracking-widest mt-4 md:mt-6 mb-2">
                 SUMI · L'ENCRE
               </div>
-              <div className="text-sm font-accent text-karasu-400 tracking-widest">
+              <div className="text-sm md:text-base font-accent text-karasu-400 tracking-widest">
                 L'IDENTITÉ DE L'ARTISTE
               </div>
             </div>
 
             {/* Titre français */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-accent text-bone mb-6 text-shadow-dark">
-              <span className="block mb-2">Ink Ritual Tattoo</span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-accent text-bone mb-6 md:mb-8 text-shadow-dark">
+              <span className="block mb-2 md:mb-3">Ink Ritual Tattoo</span>
               <span className="block text-2xl sm:text-3xl md:text-4xl text-primary brush-stroke">
                 L'art de l'encre sacrée
               </span>
             </h1>
 
             {/* Accroche orientée client */}
-            <p className="max-w-2xl mx-auto mt-4 text-karasu-400">
+            <p className="max-w-2xl mx-auto mt-4 md:mt-6 text-karasu-400 text-base md:text-lg leading-relaxed px-4 sm:px-0">
               Un tatouage unique, pensé pour vous, réalisé avec exigence et hygiène irréprochable.
             </p>
 
             {/* Double CTA */}
-            <div className="mt-8 flex items-center justify-center gap-4">
-              <a href="#gallery" className="rounded-xl px-5 py-3 bg-primary text-karasu-950 font-accent uppercase tracking-wider transition-all duration-300 hover-lift primary-glow">
+            <div className="mt-8 sm:mt-10 md:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+              <a href="#gallery" className="rounded-xl px-6 py-3 md:px-8 md:py-4 bg-primary text-karasu-950 font-accent uppercase tracking-wider transition-all duration-300 hover-lift primary-glow text-sm md:text-base w-full sm:w-auto">
                 Voir nos créations
               </a>
-              <a href="#contact" className="rounded-xl px-5 py-3 border border-primary text-bone hover:bg-primary/10 font-accent uppercase tracking-wider transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+              <a href="#contact" className="rounded-xl px-6 py-3 md:px-8 md:py-4 border border-primary text-bone hover:bg-primary/10 font-accent uppercase tracking-wider transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-sm md:text-base w-full sm:w-auto">
                 Réserver un créneau
               </a>
             </div>

@@ -47,16 +47,16 @@ const Header: React.FC = () => {
       >
         Aller au contenu
       </a>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+      <div className="md:w-full xl:container xl:mx-auto px-4 sm:px-6 md:px-0 lg:px-8">
+        <div className="flex items-center justify-between h-16 lg:h-20 md:px-2">
           {/* Logo */}
           <div
-            className="flex items-center cursor-pointer group"
+            className="flex items-center cursor-pointer group flex-shrink-0"
             onClick={() => scrollToSection("hero")}
           >
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-2 sm:space-x-3">
               {/* Icône Corbeau stylisée */}
-              <div className="w-12 h-12 relative">
+              <div className="w-12 h-12 relative flex-shrink-0">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary via-purple to-primary rounded-full opacity-30 group-hover:opacity-50 transition-all duration-300 group-hover:animate-pulse"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <span className="text-primary text-2xl font-bold kanji-style group-hover:text-purple transition-colors duration-300 group-hover:scale-110">
@@ -67,7 +67,7 @@ const Header: React.FC = () => {
 
               {/* Nom du salon */}
               <div>
-                <div className="text-2xl lg:text-3xl kanji-style text-bone group-hover:text-shimmer transition-all duration-300">
+                <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl kanji-style text-bone group-hover:text-shimmer transition-all duration-300">
                   Ink Ritual Tattoo
                 </div>
                 <div className="text-xs text-karasu-400 font-accent tracking-wider hidden lg:block">
@@ -78,25 +78,28 @@ const Header: React.FC = () => {
           </div>
 
           {/* Navigation Desktop */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-4 lg:space-x-8">
             {navItems.map((item, index) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="relative group text-bone hover:text-primary transition-all duration-300 font-accent text-sm tracking-wider uppercase cursor-pointer"
+                className="relative group text-bone hover:text-primary transition-all duration-300 font-accent text-xs lg:text-sm tracking-wider uppercase cursor-pointer"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
               </button>
             ))}
+            <div>
             <a
               href="#contact"
-              className="ml-6 inline-flex items-center rounded-xl px-4 py-2 font-accent text-sm uppercase tracking-wider
-                         bg-primary text-karasu-950 hover:brightness-110 transition-all shadow-lg shadow-primary/20"
+              className="ml-6  items-center rounded-xl px-4 py-2 font-accent text-sm uppercase tracking-wider
+                         bg-primary text-karasu-950 hover:brightness-110 transition-all shadow-lg shadow-primary/20
+                         hidden xl:inline-flex"
             >
               Prendre rendez‑vous
             </a>
+            </div>
           </nav>
 
           {/* Menu Mobile Button */}
@@ -120,7 +123,7 @@ const Header: React.FC = () => {
         <div
           id="mobile-nav"
           className={`md:hidden absolute top-full left-0 right-0 karasu-gradient border-t border-karasu-800/50 transition-all duration-500 overflow-hidden ${
-            isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+            isMobileMenuOpen ? "h-screen opacity-100" : "max-h-0 opacity-0"
           }`}
         >
           <nav className="p-6 space-y-4">
